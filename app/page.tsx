@@ -5,6 +5,8 @@ import Pricing from "./components/home/pricing/Pricing";
 import Performance from "./components/home/performance/Performance";
 import Services from "./components/home/services/Services";
 import TestiMonial from "./components/home/testimonial/Testimonial";
+import Connect from "./components/home/connect/Connect";
+import FAQ from "./components/home/faq/FAQ";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Performance />
       <Services />
       <TestiMonial />
+      <Connect />
+      <FAQ />
     </div>
   );
 }
