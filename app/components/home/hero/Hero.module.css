@@ -1,0 +1,20 @@
+.heroEffect {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .heroEffect {
+    position: absolute;
+    width: 1440px;
+    height: 800px;
+    right: -100px;
+    top: 200px;
+    background: linear-gradient(
+      180deg,
+      rgba(69, 70, 87, 0.38) 0%,
+      rgba(69, 70, 87, 0) 100%
+    );
+    border-radius: 20rem 0 0 0;
+    /* transform: skewX(-20deg); */
+  }
+}

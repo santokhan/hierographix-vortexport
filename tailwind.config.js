@@ -7,12 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        vpurple: {
+          500: "#9C85FB",
+          900: "#1E1F33",
+          950: "#07081E"
+        }
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        vlinear: 'linear-gradient(90deg, #886DF5 0%, #9C85FB 100%);'
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
