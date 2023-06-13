@@ -73,7 +73,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="lg:flex lg:justify-between gap-12">
           <div className="lg:w-5/12 mb-6 md:mb-0 space-y-5">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <a href="/" className="flex items-center">
               <Logo dark={true} />
             </a>
             <p className="text-gray-400">

@@ -53,7 +53,7 @@ export default function Services() {
           <div className="max-w-md mx-auto rounded-lg shadow" key={i}>
             <a href={e.url}>
               <Image
-                src={require(`../../assets/images/services/${e.src}.png`)}
+                src={require(`../../../assets/images/services/${e.src}.png`)}
                 alt={e.title}
                 width={0}
                 height={0}

@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import PerformanceImage from "../../assets/images/performance/performance-rating.png";
+import PerformanceImage from "../../../assets/images/performance/performance-rating.png";
 
-function Performance() {
+export default function Performance() {
   const ratings = [
     {
       desc: "Our track record is speaks for itself. We have consistently delivered exceptional result for a diverse range of client across industries.",
@@ -157,5 +157,3 @@ function Icon({ name }: { name: string }) {
     );
   }
 }
-
-export default Performance;

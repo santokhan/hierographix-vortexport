@@ -1,26 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../logo/Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SocialMedia } from "../footer/Footer";
 
 interface Navs {
+  name: string;
+  url?: string;
+}
+interface Dropodown {
   icon: string;
   name: string;
   url: string;
 }
 interface NavsDD {
-  icon: string;
   name: string;
   url: string;
-  dropdown: Navs[];
+  dropdown: Dropodown[];
 }
 
 const navs = [
-  { icon: "", name: "Home", url: "" },
+  { name: "Home", url: "/" },
   {
-    icon: "",
     name: "Expertise",
     dropdown: [
       { icon: "speaker", name: "Marketing", url: "marketing" },
@@ -43,8 +45,8 @@ const navs = [
       },
     ],
   },
-  { icon: "", name: "Our Portfolio", url: "" },
-  { icon: "", name: "Blog", url: "" },
+  { name: "Our Portfolio", url: "our-portfolio" },
+  { name: "Blog", url: "blog" },
 ];
 
 const Header = (): JSX.Element => (
@@ -63,7 +65,6 @@ export function Navbar(): JSX.Element {
     setdropdown(!dropdown);
   }
   const pathName = usePathname();
-  console.log(pathName);
 
   return (
     <nav className="max-w-screen-xl mx-auto h-full flex flex-wrap items-center justify-between px-4">
@@ -81,7 +82,10 @@ export function Navbar(): JSX.Element {
             <a
               key={i}
               href={e.url}
-              className="rounded block px-5 text-gray-400 hover:text-vpurple-500"
+              className={`rounded block px-5 text-gray-400 hover:text-vpurple-500 ${
+                pathName === e.url &&
+                "text-vpurple-500 underline underline-offset-4 decoration-2"
+              }`}
             >
               {e.name}
             </a>
@@ -99,24 +103,48 @@ export function Navbar(): JSX.Element {
   );
 }
 
+// dropdown for individual nav item
 export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
   const [dd, setdd] = useState(false);
+  const dropdownRef = useRef<any>(null);
+  const toggler = useRef<any>(null);
+  function handleDD() {
+    setdd(!dd);
+  }
+
+  useEffect(() => {
+    function handleClick(e: Event) {
+      if (dropdownRef && dropdownRef.current) {
+        if (
+          !dropdownRef.current.contains(e.target) &&
+          !toggler.current.contains(e.target)
+        ) {
+          if (dd === true) {
+            setdd(false);
+          }
+        }
+      }
+    }
+    document.addEventListener("click", handleClick);
+  }, [dd]);
 
   return (
     <div className="relative h-full flex items-center">
       <button
         type="button"
         className="flex gap-3 items-center text-gray-400 rounded hover:text-vpurple-500"
-        onClick={() => {
-          setdd(!dd);
-        }}
+        onClick={handleDD}
+        ref={toggler}
       >
         {nav.name}
         <i className={`fa fa-angle-down ${dd && "-rotate-180"}`}></i>
       </button>
       {/* dropdown desktop */}
       {dd && (
-        <div className="absolute top-10 left-0 w-72 mt-1 flex flex-col bg-white z-[2] rounded-lg py-2 shadow-xl">
+        <div
+          className="absolute top-10 left-0 w-72 mt-1 flex flex-col bg-white z-[2] rounded-lg py-2 shadow-xl"
+          ref={dropdownRef}
+        >
           {nav.dropdown.map((ele: any, ind: number) => (
             <a
               key={ind}

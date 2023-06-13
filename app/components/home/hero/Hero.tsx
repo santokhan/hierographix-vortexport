@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroImg from "../../assets/images/hero-illustration.png";
+import HeroImg from "../../../assets/images/hero-illustration.png";
 import styles from "./Hero.module.css";
 import SubscribeForm from "./SubscribeForm";
 

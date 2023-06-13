@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Headline from "../../shared/Headline";
-import partner1 from "../../assets/images/partners/1.png";
-import partner2 from "../../assets/images/partners/2.png";
-import partner3 from "../../assets/images/partners/3.png";
-import partner4 from "../../assets/images/partners/4.png";
-import partner5 from "../../assets/images/partners/5.png";
-import partner6 from "../../assets/images/partners/6.png";
+import partner1 from "../../../assets/images/partners/1.png";
+import partner2 from "../../../assets/images/partners/2.png";
+import partner3 from "../../../assets/images/partners/3.png";
+import partner4 from "../../../assets/images/partners/4.png";
+import partner5 from "../../../assets/images/partners/5.png";
+import partner6 from "../../../assets/images/partners/6.png";
 
 const Partner = () => (
   <div className="max-w-screen-lg mx-auto px-4 py-8 space-y-8">
