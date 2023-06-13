@@ -2,7 +2,6 @@
 import Headline from "../../shared/Headline";
 import GetStarted from "./GetStarted";
 import Check, { CheckWhite } from "./IconCheck";
-import { useEffect } from "react";
 
 interface PriceList {
   features: string[];
@@ -58,10 +57,12 @@ export const priceList: PriceList[] = [
     url: "",
   },
 ];
-
 export function getPriceList(listName: string): PriceList {
   return priceList.filter((e) => e.title === listName)[0];
 }
+const starting = getPriceList("Starter").features;
+const pro = getPriceList("Pro").features;
+const enterprise = getPriceList("Enterprise").features;
 
 const Pricing = () => {
   return (
@@ -78,8 +79,8 @@ const Pricing = () => {
             <Price>500</Price>
             {/* List */}
             <ul role="list" className="mb-8 space-y-4 text-left">
-              {getPriceList("Starter").features.map((e, i) => (
-                <Feature key={i + "key"}>
+              {starting.map((e, i) => (
+                <Feature key={i}>
                   <Check />
                   {e}
                 </Feature>
@@ -112,8 +113,8 @@ const Pricing = () => {
               </div>
               {/* List */}
               <ul role="list" className="mb-8 space-y-4 text-left">
-                {getPriceList("Pro").features.map((e, i) => (
-                  <Feature key={i + "key"}>
+                {pro.map((e, i) => (
+                  <Feature key={i}>
                     <CheckWhite />
                     {e}
                   </Feature>
@@ -129,7 +130,7 @@ const Pricing = () => {
             <Price>1500</Price>
             {/* List */}
             <ul role="list" className="mb-8 space-y-4 text-left">
-              {getPriceList("Enterprise").features.map((e, i) => (
+              {enterprise.map((e, i) => (
                 <Feature key={i + "key"}>
                   <Check />
                   {e}

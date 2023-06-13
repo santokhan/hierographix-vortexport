@@ -57,12 +57,12 @@ export default function FAQ() {
 
   return (
     <section>
-      <div className="lg:flex lg:gap-20 items-center max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-start max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
         <div className="w-full">
           <Image
             src={require("../../../assets/images/faqs.png")}
             alt="mockup"
-            className="w-full max-h-[600px] object-contain p-4"
+            className="w-full max-h-[600px] object-contain p-8"
           />
         </div>
         <div className="w-full max-w-lg space-y-8">
@@ -71,8 +71,8 @@ export default function FAQ() {
           </h3>
           <ul className="list-none space-y-6">
             {state.map((e, i) => (
-              <>
-                <li key={i}>
+              <li key={i}>
+                <div className="">
                   <button
                     type="button"
                     className="w-full flex gap-8 Acorditems-center justify-between"
@@ -80,7 +80,7 @@ export default function FAQ() {
                       handleFAQ(i);
                     }}
                   >
-                    <h5 className="w-full text-lg font-semibold text-white text-start">
+                    <h5 className="w-full text-lg font-semibold text-gray-100 text-start">
                       {e.ques}
                     </h5>
                     <i
@@ -96,9 +96,9 @@ export default function FAQ() {
                   >
                     {e.ans}
                   </p>
-                </li>
+                </div>
                 <hr className="border-white/20 last:border-none" />
-              </>
+              </li>
             ))}
           </ul>
         </div>

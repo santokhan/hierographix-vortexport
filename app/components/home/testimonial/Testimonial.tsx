@@ -55,14 +55,14 @@ export default function TestiMonial() {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 space-y-8 lg:space-y-16">
+    <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16">
       <Headline>
         <span className="text-teal-400">Testimonial</span> VortExpert's
         Excellence
       </Headline>
 
-      <div className="lg:grid grid-cols-2">
-        <div className="min-w-[380px] max-w-[380px] overflow-x-hidden space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
+        <div className="min-w-[380px] max-w-[380px] overflow-auto space-y-8">
           <svg
             width="77"
             height="59"
@@ -81,7 +81,7 @@ export default function TestiMonial() {
               (e, i) =>
                 i === crnt && (
                   <div
-                    className="min-w-[380px] max-w-[380px] space-y-5 transition-all ease-out"
+                    className="min-w-[360px] h-60 max-w-[380px] space-y-5 transition-all ease-out"
                     key={i}
                   >
                     <div className="flex gap-4 items-center">
@@ -101,6 +101,7 @@ export default function TestiMonial() {
             )}
           </div>
           <div className="flex justify-between items-center">
+            {/* decrement button */}
             <button
               type="button"
               className="text-vpurple-500 w-6 h-6 rounded-full hover:bg-white/10 flex justify-center items-center"
@@ -109,6 +110,7 @@ export default function TestiMonial() {
               <i className="fa fa-angle-left"></i>
             </button>
             <div className="flex gap-3">
+              {/* button loop */}
               {reviews.map((e, i) => (
                 <button
                   key={i}
@@ -122,6 +124,7 @@ export default function TestiMonial() {
                 ></button>
               ))}
             </div>
+            {/* increment button */}
             <button
               type="button"
               className="text-vpurple-500 w-6 h-6 rounded-full hover:bg-white/10 flex justify-center items-center"

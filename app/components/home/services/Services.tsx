@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Headline from "../../shared/Headline";
+import Styles from "./Services.module.css";
 
 export default function Services() {
   const cardsData = [
@@ -41,50 +43,60 @@ export default function Services() {
   ];
 
   return (
-    <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-12 lg:py-20">
-      {cardsData.map((e, i) => (
-        // card loop
-        <div className="max-w-md mx-auto rounded-lg shadow" key={i}>
-          <a href={e.url}>
-            <Image
-              src={require(`../../assets/images/services/${e.src}.png`)}
-              alt={e.title}
-              width={0}
-              height={0}
-              className="w-full object-contain"
-            />
-          </a>
-          <div className="p-5">
+    <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 space-y-10">
+      <Headline>
+        Our <span className="text-teal-400">Services</span>
+      </Headline>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {cardsData.map((e, i) => (
+          // card loop
+          <div className="max-w-md mx-auto rounded-lg shadow" key={i}>
             <a href={e.url}>
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white capitalize">
-                {e.title}
-              </h5>
+              <Image
+                src={require(`../../assets/images/services/${e.src}.png`)}
+                alt={e.title}
+                width={0}
+                height={0}
+                className="w-full object-contain"
+              />
             </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              {e.desc}
-            </p>
-            <a
-              href={e.url}
-              className="inline-flex items-center py-2 text-sm font-medium text-center text-vpurple-500/50 hover:text-vpurple-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
-            >
-              Read more
-              <svg
-                aria-hidden="true"
-                className="w-4 h-4 ml-2 -mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="p-5">
+              <a href={e.url}>
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-100 capitalize">
+                  {e.title}
+                </h5>
+              </a>
+              <p
+                className={
+                  "mb-3 font-normal text-gray-500 h-24 overflow-hidden text-ellipsis " +
+                  Styles.cardDesc
+                }
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
+                {e.desc}
+              </p>
+              <a
+                href={e.url}
+                className="inline-flex items-center py-2 text-sm font-medium text-center text-vpurple-500/50 hover:text-vpurple-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
+              >
+                Read more
+                <svg
+                  aria-hidden="true"
+                  className="w-4 h-4 ml-2 -mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

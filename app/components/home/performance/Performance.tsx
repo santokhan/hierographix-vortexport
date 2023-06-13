@@ -28,7 +28,7 @@ function Performance() {
 
   return (
     <section className="bg-white">
-      <div className="lg:flex lg:gap-20 max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
         <div className="w-full">
           <Image
             src={PerformanceImage}
@@ -36,7 +36,7 @@ function Performance() {
             className="w-full max-h-[600px] object-contain p-4"
           />
         </div>
-        <div className="w-full max-w-lg space-y-4">
+        <div className="w-full max-w-lg space-y-5">
           <h3 className="text-2xl lg:text-4xl font-bold leading-[1.2]">
             <span className="text-gray-900">Performance</span>{" "}
             <span className="text-teal-400">Rating</span>
@@ -55,7 +55,6 @@ function Performance() {
                 type="radio"
                 name="rating-2"
                 className="mask mask-star-2 bg-orange-400"
-                checked
               />
               <input
                 type="radio"
@@ -78,14 +77,14 @@ function Performance() {
             {ratings.map((e, i) => (
               <li key={i} className="space-y-2">
                 <div className="flex gap-3 items-center">
-                  <div className="bg-teal-500/50 rounded-full w-12 h-12 flex justify-center items-center">
+                  <div className="bg-teal-500/50 rounded-full w-10 lg:w-12 h-10 lg:h-12 flex justify-center items-center">
                     <Icon name={e.icon} />
                   </div>
-                  <h5 className="text-xl font-semibold text-gray-900">
+                  <h5 className="text-xl font-medium text-gray-900">
                     {e.title}
                   </h5>
                 </div>
-                <p className="text-gray-700 font-normal">{e.desc}</p>
+                <p className="text-gray-500 font-normal">{e.desc}</p>
               </li>
             ))}
           </ul>
