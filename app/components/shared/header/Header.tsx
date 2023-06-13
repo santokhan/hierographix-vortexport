@@ -9,7 +9,7 @@ import { navs, NavsDD } from "./NavList";
 const Header = (): JSX.Element => (
   <header className="h-16 relative">
     {/* Both will `"h-16"` */}
-    <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-vpurple-950">
+    <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-vpurple-950/95 backdrop-blur-sm shadow">
       <Navbar />
     </div>
   </header>
@@ -52,17 +52,17 @@ export function Navbar(): JSX.Element {
 export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
   const [dd, setdd] = useState(false);
   const dropdownRef = useRef<any>(null);
-  const toggler = useRef<any>(null);
+  const togglerRef = useRef<any>(null);
   function handleDD() {
     setdd(!dd);
   }
 
   useEffect(() => {
     function handleClick(e: Event) {
-      if (dropdownRef && dropdownRef.current) {
+      if (dropdownRef.current && togglerRef.current) {
         if (
           !dropdownRef.current.contains(e.target) &&
-          !toggler.current.contains(e.target)
+          !togglerRef.current.contains(e.target)
         ) {
           if (dd === true) {
             setdd(false);
@@ -79,7 +79,7 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
         type="button"
         className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
         onClick={handleDD}
-        ref={toggler}
+        ref={togglerRef}
       >
         {nav.name}
         <i className={`fa fa-angle-down ${dd && "-rotate-180"}`}></i>
@@ -87,11 +87,17 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
       {/* dropdown desktop */}
       {dd && (
         <div
-          className="absolute top-10 left-0 w-72 mt-1 flex flex-col bg-white z-[2] rounded-lg py-2 shadow-xl"
+          className="absolute top-10 left-0 w-72 mt-1 flex flex-col items-start bg-white/95 backdrop-blur-sm z-[2] rounded-lg py-3 shadow-xl"
           ref={dropdownRef}
         >
           {nav.dropdown.map((ele: any, ind: number) => (
-            <To key={ind} name={ele.name} url={ele.url} />
+            <a
+              key={ind}
+              href={ele.url}
+              className="rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500"
+            >
+              {ele.name}
+            </a>
           ))}
         </div>
       )}
@@ -184,7 +190,7 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
   const [dd, setdd] = useState(false);
   const pathName = usePathname();
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-6">
       <button
         type="button"
         className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
@@ -197,9 +203,15 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
       </button>
       {/* dropdown desktop */}
       {dd && (
-        <div className="flex flex-col bg-white z-[2] rounded-lg py-2">
+        <div className="flex flex-col items-center z-[2] rounded-lg py-2 border-y border-vpurple-500">
           {nav.dropdown.map((ele: any, ind: number) => (
-            <To key={ind} name={ele.name} url={ele.url} />
+            <a
+              key={ind}
+              href={ele.url}
+              className="rounded flex items-center h-10 px-5 text-gray-300 hover:text-vpurple-500"
+            >
+              {ele.name}
+            </a>
           ))}
         </div>
       )}
@@ -210,7 +222,7 @@ export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
   const pathName = usePathname();
   return (
     dropdown && (
-      <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-vpurple-950 z-[2]">
+      <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-vpurple-950/95 backdrop-blur-sm z-[2]">
         <div className="relative flex flex-col items-center justify-start gap-6 py-8">
           {navs.map((e: any, i: number) =>
             e.dropdown ? (

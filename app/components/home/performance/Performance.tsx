@@ -36,13 +36,13 @@ export default function Performance() {
             className="w-full max-h-[600px] object-contain p-4"
           />
         </div>
-        <div className="w-full max-w-lg space-y-5">
+        <div className="w-full max-w-lg space-y-4">
           <h3 className="text-2xl lg:text-4xl font-bold leading-[1.2]">
             <span className="text-gray-900">Performance</span>{" "}
             <span className="text-teal-400">Rating</span>
           </h3>
           <div className="flex justify-between">
-            <p className="font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+            <p className="font-light text-gray-500 md:text-lg lg:text-xl">
               Excellence in Action
             </p>
             <div className="rating">
@@ -73,7 +73,7 @@ export default function Performance() {
               />
             </div>
           </div>
-          <ul className="list-none space-y-6">
+          <ul className="list-none space-y-6 py-3">
             {ratings.map((e, i) => (
               <li key={i} className="space-y-2">
                 <div className="flex gap-3 items-center">

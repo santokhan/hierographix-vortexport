@@ -9,7 +9,7 @@ import Connect from "./components/home/connect/Connect";
 import FAQ from "./components/home/faq/FAQ";
 import Footer from "./components/shared/footer/Footer";
 
-export default function Home() {
+export default function FrontendDevelopment() {
   return (
     <div className="bg-vpurple-950">
       <Header />

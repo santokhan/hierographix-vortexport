@@ -4,7 +4,7 @@ import Footer from "../components/shared/footer/Footer";
 import Featured from "./featured/Featured";
 import Showcase from "./showcase/Showcase";
 
-export default function Blog() {
+export default function OurPortfolio() {
   return (
     <div className="bg-vpurple-950">
       <Header />

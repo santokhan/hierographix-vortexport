@@ -1,6 +1,6 @@
 "use client";
 import Headline from "../../shared/Headline";
-import GetStarted, { GetStartedWhite } from "./GetStarted";
+import GetStarted from "./GetStarted";
 import Check, { CheckWhite } from "./IconCheck";
 
 interface PriceList {
@@ -120,7 +120,7 @@ const Pricing = () => {
                   </Feature>
                 ))}
               </ul>
-              <GetStartedWhite to="/" />
+              <GetStarted to="/" />
             </div>
           </div>
           {/* Pricing Card */}

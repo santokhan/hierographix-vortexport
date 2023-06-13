@@ -1,116 +1,98 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import feature from "../../assets/images/portfolio/featured.png";
-import Headline from "@/app/components/shared/Headline";
-import Link from "next/link";
+import PerformanceImage from "../../../assets/images/performance/performance-rating.png";
 
-export default function Featured() {
+export default function Performance() {
   const ratings = [
-    { name: "Design" },
-    { name: "Frontend Development" },
-    { name: "Backend Development" },
+    {
+      desc: "Our track record is speaks for itself. We have consistently delivered exceptional result for a diverse range of client across industries.",
+      icon: "light",
+      title: "Proven success",
+    },
+    {
+      desc: "Our client Rep about our services. Their testimonials highlight our ability to surpass acceptations and drive tangible business growth.",
+      icon: "client",
+      title: "Client satisfaction",
+    },
+    {
+      desc: "We believe in data-driven strategies. Our performance metrics demonstrate the concrete result we achieve, from increased website traffic to higher conversion rates.",
+      icon: "database",
+      title: "Measurable impact",
+    },
+    {
+      desc: "Our dedication does not end with project completion. We provide our ongoing support and maintenance to ensure sustained success.",
+      icon: "support",
+      title: "Ongoing support",
+    },
   ];
 
   return (
-    <section className="bg-white py-12 lg:py-20 relative">
-      <Hill />
-      <div className="space-y-8 relative">
-        <Headline>
-          <span className="text-gray-800">Featured Project</span>
-        </Headline>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-xl px-4 mx-auto">
-          <div className="w-full">
-            <Image
-              src={feature}
-              alt="mockup"
-              className="w-full max-h-[600px] object-contain px-4"
-            />
-          </div>
-          <div className="w-full max-w-lg space-y-4">
-            <p className="text-gray-800 md:text-lg lg:text-xl font-medium">
-              Website Development for Unique Inc
+    <section className="bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
+        <div className="w-full">
+          <Image
+            src={PerformanceImage}
+            alt="mockup"
+            className="w-full max-h-[600px] object-contain p-4"
+          />
+        </div>
+        <div className="w-full max-w-lg space-y-5">
+          <h3 className="text-2xl lg:text-4xl font-bold leading-[1.2]">
+            <span className="text-gray-900">Performance</span>{" "}
+            <span className="text-teal-400">Rating</span>
+          </h3>
+          <div className="flex justify-between">
+            <p className="font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+              Excellence in Action
             </p>
-            <div className="flex gap-2 flex-wrap">
-              {ratings.map((e, i) => (
-                <button
-                  className="text-teal-500 bg-teal-100 h-8 px-3 rounded"
-                  key={i}
-                >
-                  {e.name}
-                </button>
-              ))}
+            <div className="rating">
+              <input
+                type="radio"
+                name="rating-2"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                className="mask mask-star-2 bg-orange-400"
+              />
+              <input
+                type="radio"
+                name="rating-2"
+                className="mask mask-star-2 bg-orange-400"
+              />
             </div>
-            <p className="text-gray-500">
-              In this project, we worked closely with the Unique Inc. team. to
-              create a website that describes the uniqueness and superiority of
-              their company. Through an in-depth consulting process, market
-              research, and a deep understanding of the company&apos;s vision
-              and goals, we have succeeded in designing and developing an
-              attractive, responsive, and functional website. This website
-              features a modern layout, intuitive navigation, and an
-              aesthetically pleasing design, reflecting the Unique Inc. brand.
-              perfectly. With engaging content and clear information, this
-              website provides an engaging user experience, encourages company
-              engagement and enhances Unique Inc&apos;s online presence.
-            </p>
-            <Link
-              href="/"
-              className="text-vpurple-500 flex gap-4 items-center my-3 hover:brightness-75"
-            >
-              See More <i className="fa fa-angle-right"></i>
-            </Link>
           </div>
+          <ul className="list-none space-y-6">
+            {ratings.map((e, i) => (
+              <li key={i} className="space-y-2">
+                <div className="flex gap-3 items-center">
+                  <div className="bg-teal-500/50 rounded-full w-10 lg:w-12 h-10 lg:h-12 flex justify-center items-center">
+                    <Icon name={e.icon} />
+                  </div>
+                  <h5 className="text-xl font-medium text-gray-900">
+                    {e.title}
+                  </h5>
+                </div>
+                <p className="text-gray-500 font-normal">{e.desc}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
   );
 }
-
-const Hill = () => (
-  <svg
-    className="w-1/2 lg:w-1/4 absolute bottom-0 right-0"
-    viewBox="0 0 595 254"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M268 254H21.1862L17.914 247.355C-28.3358 153.437 19.393 53.6267 110.356 13.201L140.06 0L268 254Z"
-      fill="url(#paint0_linear_1629_7)"
-    />
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      d="M595 254H348.186L344.914 247.355C298.664 153.437 346.393 53.6267 437.356 13.201L467.06 0L595 254Z"
-      fill="url(#paint1_linear_1629_7)"
-    />
-    <defs>
-      <linearGradient
-        id="paint0_linear_1629_7"
-        x1="31.5318"
-        y1="25.9479"
-        x2="152.13"
-        y2="304.133"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" />
-      </linearGradient>
-      <linearGradient
-        id="paint1_linear_1629_7"
-        x1="358.532"
-        y1="25.9479"
-        x2="479.13"
-        y2="304.133"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
 
 function Icon({ name }: { name: string }) {
   if (name === "light") {

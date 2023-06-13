@@ -1,14 +1,14 @@
 import Image from "next/image";
-import HeroImg from "../../../assets/images/hero-illustration.png";
+import HeroImg from "../../assets/images/frontend/expertise.png";
 import styles from "./Hero.module.css";
-import SubscribeForm from "./SubscribeForm";
+import SubscribeForm from "@/app/components/home/hero/SubscribeForm";
 
 function Hero() {
   return (
     <div className="relative overflow-hidden px-4">
       <Effect />
-      <div className="max-w-screen-xl mx-auto pb-20">
-        <div className="max-w-screen-lg mx-auto flex flex-col items-center space-y-8 py-16">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-screen-lg mx-auto flex flex-col items-center space-y-8 py-16 lg:py-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-start lg:text-center leading-[1.2]">
             Taking Your Business to the Summit of{" "}
             <span className="text-teal-500">Digital Success</span>
@@ -22,7 +22,7 @@ function Hero() {
         <Image
           src={HeroImg}
           alt="hero-image"
-          className="w-full object-contain"
+          className="w-full object-contain max-w-3xl mx-auto"
         />
       </div>
     </div>
