@@ -1,150 +1,263 @@
-import Image from "next/image";
+"use client";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../logo/Logo";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { SocialMedia } from "../footer/Footer";
+import { navs, NavsDD } from "./NavList";
 
-const Header = () => (
-  <header className="">
-    <Navbar />
+const Header = (): JSX.Element => (
+  <header className="h-16 relative">
+    {/* Both will `"h-16"` */}
+    <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-vpurple-950/95 backdrop-blur-sm shadow">
+      <Navbar />
+    </div>
   </header>
 );
+export function Navbar(): JSX.Element {
+  // mobile dropdown toggler, by default it will be false
+  const [dropdown, setdropdown] = useState<boolean>(false);
+  function handleDropdown() {
+    setdropdown(!dropdown);
+  }
 
-export default Header;
-
-const Navbar = () => (
-  <nav className="">
-    <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+  return (
+    <nav className="max-w-screen-xl mx-auto h-full flex flex-wrap items-center justify-between px-4">
       {/* Logo */}
-      <a href="#" className="flex items-center">
+      <Link href="/" className="flex items-center mt-1">
         <Logo dark={true} />
-      </a>
-      {/* Toggler */}
-      <button
-        data-collapse-toggle="navbar-dropdown"
-        type="button"
-        className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-dropdown"
-        aria-expanded="false"
-      >
-        <span className="sr-only">Open main menu</span>
-        <svg
-          className="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </button>
+      </Link>
+      <TogglerAndDDMobile dropdown={dropdown} handleDropdown={handleDropdown} />
       {/* Navs */}
-      <div className="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-        <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a
-              href="#"
-              className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-              aria-current="page"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <button
-              id="dropdownNavbarLink"
-              data-dropdown-toggle="dropdownNavbar"
-              className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-            >
-              Dropdown{" "}
-              <svg
-                className="w-5 h-5 ml-1"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-            <div
-              id="dropdownNavbar"
-              className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-            >
-              <ul
-                className="py-2 text-sm text-gray-700 dark:text-gray-400"
-                aria-labelledby="dropdownLargeButton"
-              >
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Dashboard
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Earnings
-                  </a>
-                </li>
-              </ul>
-              <div className="py-1">
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                >
-                  Sign out
-                </a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+      <div className="hidden lg:flex gap-8 items-center w-full lg:w-auto font-medium">
+        {navs.map((e: any, i: number) =>
+          e.dropdown ? (
+            <NavDropdown nav={e} key={i} />
+          ) : (
+            <To key={i} name={e.name} url={e.url} />
+          )
+        )}
       </div>
       {/* Contact Us */}
-      <a href="#" className="flex items-center border">
+      <Link
+        href="#"
+        className="hidden lg:flex items-center border border-white/50 h-10 px-4 rounded-lg hover:text-white hover:border-vpurple-500 hover:bg-vpurple-500 transition-colors ease-in focus:ring-4 focus:ring-vpurple-500/50"
+      >
         Contact Us
-      </a>
+      </Link>
+    </nav>
+  );
+}
+// dropdown for individual nav item
+export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
+  const [dd, setdd] = useState(false);
+  const dropdownRef = useRef<any>(null);
+  const togglerRef = useRef<any>(null);
+  function handleDD() {
+    setdd(!dd);
+  }
+
+  useEffect(() => {
+    function handleClick(e: Event) {
+      if (dropdownRef.current && togglerRef.current) {
+        if (
+          !dropdownRef.current.contains(e.target) &&
+          !togglerRef.current.contains(e.target)
+        ) {
+          if (dd === true) {
+            setdd(false);
+          }
+        }
+      }
+    }
+    document.addEventListener("click", handleClick);
+  }, [dd]);
+
+  return (
+    <div className="relative h-full flex items-center">
+      <button
+        type="button"
+        className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
+        onClick={handleDD}
+        ref={togglerRef}
+      >
+        {nav.name}
+        <i className={`fa fa-angle-down ${dd && "-rotate-180"}`}></i>
+      </button>
+      {/* dropdown desktop */}
+      {dd && (
+        <div
+          className="absolute top-10 left-0 w-72 mt-1 flex flex-col items-start bg-white/95 backdrop-blur-sm z-[2] rounded-lg py-3 shadow-xl"
+          ref={dropdownRef}
+        >
+          {nav.dropdown.map((ele: any, ind: number) => (
+            <a
+              key={ind}
+              href={ele.url}
+              className="rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500"
+            >
+              {ele.name}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
-  </nav>
-);
+  );
+}
+
+interface TypeToggler {
+  dropdown: boolean;
+  handleDropdown: () => void;
+}
+export function TogglerAndDDMobile({ dropdown, handleDropdown }: TypeToggler) {
+  return (
+    <div className="relative">
+      <button
+        type="button"
+        className="inline-flex items-center p-2 text-sm text-gray-100 rounded-lg lg:hidden hover:text-white focusring-2 focus:ring-gray-200"
+        onClick={handleDropdown}
+      >
+        {/* <svg
+         width="18"
+         height="16"
+         viewBox="0 0 18 16"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path
+           d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"
+           fill="currentColor"
+         />
+       </svg> */}
+        {dropdown ? (
+          <svg
+            className="h-6 w-6"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.5 1L0.999999 13.5"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              opacity="0.5"
+            />
+            <path
+              d="M1 1L13.5 13.5"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="h-6 w-6"
+            viewBox="0 0 21 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.667 1H5.66702"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M19.667 9.16699H1.00032"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M19.667 17.3335H10.3336"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        )}
+      </button>
+      <DropdownMobile dropdown={dropdown} />
+    </div>
+  );
+}
+// dropdown nested for mobile sidebar
+export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
+  const [dd, setdd] = useState(false);
+  const pathName = usePathname();
+  return (
+    <div className="flex flex-col items-center gap-6">
+      <button
+        type="button"
+        className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
+        onClick={() => {
+          setdd(!dd);
+        }}
+      >
+        {nav.name}
+        <i className={`fa fa-angle-down ${dd && "-rotate-180"}`}></i>
+      </button>
+      {/* dropdown desktop */}
+      {dd && (
+        <div className="flex flex-col items-center z-[2] rounded-lg py-2 border-y border-vpurple-500">
+          {nav.dropdown.map((ele: any, ind: number) => (
+            <a
+              key={ind}
+              href={ele.url}
+              className="rounded flex items-center h-10 px-5 text-gray-300 hover:text-vpurple-500"
+            >
+              {ele.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
+  const pathName = usePathname();
+  return (
+    dropdown && (
+      <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-vpurple-950/95 backdrop-blur-sm z-[2]">
+        <div className="relative flex flex-col items-center justify-start gap-6 py-8">
+          {navs.map((e: any, i: number) =>
+            e.dropdown ? (
+              <NavDropdownMobile nav={e} key={i} />
+            ) : (
+              <To key={i} name={e.name} url={e.url} />
+            )
+          )}
+          <SocialMedia />
+        </div>
+      </div>
+    )
+  );
+}
+export function To(props: { name: string; url: string }) {
+  const pathName = usePathname();
+  if (pathName === props.url) {
+    return (
+      <a
+        href={props.url}
+        className="rounded block px-5 text-vpurple-500 underline underline-offset-4 decoration-2"
+      >
+        {props.name}
+      </a>
+    );
+  } else {
+    return (
+      <a
+        href={props.url}
+        className="rounded block px-5 text-gray-300 hover:text-vpurple-500"
+      >
+        {props.name}
+      </a>
+    );
+  }
+}
+
+export default Header;
