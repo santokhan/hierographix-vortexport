@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "../logo/Logo";
+import Empower from "../../home/empower/Empower";
 
 export default function Footer() {
   const linkList = [
@@ -8,27 +9,27 @@ export default function Footer() {
       links: [
         {
           name: "Marketing",
-          url: "",
+          url: "/marketing",
         },
         {
           name: "Design",
-          url: "",
+          url: "/design",
         },
         {
           name: "Frontend Development",
-          url: "",
+          url: "/frontend-development",
         },
         {
           name: "Backend Development",
-          url: "",
+          url: "/backend-development",
         },
         {
           name: "Dev Ops",
-          url: "",
+          url: "/dev-ops",
         },
         {
           name: "Vortexpert's AI & Data Research",
-          url: "",
+          url: "/data-research",
         },
       ],
     },
@@ -37,15 +38,15 @@ export default function Footer() {
       links: [
         {
           name: "Expertise",
-          url: "",
+          url: "/expertise",
         },
         {
           name: "Our Portfolio",
-          url: "",
+          url: "/our-portfolio",
         },
         {
           name: "Blog",
-          url: "",
+          url: "/blog",
         },
       ],
     },
@@ -54,15 +55,15 @@ export default function Footer() {
       links: [
         {
           name: "Terms of use",
-          url: "",
+          url: "/terms-of-use",
         },
         {
           name: "Privacy Policy",
-          url: "",
+          url: "/privacy-policy",
         },
         {
           name: "Status",
-          url: "",
+          url: "/status",
         },
       ],
     },
@@ -70,6 +71,7 @@ export default function Footer() {
 
   return (
     <footer className="">
+      <Empower />
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="lg:flex lg:justify-between gap-12">
           <div className="lg:w-5/12 mb-6 md:mb-0 space-y-5">

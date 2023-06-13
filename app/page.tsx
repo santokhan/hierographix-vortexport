@@ -7,7 +7,6 @@ import Services from "./components/home/services/Services";
 import TestiMonial from "./components/home/testimonial/Testimonial";
 import Connect from "./components/home/connect/Connect";
 import FAQ from "./components/home/faq/FAQ";
-import Empower from "./components/home/empower/Empower";
 import Footer from "./components/shared/footer/Footer";
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       <TestiMonial />
       <Connect />
       <FAQ />
-      <Empower />
       <Footer />
     </div>
   );

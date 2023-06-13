@@ -1,0 +1,11 @@
+@media (min-width: 1024px) {
+  .showcaseGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a b c"
+      "d d e"
+      "f g h"
+      "i j j"
+      "k j j";
+  }
+}

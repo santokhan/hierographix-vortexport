@@ -4,67 +4,22 @@ import Logo from "../logo/Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SocialMedia } from "../footer/Footer";
-
-interface Navs {
-  name: string;
-  url?: string;
-}
-interface Dropodown {
-  icon: string;
-  name: string;
-  url: string;
-}
-interface NavsDD {
-  name: string;
-  url: string;
-  dropdown: Dropodown[];
-}
-
-const navs = [
-  { name: "Home", url: "/" },
-  {
-    name: "Expertise",
-    dropdown: [
-      { icon: "speaker", name: "Marketing", url: "marketing" },
-      { icon: "design", name: "Design", url: "design" },
-      {
-        icon: "code",
-        name: "Frontend Development",
-        url: "frontend-development",
-      },
-      {
-        icon: "curly-braces",
-        name: "Backend Development",
-        url: "backend-development",
-      },
-      { icon: "command-line", name: "Dev Ops", url: "dev-ops" },
-      {
-        icon: "brain",
-        name: "Vortexpert's AI & Data Research",
-        url: "data-research",
-      },
-    ],
-  },
-  { name: "Our Portfolio", url: "our-portfolio" },
-  { name: "Blog", url: "blog" },
-];
+import { navs, NavsDD } from "./NavList";
 
 const Header = (): JSX.Element => (
   <header className="h-16 relative">
     {/* Both will `"h-16"` */}
-    <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[1] bg-vpurple-950">
+    <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-vpurple-950">
       <Navbar />
     </div>
   </header>
 );
-
 export function Navbar(): JSX.Element {
   // mobile dropdown toggler, by default it will be false
   const [dropdown, setdropdown] = useState<boolean>(false);
   function handleDropdown() {
     setdropdown(!dropdown);
   }
-  const pathName = usePathname();
 
   return (
     <nav className="max-w-screen-xl mx-auto h-full flex flex-wrap items-center justify-between px-4">
@@ -79,16 +34,7 @@ export function Navbar(): JSX.Element {
           e.dropdown ? (
             <NavDropdown nav={e} key={i} />
           ) : (
-            <a
-              key={i}
-              href={e.url}
-              className={`rounded block px-5 text-gray-400 hover:text-vpurple-500 ${
-                pathName === e.url &&
-                "text-vpurple-500 underline underline-offset-4 decoration-2"
-              }`}
-            >
-              {e.name}
-            </a>
+            <To key={i} name={e.name} url={e.url} />
           )
         )}
       </div>
@@ -102,7 +48,6 @@ export function Navbar(): JSX.Element {
     </nav>
   );
 }
-
 // dropdown for individual nav item
 export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
   const [dd, setdd] = useState(false);
@@ -132,7 +77,7 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
     <div className="relative h-full flex items-center">
       <button
         type="button"
-        className="flex gap-3 items-center text-gray-400 rounded hover:text-vpurple-500"
+        className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
         onClick={handleDD}
         ref={toggler}
       >
@@ -146,13 +91,7 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
           ref={dropdownRef}
         >
           {nav.dropdown.map((ele: any, ind: number) => (
-            <a
-              key={ind}
-              href={ele.url}
-              className="rounded px-5 h-12 flex items-center text-gray-800 hover:text-vpurple-500"
-            >
-              {ele.name}
-            </a>
+            <To key={ind} name={ele.name} url={ele.url} />
           ))}
         </div>
       )}
@@ -240,14 +179,15 @@ export function TogglerAndDDMobile({ dropdown, handleDropdown }: TypeToggler) {
     </div>
   );
 }
+// dropdown nested for mobile sidebar
 export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
   const [dd, setdd] = useState(false);
-
+  const pathName = usePathname();
   return (
     <div className="flex flex-col items-center gap-4">
       <button
         type="button"
-        className="flex gap-3 items-center text-gray-400 rounded hover:text-vpurple-500"
+        className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
         onClick={() => {
           setdd(!dd);
         }}
@@ -259,13 +199,7 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
       {dd && (
         <div className="flex flex-col bg-white z-[2] rounded-lg py-2">
           {nav.dropdown.map((ele: any, ind: number) => (
-            <a
-              key={ind}
-              href={ele.url}
-              className="rounded px-5 h-12 flex items-center text-gray-800 hover:text-vpurple-500"
-            >
-              {ele.name}
-            </a>
+            <To key={ind} name={ele.name} url={ele.url} />
           ))}
         </div>
       )}
@@ -273,6 +207,7 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
   );
 }
 export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
+  const pathName = usePathname();
   return (
     dropdown && (
       <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-vpurple-950 z-[2]">
@@ -281,13 +216,7 @@ export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
             e.dropdown ? (
               <NavDropdownMobile nav={e} key={i} />
             ) : (
-              <a
-                key={i}
-                href={e.url}
-                className="rounded block px-5 text-gray-400 hover:text-vpurple-500"
-              >
-                {e.name}
-              </a>
+              <To key={i} name={e.name} url={e.url} />
             )
           )}
           <SocialMedia />
@@ -295,6 +224,28 @@ export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
       </div>
     )
   );
+}
+export function To(props: { name: string; url: string }) {
+  const pathName = usePathname();
+  if (pathName === props.url) {
+    return (
+      <a
+        href={props.url}
+        className="rounded block px-5 text-vpurple-500 underline underline-offset-4 decoration-2"
+      >
+        {props.name}
+      </a>
+    );
+  } else {
+    return (
+      <a
+        href={props.url}
+        className="rounded block px-5 text-gray-300 hover:text-vpurple-500"
+      >
+        {props.name}
+      </a>
+    );
+  }
 }
 
 export default Header;
