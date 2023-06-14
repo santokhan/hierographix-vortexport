@@ -18,7 +18,7 @@ export const cardsData: BCard[] = [
     src: "potential-of-ai",
     title:
       "Unlocking the Potential of AI: Exploring Its Impact on Business and Society",
-    url: "/",
+    url: "/blog/2",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",
@@ -28,7 +28,7 @@ export const cardsData: BCard[] = [
     caption: "Vortexpert's AI & Data Research",
     title:
       "AI in Web Development: Enhancing User Experiences and Driving Innovation",
-    url: "/",
+    url: "/blog/3",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",

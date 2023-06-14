@@ -3,6 +3,7 @@ import Image from "next/image";
 import feature from "../../assets/images/portfolio/featured.png";
 import Link from "next/link";
 import Headline from "@/components/shared/Headline";
+import SimpleSlider from "./SimpleSlider";
 
 export default function Featured() {
   const ratings = [
@@ -20,11 +21,12 @@ export default function Featured() {
         </Headline>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-xl px-4 mx-auto">
           <div className="w-full">
-            <Image
+            {/* <Image
               src={feature}
               alt="mockup"
               className="w-full max-h-[600px] object-contain px-4"
-            />
+            /> */}
+            <SimpleSlider />
           </div>
           <div className="w-full max-w-lg space-y-4">
             <p className="text-gray-800 md:text-lg lg:text-xl font-medium">

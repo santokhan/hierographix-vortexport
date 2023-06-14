@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import heroImg from "../../assets/images/portfolio/portfolio.png";
+import heroImg from "../../../app/assets/images/portfolio/portfolio.png";
 
 export default function Hero() {
   return (
