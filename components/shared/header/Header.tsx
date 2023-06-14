@@ -26,7 +26,7 @@ export function Navbar(): JSX.Element {
   }
   return (
     <nav className="max-w-screen-xl mx-auto h-full flex flex-wrap items-center justify-between px-4">
-      <Link href="/" className="flex items-center mt-1">
+      <Link href="/" className="flex items-center mt-1 w-1/4">
         <Logo dark={true} />
       </Link>
       <TogglerAndDDMobile dropdown={dropdown} handleDropdown={handleDropdown} />
@@ -52,6 +52,7 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
   function handleDD() {
     setdd(!dd);
   }
+  const pathName = usePathname();
 
   useEffect(() => {
     function handleClick(e: Event) {
@@ -90,7 +91,9 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
             <a
               key={ind}
               href={ele.url}
-              className="rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500"
+              className={`rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:hover:text-vpurple-500 dark:text-gray-800 ${
+                pathName === ele.url && "text-vpurple-500 dark:text-vpurple-500"
+              }`}
             >
               {ele.name}
             </a>
@@ -193,7 +196,7 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
               key={ind}
               href={ele.url}
               className={`rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:text-gray-300 ${
-                pathName === ele.url && "text-vpurple-500"
+                pathName === ele.url && "text-vpurple-500 dark:text-vpurple-500"
               }`}
             >
               {ele.name}
@@ -224,23 +227,16 @@ export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
 }
 export function To(props: { name: string; url: string }) {
   const pathName = usePathname();
-  if (pathName === props.url) {
-    return (
-      <a
-        href={props.url}
-        className="rounded block text-vpurple-500 underline underline-offset-4 decoration-2"
-      >
-        {props.name}
-      </a>
-    );
-  } else {
-    return (
-      <a
-        href={props.url}
-        className="rounded block text-gray-800 hover:text-vpurple-500 dark:text-gray-300"
-      >
-        {props.name}
-      </a>
-    );
-  }
+  return (
+    <a
+      href={props.url}
+      className={
+        pathName === props.url
+          ? "rounded block text-vpurple-500 dark:text-vpurple-500 underline underline-offset-4 decoration-2"
+          : "rounded block text-gray-800 dark:text-gray-300 hover:text-vpurple-500"
+      }
+    >
+      {props.name}
+    </a>
+  );
 }

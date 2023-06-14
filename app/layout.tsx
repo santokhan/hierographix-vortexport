@@ -24,6 +24,7 @@ export default function RootLayout({ children }: RooteLayout) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
           rel="stylesheet"
         />
+        <link rel="shortcut icon" href="/favicon.png" />
       </head>
       <body className={inter.className}>
         <Header />
