@@ -20,14 +20,14 @@ export default function Connect(): JSX.Element {
           />
         </svg>
 
-        <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 bg-white lg:bg-transparent">
+        <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 bg-white lg:bg-transparent py-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center relative">
             <Image
               src={sunami}
               alt="hero-image"
-              className="lg:col-span-5 w-full object-contain"
+              className="lg:col-span-5 p-4 w-full object-contain"
             />
-            <div className="lg:col-span-6 space-y-5 py-16 lg:py-24">
+            <div className="lg:col-span-7 space-y-5 py-16 lg:py-24">
               <div className="space-y-2">
                 <h5 className="font-meduim text-gray-400 text-lg uppercase">
                   Unleashing Digital Marvels
@@ -38,7 +38,7 @@ export default function Connect(): JSX.Element {
                   </div>
                 </Headline>
               </div>
-              <p className="text-gray-500 lg:text-lg">
+              <p className="text-gray-500">
                 Every step of the way, we focus on speed, reliability and user
                 satisfaction, so that each of our projects becomes an engaging
                 and intuitive flow. With attention to detail, we create
