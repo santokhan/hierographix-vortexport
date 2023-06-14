@@ -1,74 +1,77 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "../logo/Logo";
 import Empower from "../../home/empower/Empower";
+import { usePathname } from "next/navigation";
 
+export const linkList = [
+  {
+    title: "Services",
+    links: [
+      {
+        name: "Marketing",
+        url: "/marketing",
+      },
+      {
+        name: "Design",
+        url: "/design",
+      },
+      {
+        name: "Frontend Development",
+        url: "/frontend-development",
+      },
+      {
+        name: "Backend Development",
+        url: "/backend-development",
+      },
+      {
+        name: "Dev Ops",
+        url: "/dev-ops",
+      },
+      {
+        name: "Vortexpert's AI & Data Research",
+        url: "/data-research",
+      },
+    ],
+  },
+  {
+    title: "Useful link",
+    links: [
+      {
+        name: "Expertise",
+        url: "/expertise",
+      },
+      {
+        name: "Our Portfolio",
+        url: "/our-portfolio",
+      },
+      {
+        name: "Blog",
+        url: "/blog",
+      },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      {
+        name: "Terms of use",
+        url: "/terms-of-use",
+      },
+      {
+        name: "Privacy Policy",
+        url: "/privacy-policy",
+      },
+      {
+        name: "Status",
+        url: "/status",
+      },
+    ],
+  },
+];
 export default function Footer() {
-  const linkList = [
-    {
-      title: "Services",
-      links: [
-        {
-          name: "Marketing",
-          url: "/marketing",
-        },
-        {
-          name: "Design",
-          url: "/design",
-        },
-        {
-          name: "Frontend Development",
-          url: "/frontend-development",
-        },
-        {
-          name: "Backend Development",
-          url: "/backend-development",
-        },
-        {
-          name: "Dev Ops",
-          url: "/dev-ops",
-        },
-        {
-          name: "Vortexpert's AI & Data Research",
-          url: "/data-research",
-        },
-      ],
-    },
-    {
-      title: "Useful link",
-      links: [
-        {
-          name: "Expertise",
-          url: "/expertise",
-        },
-        {
-          name: "Our Portfolio",
-          url: "/our-portfolio",
-        },
-        {
-          name: "Blog",
-          url: "/blog",
-        },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        {
-          name: "Terms of use",
-          url: "/terms-of-use",
-        },
-        {
-          name: "Privacy Policy",
-          url: "/privacy-policy",
-        },
-        {
-          name: "Status",
-          url: "/status",
-        },
-      ],
-    },
-  ];
-
+  const pathName = usePathname();
   return (
     <footer className="">
       <Empower />
@@ -89,15 +92,17 @@ export default function Footer() {
           <div className="lg:w-7/12 flex gap-8 flex-wrap flex-col lg:flex-row justify-between">
             {linkList.map((e, i) => (
               <div key={i}>
-                <h2 className="mb-4 font-semibold text-gray-500 uppercase">
+                <h2 className="mb-4 font-semibold text-gray-400 dark:text-gray-500 uppercase">
                   {e.title}
                 </h2>
-                <ul className="text-gray-200 font-medium">
-                  {e.links.map((ele, ind) => (
+                <ul className="text-gray-800 dark:text-gray-200 font-medium">
+                  {e.links.map((ele: any, ind: number) => (
                     <li className="mb-4" key={ind}>
                       <a
                         href={ele.url}
-                        className="hover:text-vpurple-500 flex items-center gap-2 group transition-all ease-out duration-200 relative"
+                        className={`hover:text-vpurple-500 flex items-center gap-2 group transition-all ease-out duration-200 relative ${
+                          ele.url === pathName && "text-vpurple-500"
+                        }`}
                       >
                         <div className="h-[2px] group-hover:w-2 bg-vpurple-500 transition-all ease-out duration-200 absolute right-[102%]"></div>{" "}
                         {ele.name}
@@ -110,7 +115,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-6 border-gray-800 sm:mx-auto lg:my-8" />
+        <hr className="my-6 border-gray-200 dark:border-gray-800 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center justify-center">
           <span className="text-sm text-gray-500 sm:text-center">
             © 2023 . All Rights Reserved.
@@ -125,19 +130,19 @@ export const SocialMedia = () => (
   <div className="flex items-center gap-4">
     <a
       href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500"
+      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"
     >
       <i className="fab fa-facebook-f"></i>
     </a>
     <a
       href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500"
+      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"
     >
       <i className="fab fa-instagram"></i>
     </a>
     <a
       href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500"
+      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"
     >
       <i className="fab fa-twitter"></i>
     </a>

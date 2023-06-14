@@ -6,7 +6,7 @@ import Headline from "../../shared/Headline";
 
 export default function Empower() {
   return (
-    <div className="relative overflow-hidden px-4">
+    <div className="relative overflow-hidden px-4 text-vpurple-500 dark:text-[#454657]">
       <svg
         className="w-full absolute"
         viewBox="0 0 1440 657"
@@ -26,8 +26,8 @@ export default function Empower() {
             y2="657"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#454657" stopOpacity="0.38" />
-            <stop offset="1" stopColor="#454657" stopOpacity="0" />
+            <stop stopColor="currentColor" stopOpacity="0.38" />
+            <stop offset="1" stopColor="currentColor" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

@@ -2,18 +2,22 @@ import Image from "next/image";
 import logoSrc from "../../../assets/images/logo.png";
 import logoSrcWhite from "../../../assets/images/logo-white.png";
 
-const Logo = (props: { dark?: boolean }) => (
+interface Props {
+  dark?: boolean;
+}
+
+const Logo = (props: Props) => (
   <div className="">
-    {props.dark ? (
-      <Image
-        src={logoSrcWhite}
-        alt="logo"
-        className="h-6 w-full object-contain"
-      />
-    ) : (
-      <Image src={logoSrc} alt="logo" className="h-6 w-full object-contain" />
-    )}
+    <Image
+      src={logoSrcWhite}
+      alt="logo"
+      className="h-6 w-full object-contain hidden dark:block"
+    />
+    <Image
+      src={logoSrc}
+      alt="logo"
+      className="h-6 w-full object-contain dark:hidden"
+    />
   </div>
 );
-
 export default Logo;

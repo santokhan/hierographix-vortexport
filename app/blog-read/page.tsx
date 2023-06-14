@@ -6,7 +6,7 @@ import Article from "./article/Article";
 import BottomBar from "../components/shared/theme-toggler/ThemeToggler";
 export default function Blog() {
   return (
-    <div className="bg-white dark:bg-vpurple-950">
+    <div className="bg-vpurple-950">
       <Header />
       <Hero />
       <EditorChoice />

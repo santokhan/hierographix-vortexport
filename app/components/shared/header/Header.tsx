@@ -5,31 +5,33 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SocialMedia } from "../footer/Footer";
 import { navs, NavsDD } from "./NavList";
+import Contact from "./ContactUs";
 
-const Header = (): JSX.Element => (
-  <header className="h-16 relative">
-    {/* Both will `"h-16"` */}
-    <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-vpurple-950/95 backdrop-blur-sm shadow">
-      <Navbar />
-    </div>
-  </header>
-);
+export default function Header(): JSX.Element {
+  return (
+    <header className="h-16 relative">
+      {/* Both will `"h-16"` */}
+      <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
+        <Navbar />
+      </div>
+    </header>
+  );
+}
+
 export function Navbar(): JSX.Element {
   // mobile dropdown toggler, by default it will be false
   const [dropdown, setdropdown] = useState<boolean>(false);
   function handleDropdown() {
     setdropdown(!dropdown);
   }
-
   return (
     <nav className="max-w-screen-xl mx-auto h-full flex flex-wrap items-center justify-between px-4">
-      {/* Logo */}
       <Link href="/" className="flex items-center mt-1">
         <Logo dark={true} />
       </Link>
       <TogglerAndDDMobile dropdown={dropdown} handleDropdown={handleDropdown} />
       {/* Navs */}
-      <div className="hidden lg:flex gap-8 items-center w-full lg:w-auto font-medium">
+      <div className="hidden lg:flex gap-12 items-center w-full lg:w-auto font-medium">
         {navs.map((e: any, i: number) =>
           e.dropdown ? (
             <NavDropdown nav={e} key={i} />
@@ -38,13 +40,7 @@ export function Navbar(): JSX.Element {
           )
         )}
       </div>
-      {/* Contact Us */}
-      <Link
-        href="#"
-        className="hidden lg:flex items-center border border-white/50 h-10 px-4 rounded-lg hover:text-white hover:border-vpurple-500 hover:bg-vpurple-500 transition-colors ease-in focus:ring-4 focus:ring-vpurple-500/50"
-      >
-        Contact Us
-      </Link>
+      <Contact />
     </nav>
   );
 }
@@ -77,7 +73,7 @@ export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
     <div className="relative h-full flex items-center">
       <button
         type="button"
-        className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
+        className="flex gap-3 items-center text-gray-800 rounded hover:text-vpurple-500 dark:text-gray-300"
         onClick={handleDD}
         ref={togglerRef}
       >
@@ -117,18 +113,6 @@ export function TogglerAndDDMobile({ dropdown, handleDropdown }: TypeToggler) {
         className="inline-flex items-center p-2 text-sm text-gray-100 rounded-lg lg:hidden hover:text-white focusring-2 focus:ring-gray-200"
         onClick={handleDropdown}
       >
-        {/* <svg
-         width="18"
-         height="16"
-         viewBox="0 0 18 16"
-         fill="none"
-         xmlns="http://www.w3.org/2000/svg"
-       >
-         <path
-           d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"
-           fill="currentColor"
-         />
-       </svg> */}
         {dropdown ? (
           <svg
             className="h-6 w-6"
@@ -193,7 +177,7 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
     <div className="flex flex-col items-center gap-6">
       <button
         type="button"
-        className="flex gap-3 items-center text-gray-300 rounded hover:text-vpurple-500"
+        className="flex gap-3 items-center text-gray-800 rounded hover:text-vpurple-500 dark:text-gray-300"
         onClick={() => {
           setdd(!dd);
         }}
@@ -208,7 +192,7 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
             <a
               key={ind}
               href={ele.url}
-              className="rounded flex items-center h-10 px-5 text-gray-300 hover:text-vpurple-500"
+              className="rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:text-gray-300"
             >
               {ele.name}
             </a>
@@ -243,7 +227,7 @@ export function To(props: { name: string; url: string }) {
     return (
       <a
         href={props.url}
-        className="rounded block px-5 text-vpurple-500 underline underline-offset-4 decoration-2"
+        className="rounded block text-vpurple-500 underline underline-offset-4 decoration-2"
       >
         {props.name}
       </a>
@@ -252,12 +236,10 @@ export function To(props: { name: string; url: string }) {
     return (
       <a
         href={props.url}
-        className="rounded block px-5 text-gray-300 hover:text-vpurple-500"
+        className="rounded block text-gray-800 hover:text-vpurple-500 dark:text-gray-300"
       >
         {props.name}
       </a>
     );
   }
 }
-
-export default Header;

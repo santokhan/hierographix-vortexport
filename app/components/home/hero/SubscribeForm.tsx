@@ -1,12 +1,12 @@
 export default function SubscribeForm() {
   return (
     <form className="w-full max-w-md">
-      <div className="rounded-lg bg-[#353547] flex">
+      <div className="rounded-lg bg-gray-100 dark:bg-[#353547] flex">
         <input
           type="text"
           id="sub-email"
-          className="bg-transparent h-12 px-4 rounded-lg w-full focus:outline-none"
-          placeholder="Your email"
+          className="bg-transparent h-12 px-4 rounded-lg w-full focus:outline-none text-gray-800 dark:text-white"
+          placeholder="Enter your email"
         />
         <label htmlFor="sub-email">
           <button
