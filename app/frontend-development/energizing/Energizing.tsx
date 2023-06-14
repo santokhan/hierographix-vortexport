@@ -1,12 +1,12 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-import Headline from "@/app/components/shared/Headline";
+import Headline from "@/components/shared/Headline";
 import Image from "next/image";
 import energizingImg from "../../assets/images/frontend/energizing.png";
 
 export default function Electrofying() {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16">
+    <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 justify-between">
         <Image
           src={energizingImg}
@@ -14,7 +14,7 @@ export default function Electrofying() {
           className="lg:col-span-5 w-full object-contain p-6"
         />
         <div className=""></div>
-        <div className="lg:col-span-6 space-y-5 py-16 lg:py-24">
+        <div className="lg:col-span-6 space-y-5 py-10 lg:py-24">
           <div className="space-y-2">
             <h5 className="font-meduim text-gray-400 text-lg uppercase">
               Unleashing Digital Marvels

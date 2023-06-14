@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-import Headline from "@/app/components/shared/Headline";
+import Headline from "@/components/shared/Headline";
 import Image from "next/image";
 import expertise from "../../assets/images/frontend/expertise-section-pattern.png";
 
@@ -37,7 +37,7 @@ export default function Electrofying() {
           <Image
             src={expertise}
             alt="hero-image"
-            className="lg:col-span-5 w-full object-contain"
+            className="lg:col-span-5 w-full object-contain pb-12 lg:pb-0"
           />
         </div>
       </div>

@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import Headline from "@/app/components/shared/Headline";
+
+import Headline from "@/components/shared/Headline";
 import sunami from "../../assets/images/frontend/sunami.png";
 import Image from "next/image";
 
 export default function Connect(): JSX.Element {
   return (
-    <div className="relative lg:mt-16 bg-vpurple-500 lg:bg-transparent overflow-hidden pb-10 lg:mb-20">
+    <div className="relative lg:mt-16 bg-vpurple-500 lg:bg-transparent overflow-hidden my-16 lg:mb-20">
       <div className="relative">
         <svg
           className="absolute w-10/12 top-0 left-1/2 -translate-x-1/2 hidden lg:block text-white"
@@ -18,14 +19,15 @@ export default function Connect(): JSX.Element {
             fill="currentColor"
           />
         </svg>
-        <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 bg-white lg:bg-transparent">
+
+        <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 bg-white lg:bg-transparent py-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center relative">
             <Image
               src={sunami}
               alt="hero-image"
-              className="lg:col-span-5 w-full object-contain"
+              className="lg:col-span-5 p-4 w-full object-contain"
             />
-            <div className="lg:col-span-6 space-y-5 py-16 lg:py-24">
+            <div className="lg:col-span-7 space-y-5 py-16 lg:py-24">
               <div className="space-y-2">
                 <h5 className="font-meduim text-gray-400 text-lg uppercase">
                   Unleashing Digital Marvels
@@ -36,7 +38,7 @@ export default function Connect(): JSX.Element {
                   </div>
                 </Headline>
               </div>
-              <p className="text-gray-500 lg:text-lg">
+              <p className="text-gray-500">
                 Every step of the way, we focus on speed, reliability and user
                 satisfaction, so that each of our projects becomes an engaging
                 and intuitive flow. With attention to detail, we create
@@ -71,12 +73,12 @@ export default function Connect(): JSX.Element {
             <Headline>
               <span className="text-center">Connect with VortExpert</span>
             </Headline>
-            <div className="space-y-5 lg:space-y-8 text-white">
-              <p className="text-white text-center">
+            <div className="space-y-8 lg:space-y-8 text-white">
+              <p className="text-gray-200 text-center">
                 Contact VortExpert Today & Unleash Your Business's True
                 Potential with our Expertise and Innovation
               </p>
-              <ul className="list-none space-y-6">
+              <ul className="list-none space-y-4 lg:space-y-6 text-white">
                 <li className="flex items-center gap-3">
                   <i className="fa fa-phone"></i>
                   +12-3456-7890-00

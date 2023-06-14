@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  // Santo
   theme: {
     extend: {
       colors: {
@@ -23,4 +24,5 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  darkMode: 'class'
 }

@@ -1,0 +1,14 @@
+.simpleSlider {
+  animation: slider 250ms ease-in-out forwards;
+}
+
+@keyframes slider {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
