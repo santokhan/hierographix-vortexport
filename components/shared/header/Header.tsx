@@ -113,7 +113,7 @@ export function TogglerAndDDMobile({ dropdown, handleDropdown }: TypeToggler) {
     <div className="relative">
       <button
         type="button"
-        className="inline-flex items-center p-2 text-sm text-gray-100 rounded-lg lg:hidden hover:text-white focusring-2 focus:ring-gray-200"
+        className="inline-flex items-center p-2 text-sm text-gray-800 dark:text-gray-100 rounded-lg lg:hidden hover:text-white focusring-2 focus:ring-gray-200"
         onClick={handleDropdown}
       >
         {dropdown ? (
