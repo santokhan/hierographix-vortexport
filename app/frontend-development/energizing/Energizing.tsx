@@ -6,7 +6,7 @@ import energizingImg from "../../assets/images/frontend/energizing.png";
 
 export default function Electrofying() {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16">
+    <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 justify-between">
         <Image
           src={energizingImg}

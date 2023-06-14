@@ -37,7 +37,7 @@ export default function Electrofying() {
           <Image
             src={expertise}
             alt="hero-image"
-            className="lg:col-span-5 w-full object-contain"
+            className="lg:col-span-5 w-full object-contain pb-12 lg:pb-0"
           />
         </div>
       </div>
