@@ -15,7 +15,7 @@ export default function Mesmerizing() {
   data = data.filter((e, i) => i !== 3);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 space-y-10 py-16 lg:py-20">
+    <div className="max-w-screen-xl mx-auto space-y-8 py-16 lg:py-20">
       <Headline>
         Mesmerizing portfolio of{" "}
         <span className="text-teal-400">extraordinary creations</span>
@@ -24,9 +24,9 @@ export default function Mesmerizing() {
         {data.slice(0, 5).map((e, i) => {
           let w;
           if (i === 0 || i === 1 || i === 2) {
-            w = "w-4/12";
+            w = "w-full lg:w-4/12";
           } else if (i === 3 || i === 4) {
-            w = "w-5/12";
+            w = "w-full lg:w-5/12";
           }
 
           return (
@@ -60,4 +60,3 @@ export default function Mesmerizing() {
     </div>
   );
 }
-

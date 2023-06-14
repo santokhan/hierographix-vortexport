@@ -81,7 +81,7 @@ export default function ReadBlog() {
   return (
     <div className="w-full">
       {/* Hero */}
-      <div className="flex justify-start py-4">
+      <div className="flex justify-start py-6">
         <Link
           className="flex gap-3 items-center justify-start whitespace-nowrap text-vpurple-500 hover:underline underline-offset-2"
           href="/blog"
@@ -98,7 +98,7 @@ export default function ReadBlog() {
           className="w-full h-auto rounded-2xl"
         />
         {/* Text Content */}
-        <div className="absolute left-0 top-0 p-8 lg:p-16 w-full h-full image-top-effect z-[3] flex flex-col justify-between">
+        <div className="absolute left-0 top-0 p-4 lg:p-16 w-full h-full image-top-effect z-[3] flex flex-col justify-between">
           <div className="space-y-2">
             <h5 className="font-meduim text-white text-lg uppercase">
               {blogDetailsData.caption}
@@ -110,22 +110,24 @@ export default function ReadBlog() {
             </h3>
           </div>
 
-          <div className="flex gap-4 items-center whitespace-nowrap ml-auto text-gray-300">
-            <div className="flex items-center gap-2 ">
+          <div className="flex gap-4 items-center whitespace-nowrap lg:ml-auto text-gray-300">
+            <div className="flex items-center gap-2 text-xs lg:text-sm">
               <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
               {blogDetailsData.creator}
             </div>
             <div className="w-[2px] h-3 bg-gray-300"></div>
-            <div className="">{blogDetailsData.timestamp}</div>
+            <div className="text-xs lg:text-sm">
+              {blogDetailsData.timestamp}
+            </div>
             <div className="w-[2px] h-3 bg-gray-300"></div>
-            <div className="">{blogDetailsData.read}</div>
+            <div className="text-xs lg:text-sm">{blogDetailsData.read}</div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 py-16 lg:py-20">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 py-16 lg:py-20">
         {/* Main content */}
-        <div className="lg:col-span-9 space-y-8">
+        <div className="order-2 lg:order-1 lg:col-span-9 space-y-8">
           {blogDetailsData.details.map((e: any, i: number) => {
             const { img, title, desc, important } = e;
             return (
@@ -140,7 +142,7 @@ export default function ReadBlog() {
         </div>
 
         {/* Sidebar */}
-        <aside className="lg:col-span-3 space-y-8">
+        <aside className="order-1 lg:order-2 lg:col-span-3 space-y-8">
           <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400">
             <i className="fa fa-history"></i>
             {blogDetailsData.read}
@@ -152,10 +154,13 @@ export default function ReadBlog() {
           <div className="text-gray-500 dark:text-gray-400">
             <div className="">Related Article</div>
             {blogDetailsData.relatedArticles.map((e, i) => (
-              <div className="border-b last:border-none" key={i}>
+              <div
+                className="border-b last:border-none dark:border-gray-200"
+                key={i}
+              >
                 <Link
                   href={e.url}
-                  className="font-medium text-gray-800 dark:text-gray-200 block py-3 hover:text-vpurple-500 hover:dark:text-vpurple-500"
+                  className="font-medium text-gray-800 dark:text-gray-200 block py-4 hover:text-vpurple-500 hover:dark:text-vpurple-500"
                 >
                   {e.text}
                 </Link>
@@ -189,7 +194,7 @@ export function Title(props: any) {
 }
 export function Important(props: any) {
   return (
-    <p className="font-semibold text-gray-600 dark:text-white border-l-2 border-teal-400 pl-3 mb-4">
+    <p className="font-semibold text-gray-600 dark:text-white border-l-2 border-teal-400 pl-3 mb-8">
       {props.children}
     </p>
   );

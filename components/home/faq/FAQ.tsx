@@ -69,9 +69,12 @@ export default function FAQ() {
           <h3 className="text-2xl lg:text-4xl font-bold leading-[1.2]">
             <span className="text-teal-400">Frequently</span> Asked Questions
           </h3>
-          <ul className="list-none space-y-6">
+          <ul className="list-none">
             {state.map((e, i) => (
-              <li key={i}>
+              <li
+                key={i}
+                className="border-b border-gray-200 dark:border-gray-600 py-6"
+              >
                 <div className="">
                   <button
                     type="button"

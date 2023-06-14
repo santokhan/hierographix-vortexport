@@ -11,7 +11,7 @@ export default function Header(): JSX.Element {
   return (
     <header className="h-16 relative">
       {/* Both will `"h-16"` */}
-      <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none border-gray-600 z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
+      <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none dark:border-gray-600 z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
         <Navbar />
       </div>
     </header>
@@ -192,7 +192,9 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
             <a
               key={ind}
               href={ele.url}
-              className="rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:text-gray-300"
+              className={`rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:text-gray-300 ${
+                pathName === ele.url && "text-vpurple-500"
+              }`}
             >
               {ele.name}
             </a>
@@ -203,10 +205,9 @@ export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
   );
 }
 export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
-  const pathName = usePathname();
   return (
     dropdown && (
-      <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-vpurple-950/95 backdrop-blur-sm z-[2]">
+      <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-white/95 dark:bg-vpurple-950/95 backdrop-blur-sm z-[2]">
         <div className="relative flex flex-col items-center justify-start gap-6 py-8">
           {navs.map((e: any, i: number) =>
             e.dropdown ? (

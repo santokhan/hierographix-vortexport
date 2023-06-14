@@ -73,7 +73,7 @@ export const linkList = [
 export default function Footer() {
   const pathName = usePathname();
   return (
-    <footer className="">
+    <footer className="bg-white dark:bg-vpurple-950">
       <Empower />
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="lg:flex lg:justify-between gap-12">

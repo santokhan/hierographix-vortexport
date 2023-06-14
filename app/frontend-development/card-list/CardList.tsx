@@ -23,9 +23,12 @@ export default function CardList(): JSX.Element {
   ];
   return (
     <div className="bg-vpurple-950">
-      <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
         {cards.map((e: any, i: number) => (
-          <div className="flex gap-5 py-4 border-b border-gray-600" key={i}>
+          <div
+            className="flex gap-4 lg:gap-5 items-start py-6 border-b border-gray-600"
+            key={i}
+          >
             <div className="min-h-[64px] lg:h-24 lg:min-h-[96px] min-w-[64px] lg:w-24 lg:min-w-[96px] rounded-lg bg-vpurple-900 flex justify-center items-center font-bold text-teal-400 text-xl lg:text-3xl">
               #{e.id}
             </div>

@@ -14,7 +14,7 @@ export default function Electrofying() {
           className="lg:col-span-5 w-full object-contain p-6"
         />
         <div className=""></div>
-        <div className="lg:col-span-6 space-y-5 py-16 lg:py-24">
+        <div className="lg:col-span-6 space-y-5 py-10 lg:py-24">
           <div className="space-y-2">
             <h5 className="font-meduim text-gray-400 text-lg uppercase">
               Unleashing Digital Marvels

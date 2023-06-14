@@ -22,13 +22,13 @@ export default function BlogCard({ data }: { data: BCard }) {
             alt={data.title}
             width={0}
             height={0}
-            className="w-full object-contain"
+            className="w-full object-contain shadow rounded-lg"
           />
         )}
       </a>
-      <div className="space-y-4">
+      <div className="space-y-4 px-2">
         {/* Card Caption */}
-        <h3 className="font-medium tracking-tight text-gray-400 uppercase">
+        <h3 className="font-medium text-sm lg:text-base tracking-tight text-gray-400 uppercase">
           {data.caption}
         </h3>
         {/* Card Title */}
@@ -65,13 +65,13 @@ export function BlogCardWhite({ data }: { data: BCard }) {
             alt={data.title}
             width={0}
             height={0}
-            className="w-full object-contain"
+            className="w-full object-contain shadow rounded overflow-hidden"
           />
         )}
       </a>
-      <div className="space-y-4">
+      <div className="space-y-4 px-2">
         {/* Card Caption */}
-        <h3 className="font-medium tracking-tight text-gray-500 uppercase">
+        <h3 className="font-medium text-sm lg:text-base tracking-tight text-gray-500 uppercase">
           {data.caption}
         </h3>
         {/* Card Title */}
@@ -83,8 +83,8 @@ export function BlogCardWhite({ data }: { data: BCard }) {
         </a>
         {/* Card Footer */}
         <div className="flex gap-4 items-center whitespace-nowrap">
-          <div className="flex items-center gap-2 ext-xs lg:text-sm text-gray-800">
-            <div className="w-9 h-9 rounded-full bg-teal-800 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-800/50"></div>
+          <div className="flex items-center gap-2 text-xs lg:text-sm text-gray-800">
+            <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
             {data.creator}
           </div>
           <div className="w-[2px] h-3 bg-gray-400"></div>
