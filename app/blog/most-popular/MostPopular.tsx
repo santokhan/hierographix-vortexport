@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Headline from "@/app/components/shared/Headline";
+import Headline from "@/components/shared/Headline";
 import riseOfAI from "../../assets/images/blog/article/rise-of-ai.png";
 import Image from "next/image";
 

@@ -1,6 +1,6 @@
-import SubscribeForm from "@/app/components/home/hero/SubscribeForm";
-import Headline from "@/app/components/shared/Headline";
-import BlogCard, { BCard } from "@/app/components/shared/blog-card/BlogCard";
+import Headline from "@/components/shared/Headline";
+import SubscribeForm from "@/components/home/hero/SubscribeForm";
+import BlogCard, { BCard } from "@/components/shared/blog-card/BlogCard";
 
 export const cardsData: BCard[] = [
   {
@@ -8,7 +8,7 @@ export const cardsData: BCard[] = [
     src: "rise-of-ai",
     title:
       "The Rise of Artificial Intelligence: Revolutionizing Industries and Transforming",
-    url: "/",
+    url: "/blog/1",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",

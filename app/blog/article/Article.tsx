@@ -1,5 +1,5 @@
-import Headline from "@/app/components/shared/Headline";
-import BlogCard, { BCard } from "@/app/components/shared/blog-card/BlogCard";
+import Headline from "@/components/shared/Headline";
+import BlogCard, { BCard } from "@/components/shared/blog-card/BlogCard";
 import MostPopular from "../most-popular/MostPopular";
 
 export const cardsData: BCard[] = [

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import Headline from "@/app/components/shared/Headline";
+
+import Headline from "@/components/shared/Headline";
 import sunami from "../../assets/images/frontend/sunami.png";
 import Image from "next/image";
 

@@ -1,8 +1,5 @@
-import Headline from "@/app/components/shared/Headline";
-import {
-  BCard,
-  BlogCardWhite,
-} from "@/app/components/shared/blog-card/BlogCard";
+import Headline from "@/components/shared/Headline";
+import { BCard, BlogCardWhite } from "@/components/shared/blog-card/BlogCard";
 
 export const editorChoice: BCard[] = [
   {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Headline from "@/app/components/shared/Headline";
+import Headline from "@/components/shared/Headline";
 import Styles from "./Showcase.module.css";
 
 export const cardsData = [

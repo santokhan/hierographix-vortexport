@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-import Headline from "@/app/components/shared/Headline";
+import Headline from "@/components/shared/Headline";
 import {
   SeeMore,
   Title,
