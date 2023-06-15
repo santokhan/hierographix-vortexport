@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export interface BCard {
   caption: string;
@@ -11,11 +12,13 @@ export interface BCard {
 }
 
 // Blog Card will fill it's container
-export default function BlogCard({ data }: { data: BCard }) {
+export default function BlogCard(props: { data: BCard }): JSX.Element {
+  const { data } = props;
+
   return (
     <div className="w-full space-y-3">
       {/* Card Image */}
-      <a href={data.url}>
+      <Link href={data.url}>
         {data.src && (
           <Image
             src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
@@ -25,40 +28,32 @@ export default function BlogCard({ data }: { data: BCard }) {
             className="w-full object-contain shadow rounded-lg"
           />
         )}
-      </a>
+      </Link>
       <div className="space-y-4 px-2">
         {/* Card Caption */}
-        <h3 className="font-medium text-sm lg:text-base tracking-tight text-gray-400 uppercase">
+        <h5 className="font-medium text-sm lg:text-base tracking-tight text-gray-400 uppercase">
           {data.caption}
-        </h3>
+        </h5>
         {/* Card Title */}
-        <a
+        <Link
           href={data.url}
           className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 dark:text-gray-100 capitalize"
         >
           {data.title}
-        </a>
+        </Link>
         {/* Card Footer */}
-        <div className="flex gap-4 items-center whitespace-nowrap">
-          <div className="flex items-center gap-2 text-xs text-gray-400">
-            <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
-            {data.creator}
-          </div>
-          <div className="w-[2px] h-3 bg-gray-400"></div>
-          <div className="text-xs text-gray-400">{data.timestamp}</div>
-          <div className="w-[2px] h-3 bg-gray-400"></div>
-          <div className="text-xs text-gray-400">{data.read}</div>
-        </div>
+        <BlogCardFooter data={data} />
       </div>
     </div>
   );
 }
 
-export function BlogCardWhite({ data }: { data: BCard }) {
+// this is for only light mode, not for dark
+export function BlogCardWhite({ data }: { data: BCard }): JSX.Element {
   return (
     <div className="w-full space-y-3">
       {/* Card Image */}
-      <a href={data.url}>
+      <Link href={data.url}>
         {data.src && (
           <Image
             src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
@@ -68,20 +63,20 @@ export function BlogCardWhite({ data }: { data: BCard }) {
             className="w-full object-contain shadow rounded overflow-hidden"
           />
         )}
-      </a>
+      </Link>
       <div className="space-y-4 px-2">
         {/* Card Caption */}
-        <h3 className="font-medium text-sm lg:text-base tracking-tight text-gray-500 uppercase">
+        <h5 className="font-medium text-sm lg:text-base tracking-tight text-gray-500 uppercase">
           {data.caption}
-        </h3>
+        </h5>
         {/* Card Title */}
-        <a
+        <Link
           href={data.url}
           className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 capitalize"
         >
           {data.title}
-        </a>
-        {/* Card Footer */}
+        </Link>
+        {/* Card Footer for Light mode */}
         <div className="flex gap-4 items-center whitespace-nowrap">
           <div className="flex items-center gap-2 text-xs lg:text-sm text-gray-800">
             <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
@@ -95,6 +90,23 @@ export function BlogCardWhite({ data }: { data: BCard }) {
           <div className="text-xs lg:text-sm text-gray-800">{data.read}</div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export function BlogCardFooter(props: { data: BCard }): JSX.Element {
+  const { data } = props;
+
+  return (
+    <div className="flex gap-4 items-center whitespace-nowrap">
+      <div className="flex items-center gap-2 text-xs text-gray-400">
+        <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
+        {data.creator}
+      </div>
+      <div className="w-[2px] h-3 bg-gray-400"></div>
+      <div className="text-xs text-gray-400">{data.timestamp}</div>
+      <div className="w-[2px] h-3 bg-gray-400"></div>
+      <div className="text-xs text-gray-400">{data.read}</div>
     </div>
   );
 }

@@ -1,0 +1,8 @@
+@media (min-width: 1024px) {
+  .bgPurpleSkew {
+    background-image: url("../../../app/assets/images/frontend/purple-skew.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

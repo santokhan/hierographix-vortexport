@@ -7,7 +7,7 @@ export const editorChoice: BCard[] = [
     src: "rise-of-ai",
     title:
       "Revolutionizing Healthcare with AI: From Diagnostics to Personalized Treatment",
-    url: "/",
+    url: "/blog/4",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",
@@ -17,7 +17,7 @@ export const editorChoice: BCard[] = [
     src: "potential-of-ai",
     title:
       "Machine Learning in UX Design: Creating Intuitive and Personalized User Interfaces",
-    url: "/",
+    url: "/blog/5",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",
@@ -27,7 +27,7 @@ export const editorChoice: BCard[] = [
     caption: "DESIGN, Vortexpert's AI & Data Research",
     title:
       "The Intersection of AI and Web Design: Crafting Intelligent and Adaptive Design",
-    url: "/",
+    url: "/blog/6",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",
@@ -37,7 +37,7 @@ export const editorChoice: BCard[] = [
     caption: "Backend development",
     title:
       "Demystifying Backend Development: Understanding the Core Technologies and Concepts",
-    url: "/",
+    url: "/blog/7",
     creator: "By Vortex Team",
     timestamp: "June 1, 2023",
     read: "4 min read",
