@@ -4,11 +4,11 @@ import Headline from "@/components/shared/Headline";
 import sunami from "../../assets/images/frontend/sunami.png";
 import Image from "next/image";
 import Styles from "./Connect.module.css";
-import Link from "next/link";
 
 export default function Connect(): JSX.Element {
   return (
     <div className="overflow-hidden py-16">
+      {/* Background will be `'lg:bg-transparent'` */}
       <div
         className={`${Styles.bgElectrofiying} bg-white lg:bg-transparent py-16 lg:py-40`}
       >
@@ -48,8 +48,9 @@ export default function Connect(): JSX.Element {
         </div>
       </div>
 
+      {/* Purple Skew sectoin it will have `"lg:-mt-20"`, background will be `'lg:bg-transparent'` */}
       <div
-        className={`${Styles.bgPurpleSkew} lg:-mt-20 bg-vpurple-500  lg:bg-transparent py-16 lg:py-40`}
+        className={`${Styles.bgPurpleSkew} lg:-mt-20 bg-vpurple-500 lg:bg-transparent py-16 lg:py-40`}
       >
         <div className="max-w-lg mx-auto px-4 space-y-4">
           <Headline>
