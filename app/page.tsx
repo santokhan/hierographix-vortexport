@@ -6,7 +6,7 @@ import Pricing from "../components/home/pricing/Pricing";
 import Performance from "../components/home/performance/Performance";
 import Services from "../components/home/services/Services";
 import TestiMonial from "../components/home/testimonial/Testimonial";
-import Connect from "../components/home/connect/Connect";
+import ConnectWithSpacing from "../components/home/connect/Connect";
 import FAQ from "../components/home/faq/FAQ";
 
 export default function FrontendDevelopment() {
@@ -18,7 +18,7 @@ export default function FrontendDevelopment() {
       <Performance />
       <Services />
       <TestiMonial />
-      <Connect />
+      <ConnectWithSpacing />
       <FAQ />
     </div>
   );
