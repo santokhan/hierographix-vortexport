@@ -18,7 +18,7 @@ export const navs = [
   {
     name: "Expertise",
     dropdown: [
-      { icon: "speaker", name: "Marketing", url: "/marketing" },
+      { icon: "marketing", name: "Marketing", url: "/marketing" },
       { icon: "design", name: "Design", url: "/design" },
       {
         icon: "code",
@@ -26,13 +26,13 @@ export const navs = [
         url: "/frontend-development",
       },
       {
-        icon: "curly-braces",
+        icon: "brackets",
         name: "Backend Development",
         url: "/backend-development",
       },
-      { icon: "command-line", name: "Dev Ops", url: "/dev-ops" },
+      { icon: "devops", name: "Dev Ops", url: "/dev-ops" },
       {
-        icon: "brain",
+        icon: "ai",
         name: "Vortexpert's AI & Data Research",
         url: "/data-research",
       },

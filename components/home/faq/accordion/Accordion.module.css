@@ -1,0 +1,29 @@
+.expand,
+.collapse {
+  animation-direction: normal;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+  animation-name: expandCollapse;
+  animation-timing-function: ease-out;
+  transform-origin: top;
+}
+
+.expand {
+  animation-direction: normal;
+}
+
+.collapse {
+  animation-direction: reverse;
+}
+
+@keyframes expandCollapse {
+  0% {
+    /* transform: scaleY(0); */
+    height: 0;
+    overflow-y: hidden;
+  }
+  100% {
+    /* transform: scaleY(1); */
+    margin-top: 0.75rem;
+  }
+}

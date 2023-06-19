@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 import Logo from "../logo/Logo";
 import Link from "next/link";
@@ -6,19 +7,21 @@ import { usePathname } from "next/navigation";
 import { navs, NavsDD } from "./NavList";
 import Contact from "./ContactUs";
 import { SocialMedia } from "@/components/shared/footer/Footer";
+import Icons from "./dropdown/icons/Icons";
+import activeNav from "../ActiveNav";
 
-export default function Header(): JSX.Element {
+export default function Header() {
   return (
     <header className="h-16 relative">
       {/* Both will `"h-16"` */}
-      <div className="h-16 fixed top-0 left-0 w-full border-b lg:border-none dark:border-gray-600 z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
+      <div className="h-16 fixed top-0 left-0 w-full z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
         <Navbar />
       </div>
     </header>
   );
 }
 
-export function Navbar(): JSX.Element {
+export function Navbar() {
   // mobile dropdown toggler, by default it will be false
   const [dropdown, setdropdown] = useState<boolean>(false);
   function handleDropdown() {
@@ -31,7 +34,7 @@ export function Navbar(): JSX.Element {
       </Link>
       <TogglerAndDDMobile dropdown={dropdown} handleDropdown={handleDropdown} />
       {/* Navs */}
-      <div className="hidden lg:flex gap-12 items-center w-full lg:w-auto font-medium">
+      <div className="hidden lg:flex gap-12 items-center w-full lg:w-auto h-full font-medium">
         {navs.map((e: any, i: number) =>
           e.dropdown ? (
             <NavDropdown nav={e} key={i} />
@@ -45,61 +48,52 @@ export function Navbar(): JSX.Element {
   );
 }
 // dropdown for individual nav item
-export function NavDropdown({ nav }: { nav: NavsDD }): JSX.Element {
-  const [dd, setdd] = useState(false);
-  const dropdownRef = useRef<any>(null);
-  const togglerRef = useRef<any>(null);
-  function handleDD() {
-    setdd(!dd);
-  }
-  const pathName = usePathname();
-
-  useEffect(() => {
-    function handleClick(e: Event) {
-      if (dropdownRef.current && togglerRef.current) {
-        if (
-          !dropdownRef.current.contains(e.target) &&
-          !togglerRef.current.contains(e.target)
-        ) {
-          if (dd === true) {
-            setdd(false);
-          }
-        }
-      }
-    }
-    document.addEventListener("click", handleClick);
-  }, [dd]);
+export function NavDropdown({ nav }: { nav: NavsDD }) {
+  // const [dd, setdd] = useState(false);
+  // const dropdownRef = useRef<any>(null);
+  // const togglerRef = useRef<any>(null);
+  // useEffect(() => {
+  //   function handleClick(e: Event) {
+  //     if (dropdownRef.current && togglerRef.current) {
+  //       if (
+  //         !dropdownRef.current.contains(e.target) &&
+  //         !togglerRef.current.contains(e.target)
+  //       ) {
+  //         if (dd === true) {
+  //           setdd(false);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   document.addEventListener("click", handleClick);
+  // }, [dd]);
 
   return (
-    <div className="relative h-full flex items-center">
+    <div className="relative h-full flex items-center group">
       <button
         type="button"
         className="flex gap-3 items-center text-gray-800 rounded hover:text-vpurple-500 dark:text-gray-300"
-        onClick={handleDD}
-        ref={togglerRef}
       >
         {nav.name}
-        <i className={`fa fa-angle-down ${dd && "-rotate-180"}`}></i>
+        <i className="fa fa-angle-down group-hover:-rotate-180 transition-transform ease-out"></i>
       </button>
       {/* dropdown desktop */}
-      {dd && (
-        <div
-          className="absolute top-10 left-0 w-72 mt-1 flex flex-col items-start bg-white/95 backdrop-blur-sm z-[2] rounded-lg py-3 shadow-xl"
-          ref={dropdownRef}
-        >
-          {nav.dropdown.map((ele: any, ind: number) => (
-            <a
-              key={ind}
-              href={ele.url}
-              className={`rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:hover:text-vpurple-500 dark:text-gray-800 ${
-                pathName === ele.url && "text-vpurple-500 dark:text-vpurple-500"
-              }`}
-            >
-              {ele.name}
-            </a>
-          ))}
-        </div>
-      )}
+      <div className="hidden group-hover:flex flex-col items-start absolute top-14 left-0 w-80 mt-1 bg-white /95 backdrop-blur-sm z-[2] rounded-lg py-3 px-5 shadow-xl">
+        {nav.dropdown.map((ele: any, ind: number) => (
+          <a
+            key={ind}
+            href={ele.url}
+            className={`rounded w-full flex items-center gap-2 h-12 text-gray-800 hover:text-vpurple-500 dark:hover:text-vpurple-500 dark:text-gray-800 border-b last:border-none ${
+              activeNav(ele.url) && "text-vpurple-500 dark:text-vpurple-500"
+            }`}
+          >
+            <div className="flex items-center justify-center">
+              <Icons name={ele.icon} className="h-6 w-6" />
+            </div>
+            {ele.name}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
@@ -173,37 +167,33 @@ export function TogglerAndDDMobile({ dropdown, handleDropdown }: TypeToggler) {
   );
 }
 // dropdown nested for mobile sidebar
-export function NavDropdownMobile({ nav }: { nav: NavsDD }): JSX.Element {
-  const [dd, setdd] = useState(false);
-  const pathName = usePathname();
+export function NavDropdownMobile({ nav }: { nav: NavsDD }) {
   return (
     <div className="flex flex-col items-center gap-6">
       <button
         type="button"
         className="flex gap-3 items-center text-gray-800 rounded hover:text-vpurple-500 dark:text-gray-300"
-        onClick={() => {
-          setdd(!dd);
-        }}
       >
         {nav.name}
-        <i className={`fa fa-angle-down ${dd && "-rotate-180"}`}></i>
+        <i className="fa fa-angle-down group-hover:-rotate-180 transition-transform ease-out"></i>
       </button>
       {/* dropdown desktop */}
-      {dd && (
-        <div className="flex flex-col items-center z-[2] rounded-lg py-2 border-y border-vpurple-500">
-          {nav.dropdown.map((ele: any, ind: number) => (
-            <a
-              key={ind}
-              href={ele.url}
-              className={`rounded flex items-center h-10 px-5 text-gray-800 hover:text-vpurple-500 dark:text-gray-300 ${
-                pathName === ele.url && "text-vpurple-500 dark:text-vpurple-500"
-              }`}
-            >
-              {ele.name}
-            </a>
-          ))}
-        </div>
-      )}
+      <div className="hidden group-hover:flex flex-col items-start absolute top-14 left-0 w-80 mt-1 bg-white /95 backdrop-blur-sm z-[2] rounded-lg py-3 px-5 shadow-xl">
+        {nav.dropdown.map((ele: any, ind: number) => (
+          <a
+            key={ind}
+            href={ele.url}
+            className={`rounded w-full flex items-center gap-2 h-12 text-gray-800 hover:text-vpurple-500 dark:hover:text-vpurple-500 dark:text-gray-800 border-b last:border-none ${
+              activeNav(ele.url) && "text-vpurple-500 dark:text-vpurple-500"
+            }`}
+          >
+            <div className="flex items-center justify-center">
+              <Icons name={ele.icon} className="h-6 w-6" />
+            </div>
+            {ele.name}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
@@ -226,14 +216,13 @@ export function DropdownMobile({ dropdown }: { dropdown: boolean }) {
   );
 }
 export function To(props: { name: string; url: string }) {
-  const pathName = usePathname();
   return (
     <a
       href={props.url}
       className={
-        pathName === props.url
-          ? "rounded block text-vpurple-500 dark:text-vpurple-500 underline underline-offset-4 decoration-2"
-          : "rounded block text-gray-800 dark:text-gray-300 hover:text-vpurple-500"
+        activeNav(props.url)
+          ? "rounded block text-vpurple-500 dark:text-vpurple-500"
+          : "rounded block text-gray-800 dark:text-gray-300 hover:dark:text-vpurple-500"
       }
     >
       {props.name}

@@ -18,10 +18,12 @@ export function ConnectSimplify(): JSX.Element {
     >
       <div className="max-w-lg mx-auto px-4 space-y-4">
         <Headline>
-          <div className="text-start">Connect with VortExpert</div>
+          <div className="max-w-sm mx-auto text-center">
+            Connect with VortExpert
+          </div>
         </Headline>
         <div className="space-y-8 lg:space-y-8 text-white">
-          <p className="text-start">
+          <p className="text-center">
             Contact VortExpert Today & Unleash Your Business's True Potential
             with our Expertise and Innovation
           </p>
@@ -31,7 +33,7 @@ export function ConnectSimplify(): JSX.Element {
               className="flex items-center gap-3 font-medium group"
             >
               <i className="fa fa-phone"></i>
-              <span className="group-hover:underline hover:decoration-2">
+              <span className="group-hover:underline hover:decoration-2 hover:underline-offset-2">
                 +12-3456-7890-00
               </span>
             </a>
@@ -40,7 +42,7 @@ export function ConnectSimplify(): JSX.Element {
               className="flex items-center gap-3 font-medium group"
             >
               <i className="fa fa-envelope"></i>
-              <span className="group-hover:underline hover:decoration-2">
+              <span className="group-hover:underline hover:decoration-2 hover:underline-offset-2">
                 email@vortexpert.io
               </span>
             </a>
@@ -49,7 +51,7 @@ export function ConnectSimplify(): JSX.Element {
               className="flex items-center gap-3 font-medium group"
             >
               <i className="fa fa-location-arrow"></i>
-              <address className="group-hover:underline hover:decoration-2">
+              <address className="group-hover:underline hover:decoration-2 hover:underline-offset-2">
                 2012A Rue RaudotMontréal QC H4E 2N9 Canada
               </address>
             </a>

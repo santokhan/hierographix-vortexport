@@ -1,9 +1,12 @@
 import Header from "@/components/shared/header/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import Footer from "@/components/shared/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 // Santo
 export const metadata = {
@@ -30,7 +33,7 @@ export default function RootLayout({ children }: RooteLayout) {
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
         />
       </head>
-      <body className={inter.className}>
+      <body className={manrope.className}>
         <Header />
         {children}
         <Footer />

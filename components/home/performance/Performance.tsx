@@ -29,11 +29,11 @@ export default function Performance() {
   return (
     <section className="bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
-        <div className="w-full">
+        <div className="w-full flex justify-center">
           <Image
             src={PerformanceImage}
             alt="mockup"
-            className="w-full max-h-[600px] object-contain p-4"
+            className="max-h-[640px] object-contain p-4"
           />
         </div>
         <div className="w-full max-w-lg space-y-4">

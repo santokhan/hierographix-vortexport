@@ -2,10 +2,10 @@ import Image from "next/image";
 import HeroImg from "../../../app/assets/images/hero-illustration.png";
 import styles from "./Hero.module.css";
 import SubscribeForm from "./SubscribeForm";
-import { Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Text from "@/components/shared/text/Text";
 
-const manrope = Manrope({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 
 function Hero() {
   return (
@@ -13,7 +13,9 @@ function Hero() {
       <Effect />
       <div className="max-w-screen-xl mx-auto px-4 pb-20 relative">
         <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 py-16 lg:py-20">
-          <h2 className="text-4xl lg:text-[3.5rem] font-bold text-start lg:text-center leading-[1.2]">
+          <h2
+            className={`${poppins.className} text-4xl lg:text-[3.5rem] font-bold text-start lg:text-center leading-[1.2]`}
+          >
             Taking Your Business to the Summit of{" "}
             <span className="text-teal-500">Digital Success</span>
           </h2>
@@ -36,7 +38,7 @@ function Hero() {
 
 export const Effect = () => (
   <svg
-    className="w-11/12 max-h-[850px] text-vpurple-900 absolute right-0 bottom-0 hidden lg:block"
+    className="w-full max-h-[1200px] text-vpurple-900 absolute -right-40 top-56 hidden lg:block"
     viewBox="0 0 1101 900"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +56,8 @@ export const Effect = () => (
         y2="900"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="currentColor" stop-opacity="0.38" />
-        <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+        <stop stopColor="currentColor" stopOpacity="0.38" />
+        <stop offset="1" stopColor="currentColor" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

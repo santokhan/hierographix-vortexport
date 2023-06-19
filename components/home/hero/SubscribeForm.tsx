@@ -5,13 +5,13 @@ export default function SubscribeForm() {
         <input
           type="text"
           id="sub-email"
-          className="bg-transparent h-12 px-4 rounded-lg w-full focus:outline-none text-gray-800 dark:text-white"
+          className="bg-transparent h-12 px-4 rounded-l-lg w-full focus:outline-none text-gray-800 dark:text-white border border-vpurple-900 focus:border-vpurple-500 transition-all ease-out"
           placeholder="Enter your email"
         />
         <label htmlFor="sub-email">
           <button
             type="submit"
-            className="bg-vlinear text-white h-12 px-4 lg:px-6 rounded-lg whitespace-nowrap hover:brightness-90 focus:ring-4 focus:ring-vpurple-500/50"
+            className="bg-vlinear -ml-2 text-white h-12 px-4 lg:px-6 rounded-lg whitespace-nowrap hover:bg-vlinear-hover focus:ring-4 focus:ring-vpurple-500/50 transition-all ease-in-out"
           >
             Talk with us
           </button>

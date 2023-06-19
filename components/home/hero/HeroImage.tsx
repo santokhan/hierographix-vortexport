@@ -5,8 +5,8 @@ export default (
       fill="url(#paint0_linear_2245_1529)"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M999.576 38.1213C999.309 37.7182 999.167 37.2448 999.169 36.7611C999.172 36.1132 999.431 35.4929 999.89 35.0362C1000.35 34.5795 1000.97 34.3238 1001.62 34.3252C1002.1 34.3265 1002.57 34.4712 1002.97 34.7411C1003.38 35.0109 1003.69 35.3938 1003.87 35.8413C1004.06 36.2887 1004.1 36.7806 1004.01 37.2547C1003.91 37.7288 1003.68 38.1638 1003.33 38.5048C1002.99 38.8457 1002.55 39.0772 1002.08 39.1699C1001.61 39.2627 1001.12 39.2126 1000.67 39.026C1000.22 38.8393 999.843 38.5245 999.576 38.1213ZM1010.05 36.7951C1010.05 37.2784 1010.2 37.7513 1010.46 38.1538C1010.73 38.5564 1011.11 38.8706 1011.56 39.0568C1012 39.243 1012.49 39.2928 1012.97 39.1999C1013.44 39.1069 1013.88 38.8755 1014.22 38.5348C1014.56 38.1941 1014.79 37.7594 1014.89 37.2857C1014.99 36.812 1014.94 36.3205 1014.76 35.8734C1014.57 35.4264 1014.26 35.0438 1013.86 34.774C1013.46 34.5043 1012.99 34.3595 1012.5 34.3579C1011.86 34.3562 1011.23 34.612 1010.78 35.069C1010.32 35.526 1010.06 36.1469 1010.05 36.7951ZM1020.94 36.8271C1020.94 37.3107 1021.08 37.784 1021.35 38.1871C1021.61 38.5903 1021.99 38.9051 1022.44 39.0918C1022.88 39.2785 1023.38 39.3287 1023.85 39.236C1024.32 39.1433 1024.76 38.9119 1025.1 38.5711C1025.45 38.2303 1025.68 37.7954 1025.78 37.3214C1025.87 36.8474 1025.83 36.3555 1025.64 35.9081C1025.46 35.4606 1025.15 35.0777 1024.75 34.8077C1024.34 34.5377 1023.87 34.3927 1023.39 34.3911C1023.07 34.3899 1022.75 34.452 1022.45 34.5738C1022.16 34.6955 1021.89 34.8747 1021.66 35.1009C1021.43 35.3271 1021.25 35.596 1021.13 35.8922C1021 36.1883 1020.94 36.5061 1020.94 36.8271Z"
       fill="#E6F7E6"
     />
@@ -521,8 +521,8 @@ export default (
       fill="url(#paint34_linear_2245_1529)"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M136.089 206.711C135.91 205.683 135.734 204.653 135.568 203.623C135.541 203.512 135.52 203.399 135.505 203.286C135.499 203.23 135.49 203.174 135.481 203.117C135.471 203.061 135.462 203.005 135.456 202.949C135.169 201.288 134.907 199.628 134.657 197.967V197.966L146.309 197.971C146.597 197.526 146.998 197.165 147.471 196.925C147.943 196.685 148.471 196.574 149 196.604L179.48 197.005L194.554 197.204H194.576C194.469 197.467 194.357 197.725 194.241 197.977C194.199 198.066 194.156 198.155 194.11 198.242C193.998 198.479 193.873 198.716 193.749 198.954C193.624 199.191 193.499 199.416 193.374 199.628C193.341 199.689 193.306 199.749 193.271 199.809C193.215 199.902 193.158 199.995 193.1 200.086C193.055 200.155 193.01 200.223 192.963 200.29C192.851 200.463 192.727 200.637 192.603 200.811L192.601 200.814C192.556 200.899 192.501 200.978 192.439 201.051C192.202 201.376 191.952 201.675 191.703 201.975C191.578 202.137 191.441 202.3 191.304 202.449C191.092 202.687 190.867 202.911 190.642 203.136C190.631 203.147 190.62 203.161 190.608 203.176C190.604 203.181 190.6 203.186 190.596 203.19C190.419 203.365 190.239 203.534 190.056 203.7C189.702 204.017 189.336 204.32 188.958 204.609C188.671 204.834 188.372 205.059 188.06 205.271C186.789 206.133 185.435 206.864 184.019 207.456H184.006C183.66 207.616 183.306 207.757 182.946 207.88C182.721 207.98 182.497 208.055 182.272 208.13C181.91 208.267 181.536 208.392 181.174 208.505C181.099 208.53 181.025 208.555 180.937 208.58C180.931 208.581 180.926 208.583 180.92 208.585C179.916 208.861 178.907 209.115 177.892 209.347C176.904 209.568 175.859 209.781 174.887 209.965L174.886 209.966C174.749 209.99 174.613 210.015 174.488 210.04C174.426 210.053 174.36 210.062 174.295 210.072C174.229 210.081 174.164 210.09 174.101 210.103C174.069 210.109 174.038 210.115 174.006 210.121C173.842 210.152 173.685 210.182 173.528 210.203C173.493 210.21 173.458 210.217 173.423 210.223C173.081 210.279 172.738 210.332 172.395 210.383C172.377 210.385 172.36 210.388 172.342 210.39C172.341 210.39 172.34 210.391 172.339 210.392C172.314 210.395 172.289 210.399 172.265 210.402H172.243C172.211 210.409 172.18 210.412 172.149 210.415C172.118 210.418 172.087 210.421 172.056 210.427C172.056 210.429 172.056 210.431 172.056 210.433C172.056 210.433 172.056 210.433 172.055 210.433C172.065 210.494 172.079 210.56 172.096 210.631C172.145 210.868 172.214 211.167 172.301 211.522C172.314 211.59 172.33 211.657 172.35 211.724C172.41 211.963 172.476 212.225 172.549 212.508C172.559 212.55 172.569 212.593 172.579 212.636L172.579 212.637C172.583 212.644 172.585 212.65 172.588 212.656C172.59 212.664 172.592 212.672 172.594 212.681C172.596 212.69 172.598 212.698 172.6 212.708C172.618 212.775 172.636 212.845 172.654 212.916C172.674 212.993 172.694 213.072 172.715 213.152C172.72 213.173 172.728 213.197 172.737 213.225C172.774 213.367 172.812 213.515 172.851 213.667C172.896 213.843 172.942 214.025 172.991 214.21C173.088 214.568 173.19 214.945 173.297 215.34C173.467 215.964 173.648 216.633 173.839 217.344L174.027 218.056C174.164 218.53 174.301 219.03 174.438 219.541C175.436 223.137 176.634 227.457 177.856 231.939L169.486 231.976L146.945 232.089L145.733 232.096C145.086 230.923 144.398 229.633 143.71 228.344C141.468 224.142 139.231 219.95 138.475 219.871C138.475 219.869 138.475 219.868 138.474 219.866C138.339 219.125 138.203 218.386 138.068 217.648C138.016 217.363 137.964 217.079 137.911 216.795C137.505 214.562 137.102 212.346 136.703 210.148C136.674 209.99 136.646 209.84 136.619 209.689C136.614 209.652 136.608 209.615 136.603 209.578C136.591 209.522 136.581 209.469 136.572 209.416C136.563 209.366 136.554 209.315 136.543 209.262C136.542 209.26 136.542 209.258 136.542 209.257C136.528 209.181 136.514 209.105 136.501 209.029C136.497 209.004 136.494 208.98 136.491 208.954C136.484 208.9 136.474 208.858 136.464 208.816C136.462 208.808 136.46 208.8 136.458 208.792C136.334 208.098 136.211 207.405 136.089 206.711Z"
       fill="#6D3EF6"
     />
@@ -555,8 +555,8 @@ export default (
       fill="#6D3EF6"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M105.209 232.302C94.0154 232.358 82.8218 232.414 71.6283 232.469C70.5904 232.475 69.5451 232.481 68.5097 232.481C68.5688 231.981 68.6275 231.483 68.686 230.988C68.8916 229.245 69.0936 227.532 69.2956 225.864C69.4187 224.824 69.5434 223.803 69.6698 222.802C69.7259 222.302 69.7871 221.812 69.8495 221.322C69.8544 221.281 69.8593 221.24 69.8641 221.198C69.8965 220.924 69.9288 220.651 69.9667 220.376C69.9863 220.224 70.0041 220.073 70.0218 219.922C70.038 219.783 70.0542 219.646 70.0715 219.51C70.0857 219.398 70.0994 219.286 70.113 219.174C70.134 219.002 70.1549 218.831 70.1776 218.662C70.3497 217.226 70.5231 215.859 70.684 214.59L70.6845 214.585C70.6906 214.513 70.6968 214.44 70.7089 214.368C70.336 214.317 69.9578 214.261 69.5705 214.204L69.4615 214.188C69.4143 214.184 69.367 214.175 69.3149 214.166C69.2982 214.163 69.281 214.16 69.2632 214.157C68.8517 214.1 68.4367 214.032 68.0173 213.964C67.9445 213.952 67.8717 213.941 67.7986 213.929C67.3468 213.856 66.894 213.771 66.4411 213.686C66.3988 213.679 66.3565 213.671 66.3142 213.663C66.31 213.667 66.3059 213.666 66.3018 213.664C66.2997 213.663 66.2976 213.663 66.2955 213.663C65.9749 213.607 65.6593 213.545 65.3375 213.483C65.2658 213.469 65.1942 213.455 65.1226 213.441C63.0178 213.01 60.9311 212.491 58.8682 211.884C66.3902 209.868 73.8987 207.804 81.3683 205.6C87.4808 203.795 93.5933 201.949 99.6359 199.939C102.569 198.964 105.481 197.921 108.337 196.739C108.946 196.489 109.549 196.24 110.147 195.976C110.127 196.533 110.107 197.092 110.087 197.653C110 200.077 109.913 202.532 109.823 205.009C110.034 212.798 107.49 223.079 105.646 230.531C105.495 231.141 105.349 231.732 105.209 232.302Z"
       fill="#6D3EF6"
     />
@@ -825,8 +825,8 @@ export default (
         y2="70.2575"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#74CAAD" />
-        <stop offset="1" stop-color="#40C699" />
+        <stop stopColor="#74CAAD" />
+        <stop offset="1" stopColor="#40C699" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_2245_1529"
@@ -836,8 +836,8 @@ export default (
         y2="146.482"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_2245_1529"
@@ -847,8 +847,8 @@ export default (
         y2="228.834"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_2245_1529"
@@ -858,8 +858,8 @@ export default (
         y2="132.081"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint4_linear_2245_1529"
@@ -869,8 +869,8 @@ export default (
         y2="442.21"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#DED4EB" />
-        <stop offset="1" stop-color="#855FFF" />
+        <stop stopColor="#DED4EB" />
+        <stop offset="1" stopColor="#855FFF" />
       </linearGradient>
       <linearGradient
         id="paint5_linear_2245_1529"
@@ -880,8 +880,8 @@ export default (
         y2="290.949"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EFE8FF" />
-        <stop offset="1" stop-color="#CDB6FF" stop-opacity="0" />
+        <stop stopColor="#EFE8FF" />
+        <stop offset="1" stopColor="#CDB6FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint6_linear_2245_1529"
@@ -891,8 +891,8 @@ export default (
         y2="261.303"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EFE8FF" />
-        <stop offset="1" stop-color="#CDB6FF" stop-opacity="0" />
+        <stop stopColor="#EFE8FF" />
+        <stop offset="1" stopColor="#CDB6FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint7_linear_2245_1529"
@@ -902,8 +902,8 @@ export default (
         y2="213.249"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint8_linear_2245_1529"
@@ -913,8 +913,8 @@ export default (
         y2="246.486"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint9_linear_2245_1529"
@@ -924,8 +924,8 @@ export default (
         y2="188.641"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="white" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="white" />
       </linearGradient>
       <linearGradient
         id="paint10_linear_2245_1529"
@@ -935,8 +935,8 @@ export default (
         y2="218.965"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#74CAAD" />
-        <stop offset="1" stop-color="#40C699" />
+        <stop stopColor="#74CAAD" />
+        <stop offset="1" stopColor="#40C699" />
       </linearGradient>
       <linearGradient
         id="paint11_linear_2245_1529"
@@ -946,8 +946,8 @@ export default (
         y2="116.922"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#74CAAD" />
-        <stop offset="1" stop-color="#40C699" />
+        <stop stopColor="#74CAAD" />
+        <stop offset="1" stopColor="#40C699" />
       </linearGradient>
       <linearGradient
         id="paint12_linear_2245_1529"
@@ -957,8 +957,8 @@ export default (
         y2="117.835"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#74CAAD" />
-        <stop offset="1" stop-color="#40C699" />
+        <stop stopColor="#74CAAD" />
+        <stop offset="1" stopColor="#40C699" />
       </linearGradient>
       <linearGradient
         id="paint13_linear_2245_1529"
@@ -968,8 +968,8 @@ export default (
         y2="182.969"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#53C7A0" />
-        <stop offset="1" stop-color="#4DC79E" />
+        <stop stopColor="#53C7A0" />
+        <stop offset="1" stopColor="#4DC79E" />
       </linearGradient>
       <linearGradient
         id="paint14_linear_2245_1529"
@@ -979,8 +979,8 @@ export default (
         y2="178.36"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#64C8A7" />
-        <stop offset="1" stop-color="#58C7A2" />
+        <stop stopColor="#64C8A7" />
+        <stop offset="1" stopColor="#58C7A2" />
       </linearGradient>
       <linearGradient
         id="paint15_linear_2245_1529"
@@ -990,9 +990,9 @@ export default (
         y2="35.6415"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F1972D" />
-        <stop offset="0.0001" stop-color="#F7A94D" />
-        <stop offset="1" stop-color="#F86233" />
+        <stop stopColor="#F1972D" />
+        <stop offset="0.0001" stopColor="#F7A94D" />
+        <stop offset="1" stopColor="#F86233" />
       </linearGradient>
       <linearGradient
         id="paint16_linear_2245_1529"
@@ -1002,8 +1002,8 @@ export default (
         y2="45.6384"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4C4B53" />
-        <stop offset="1" stop-color="#252231" />
+        <stop stopColor="#4C4B53" />
+        <stop offset="1" stopColor="#252231" />
       </linearGradient>
       <linearGradient
         id="paint17_linear_2245_1529"
@@ -1013,8 +1013,8 @@ export default (
         y2="43.0813"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4C4B53" />
-        <stop offset="1" stop-color="#252231" />
+        <stop stopColor="#4C4B53" />
+        <stop offset="1" stopColor="#252231" />
       </linearGradient>
       <linearGradient
         id="paint18_linear_2245_1529"
@@ -1024,8 +1024,8 @@ export default (
         y2="318.544"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" stop-opacity="0.68" />
-        <stop offset="1" stop-color="white" stop-opacity="0.68" />
+        <stop stopColor="white" stopOpacity="0.68" />
+        <stop offset="1" stopColor="white" stopOpacity="0.68" />
       </linearGradient>
       <linearGradient
         id="paint19_linear_2245_1529"
@@ -1035,9 +1035,9 @@ export default (
         y2="181.419"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#77FFD1" stop-opacity="0" />
-        <stop offset="0.465152" stop-color="#7EFF8B" />
-        <stop offset="1" stop-color="#77FFD1" stop-opacity="0" />
+        <stop stopColor="#77FFD1" stopOpacity="0" />
+        <stop offset="0.465152" stopColor="#7EFF8B" />
+        <stop offset="1" stopColor="#77FFD1" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint20_linear_2245_1529"
@@ -1047,8 +1047,8 @@ export default (
         y2="271.285"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4F95FF" />
-        <stop offset="1" stop-color="#58FFFF" />
+        <stop stopColor="#4F95FF" />
+        <stop offset="1" stopColor="#58FFFF" />
       </linearGradient>
       <linearGradient
         id="paint21_linear_2245_1529"
@@ -1058,8 +1058,8 @@ export default (
         y2="227.954"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8B62F5" />
-        <stop offset="1" stop-color="#B483FF" />
+        <stop stopColor="#8B62F5" />
+        <stop offset="1" stopColor="#B483FF" />
       </linearGradient>
       <linearGradient
         id="paint22_linear_2245_1529"
@@ -1069,8 +1069,8 @@ export default (
         y2="107.744"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#4F95FF" />
-        <stop offset="1" stop-color="#58FFFF" />
+        <stop stopColor="#4F95FF" />
+        <stop offset="1" stopColor="#58FFFF" />
       </linearGradient>
       <linearGradient
         id="paint23_linear_2245_1529"
@@ -1080,8 +1080,8 @@ export default (
         y2="184.049"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9E8CE4" />
-        <stop offset="1" stop-color="#FFFFEF" />
+        <stop stopColor="#9E8CE4" />
+        <stop offset="1" stopColor="#FFFFEF" />
       </linearGradient>
       <linearGradient
         id="paint24_linear_2245_1529"
@@ -1091,8 +1091,8 @@ export default (
         y2="164.032"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8B62F5" />
-        <stop offset="1" stop-color="#B483FF" />
+        <stop stopColor="#8B62F5" />
+        <stop offset="1" stopColor="#B483FF" />
       </linearGradient>
       <linearGradient
         id="paint25_linear_2245_1529"
@@ -1102,8 +1102,8 @@ export default (
         y2="202.574"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#F6E7FF" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#F6E7FF" />
       </linearGradient>
       <linearGradient
         id="paint26_linear_2245_1529"
@@ -1113,8 +1113,8 @@ export default (
         y2="423.066"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#E8DEFD" />
-        <stop offset="1" stop-color="#F6E7FF" />
+        <stop stopColor="#E8DEFD" />
+        <stop offset="1" stopColor="#F6E7FF" />
       </linearGradient>
       <linearGradient
         id="paint27_linear_2245_1529"
@@ -1124,8 +1124,8 @@ export default (
         y2="291.269"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EFE8FF" />
-        <stop offset="1" stop-color="#CDB6FF" stop-opacity="0" />
+        <stop stopColor="#EFE8FF" />
+        <stop offset="1" stopColor="#CDB6FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint28_linear_2245_1529"
@@ -1135,8 +1135,8 @@ export default (
         y2="263.479"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#EFE8FF" />
-        <stop offset="1" stop-color="#CDB6FF" stop-opacity="0" />
+        <stop stopColor="#EFE8FF" />
+        <stop offset="1" stopColor="#CDB6FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint29_linear_2245_1529"
@@ -1146,8 +1146,8 @@ export default (
         y2="200.9"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint30_linear_2245_1529"
@@ -1157,8 +1157,8 @@ export default (
         y2="222.954"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint31_linear_2245_1529"
@@ -1168,8 +1168,8 @@ export default (
         y2="194.797"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint32_linear_2245_1529"
@@ -1179,8 +1179,8 @@ export default (
         y2="209.516"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" />
       </linearGradient>
       <linearGradient
         id="paint33_linear_2245_1529"
@@ -1190,8 +1190,8 @@ export default (
         y2="243.636"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#855FFF" />
-        <stop offset="1" stop-color="#AE99FF" stop-opacity="0" />
+        <stop stopColor="#855FFF" />
+        <stop offset="1" stopColor="#AE99FF" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint34_linear_2245_1529"
@@ -1201,8 +1201,8 @@ export default (
         y2="115.297"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8B6AFB" />
-        <stop offset="1" stop-color="#A692FF" />
+        <stop stopColor="#8B6AFB" />
+        <stop offset="1" stopColor="#A692FF" />
       </linearGradient>
       <linearGradient
         id="paint35_linear_2245_1529"
@@ -1212,8 +1212,8 @@ export default (
         y2="115.684"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8B6AFB" />
-        <stop offset="1" stop-color="#A692FF" />
+        <stop stopColor="#8B6AFB" />
+        <stop offset="1" stopColor="#A692FF" />
       </linearGradient>
       <linearGradient
         id="paint36_linear_2245_1529"
@@ -1223,8 +1223,8 @@ export default (
         y2="190.046"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8B6AFB" />
-        <stop offset="1" stop-color="#A692FF" />
+        <stop stopColor="#8B6AFB" />
+        <stop offset="1" stopColor="#A692FF" />
       </linearGradient>
       <linearGradient
         id="paint37_linear_2245_1529"
@@ -1234,8 +1234,8 @@ export default (
         y2="185.724"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8B6AFB" />
-        <stop offset="1" stop-color="#A692FF" />
+        <stop stopColor="#8B6AFB" />
+        <stop offset="1" stopColor="#A692FF" />
       </linearGradient>
       <linearGradient
         id="paint38_linear_2245_1529"
@@ -1245,8 +1245,8 @@ export default (
         y2="4.11619"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#0F0036" />
-        <stop offset="1" stop-color="#6A2CAC" />
+        <stop stopColor="#0F0036" />
+        <stop offset="1" stopColor="#6A2CAC" />
       </linearGradient>
       <radialGradient
         id="paint39_radial_2245_1529"
@@ -1256,8 +1256,8 @@ export default (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(875.914 332.825) rotate(59.7247) scale(51.5714 43.0035)"
       >
-        <stop stop-color="#C785FB" />
-        <stop offset="1" stop-color="#6F52E7" />
+        <stop stopColor="#C785FB" />
+        <stop offset="1" stopColor="#6F52E7" />
       </radialGradient>
       <linearGradient
         id="paint40_linear_2245_1529"
@@ -1267,8 +1267,8 @@ export default (
         y2="144.11"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#0B8F63" />
-        <stop offset="1" stop-color="#74CAAD" />
+        <stop stopColor="#0B8F63" />
+        <stop offset="1" stopColor="#74CAAD" />
       </linearGradient>
       <linearGradient
         id="paint41_linear_2245_1529"
@@ -1278,8 +1278,8 @@ export default (
         y2="25.0496"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#0B8F63" />
-        <stop offset="1" stop-color="#74CAAD" />
+        <stop stopColor="#0B8F63" />
+        <stop offset="1" stopColor="#74CAAD" />
       </linearGradient>
       <linearGradient
         id="paint42_linear_2245_1529"
@@ -1289,8 +1289,8 @@ export default (
         y2="94.8359"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" stop-opacity="0.21" />
-        <stop offset="1" stop-color="white" />
+        <stop stopColor="white" stopOpacity="0.21" />
+        <stop offset="1" stopColor="white" />
       </linearGradient>
       <linearGradient
         id="paint43_linear_2245_1529"
@@ -1300,8 +1300,8 @@ export default (
         y2="121.084"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#8078B6" />
-        <stop offset="1" stop-color="#FFFCEC" />
+        <stop stopColor="#8078B6" />
+        <stop offset="1" stopColor="#FFFCEC" />
       </linearGradient>
       <linearGradient
         id="paint44_linear_2245_1529"
@@ -1311,8 +1311,8 @@ export default (
         y2="92.4988"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" stop-opacity="0" />
+        <stop stopColor="#886DF5" />
+        <stop offset="1" stopColor="#9C85FB" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint45_linear_2245_1529"
@@ -1322,8 +1322,8 @@ export default (
         y2="105.089"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" />
+        <stop stopColor="#886DF5" />
+        <stop offset="1" stopColor="#9C85FB" />
       </linearGradient>
       <linearGradient
         id="paint46_linear_2245_1529"
@@ -1333,8 +1333,8 @@ export default (
         y2="117.679"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" stop-opacity="0" />
+        <stop stopColor="#886DF5" />
+        <stop offset="1" stopColor="#9C85FB" stopOpacity="0" />
       </linearGradient>
       <image id="image0_2245_1529" width="872" height="130" />
     </defs>

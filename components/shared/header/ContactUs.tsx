@@ -5,7 +5,7 @@ export default function Contact() {
     <div className="hidden w-1/4 lg:flex justify-end items-center">
       <Link
         href="#"
-        className="lg:flex items-center border border-vpurple-500/50 h-10 px-4 rounded-lg text-vpurple-500 hover:text-white hover:border-vpurple-500 hover:bg-vpurple-500 transition-colors ease-in focus:ring-4 focus:ring-vpurple-500/50 dark:text-white dark:border-white/50 dark:hover:border-vpurple-500"
+        className="lg:flex items-center h-10 px-4 rounded-lg bg-vpurple-500 text-white hover:bg-vpurple-600 focus:ring-4 focus:ring-vpurple-500/50 transition-all duration-200 ease-in-out"
       >
         Contact Us
       </Link>

@@ -33,8 +33,8 @@ export default function Empower() {
       </svg>
 
       <div className="max-w-screen-xl mx-auto pb-20 relative">
-        <div className="max-w-screen-lg mx-auto flex flex-col items-center space-y-8 py-16">
-          <div className="">
+        <div className="max-w-[640px] mx-auto flex flex-col items-center space-y-8 py-16 leading-relaxed">
+          <div>
             <Logo />
           </div>
           <Headline>
