@@ -55,7 +55,7 @@ export default function Pricing() {
                   </div>
                   {/* List */}
                   <ul role="list" className="mb-8 space-y-4 text-left">
-                    {pro.features.map((e, i) => (
+                    {e.features.map((e, i) => (
                       <Feature key={i}>
                         <CheckWhite />
                         {e}
@@ -73,7 +73,7 @@ export default function Pricing() {
                   <Price>{e.price}</Price>
                   {/* List */}
                   <ul role="list" className="mb-8 space-y-4 text-left">
-                    {starting.features.map((e, i) => (
+                    {e.features.map((e, i) => (
                       <Feature key={i}>
                         <Check />
                         {e}

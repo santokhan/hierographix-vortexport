@@ -57,8 +57,4 @@ export const enterprise: PriceList = {
 
 const priceList: PriceList[] = [starting, pro, enterprise];
 
-export function getPriceList(listName: string): PriceList {
-  return priceList.filter((e) => e.title === listName)[0];
-}
-
 export default priceList;
