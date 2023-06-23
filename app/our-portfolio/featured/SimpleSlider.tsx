@@ -28,7 +28,7 @@ export default function SimpleSlider() {
   return (
     <div className="block space-y-4">
       <Swiper
-        slidesPerView={1}
+        slidesPerView={1} 
         spaceBetween={30}
         loop={true}
         pagination={{

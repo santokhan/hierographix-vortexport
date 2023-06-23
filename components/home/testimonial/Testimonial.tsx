@@ -20,7 +20,7 @@ import { Pagination, Navigation } from "swiper";
 export default function TestiMonial() {
   return (
     <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16">
-      <Headline>
+      <Headline className="max-w-xl mx-auto">
         <span className="text-teal-400">Testimonial</span> VortExpert's
         Excellence
       </Headline>

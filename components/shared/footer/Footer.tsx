@@ -127,23 +127,26 @@ export default function Footer() {
 
 export const SocialMedia = () => (
   <div className="flex items-center gap-4">
-    <a
-      href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-600 focus:ring-4 ring-teal-400/60 transition-all ease-out"
-    >
+    <SocialIcon href="">
       <i className="fab fa-facebook-f"></i>
-    </a>
-    <a
-      href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-600 focus:ring-4 ring-teal-400/60 transition-all ease-out"
-    >
+    </SocialIcon>
+    <SocialIcon href="">
       <i className="fab fa-instagram"></i>
-    </a>
-    <a
-      href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-600 focus:ring-4 ring-teal-400/60 transition-all ease-out"
-    >
+    </SocialIcon>
+    <SocialIcon href="">
       <i className="fab fa-twitter"></i>
-    </a>
+    </SocialIcon>
   </div>
+);
+
+export const SocialIcon = (props: any) => (
+  <a
+    href={props.href}
+    className={[
+      "w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center transition-all ease-in-out",
+      "hover:bg-transparent hover:text-teal-400 hover:border hover:border-teal-400",
+    ].join(" ")}
+  >
+    {props.children}
+  </a>
 );

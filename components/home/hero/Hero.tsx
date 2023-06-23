@@ -38,7 +38,7 @@ function Hero() {
 
 export const Effect = () => (
   <svg
-    className="w-full max-h-[1200px] text-vpurple-900 absolute -right-40 top-56 hidden lg:block"
+    className="w-full max-h-[900px] text-vpurple-900 absolute -right-40 top-40 hidden lg:block"
     viewBox="0 0 1101 900"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

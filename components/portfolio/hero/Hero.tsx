@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import heroImg from "../../../app/assets/images/portfolio/portfolio.png";
+import Headline from "@/components/shared/Headline";
 
 export default function Hero() {
   return (
@@ -8,9 +9,9 @@ export default function Hero() {
       <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-8 items-center px-4">
         <div className="w-full lg:w-1/2 space-y-6">
           <div className="space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-bold leading-[1.2]">
+            <Headline className="text-start lg:text-5xl">
               Discover <span className="text-teal-500">Portfolio</span>
-            </h2>
+            </Headline>
             <p className="max-w-screen-sm text-gray-100 lg:text-xl">
               A Showcase of Creative Excellence
             </p>

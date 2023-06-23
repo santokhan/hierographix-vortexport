@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Logo from "../logo/Logo";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { navs, NavsDD } from "./NavList";
 import Contact from "./ContactUs";
 import { SocialMedia } from "@/components/shared/footer/Footer";
@@ -78,20 +77,30 @@ export function NavDropdown({ nav }: { nav: NavsDD }) {
         <i className="fa fa-angle-down group-hover:-rotate-180 transition-transform ease-out"></i>
       </button>
       {/* dropdown desktop */}
-      <div className="hidden group-hover:flex flex-col items-start absolute top-14 left-0 w-80 mt-1 bg-white /95 backdrop-blur-sm z-[2] rounded-lg py-3 px-5 shadow-xl">
+      <div
+        className={[
+          "transition-all ease-in-out",
+          "hidden absolute top-14 left-0 w-80 mt-1 bg-white z-[2] rounded-lg py-3 px-5 shadow-xl",
+          "group-hover:flex group-hover:flex-col group-hover:items-start",
+        ].join(" ")}
+      >
         {nav.dropdown.map((ele: any, ind: number) => (
-          <a
+          <Link
             key={ind}
             href={ele.url}
-            className={`rounded w-full flex items-center gap-2 h-12 text-gray-800 hover:text-vpurple-500 dark:hover:text-vpurple-500 dark:text-gray-800 border-b last:border-none ${
-              activeNav(ele.url) && "text-vpurple-500 dark:text-vpurple-500"
-            }`}
+            className={[
+              "rounded w-full flex items-center gap-2 h-12 text-gray-800 border-b last:border-none",
+              "hover:text-vpurple-500 dark:hover:text-vpurple-500 dark:text-gray-800",
+              activeNav(ele.url)
+                ? "text-vpurple-500 dark:text-vpurple-500"
+                : "",
+            ].join(" ")}
           >
             <div className="flex items-center justify-center">
               <Icons name={ele.icon} className="h-6 w-6" />
             </div>
             {ele.name}
-          </a>
+          </Link>
         ))}
       </div>
     </div>

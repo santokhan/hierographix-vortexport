@@ -33,11 +33,9 @@ export default function Empower() {
       </svg>
 
       <div className="max-w-screen-xl mx-auto pb-20 relative">
-        <div className="max-w-[640px] mx-auto flex flex-col items-center space-y-8 py-16 leading-relaxed">
-          <div>
-            <Logo />
-          </div>
-          <Headline>
+        <div className="max-w-[900px] mx-auto flex flex-col items-center space-y-8 py-16 leading-relaxed">
+          <Logo />
+          <Headline className="leading-[1.25]">
             Empower Your Business with VortExpert's{" "}
             <span className="text-teal-500">Cutting-Edge Solutions!</span>
           </Headline>

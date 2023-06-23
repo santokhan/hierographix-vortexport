@@ -48,11 +48,13 @@ export default function Featured() {
               website provides an engaging user experience, encourages company
               engagement and enhances Unique Inc&apos;s online presence.
             </p>
+
             <Link
-              href="/"
-              className="text-vpurple-500 flex gap-4 items-center my-3 hover:brightness-75"
+              className="relative inline-flex items-center my-1 py-1 text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500 group focus:ring-4 focus:outline-none focus:ring-blue-300"
+              href=""
             >
-              See More <i className="fa fa-angle-right"></i>
+              <span>See more</span>
+              <div className="absolute bottom-0 left-0 bg-vpurple-500 h-[2px] w-0 group-hover:w-full transition-all ease-in-out"></div>
             </Link>
           </div>
         </div>

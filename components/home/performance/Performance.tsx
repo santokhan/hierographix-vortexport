@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import PerformanceImage from "../../../app/assets/images/performance/performance-rating.png";
+import Headline from "@/components/shared/Headline";
 
 export default function Performance() {
   const ratings = [
@@ -37,11 +38,11 @@ export default function Performance() {
           />
         </div>
         <div className="w-full max-w-lg space-y-4">
-          <h3 className="text-2xl lg:text-4xl font-bold leading-[1.2]">
+          <Headline className="text-start">
             <span className="text-gray-900">Performance</span>{" "}
             <span className="text-teal-400">Rating</span>
-          </h3>
-          <div className="flex justify-between">
+          </Headline>
+          <div className="flex justify-between lg:pr-6">
             <p className="font-light text-gray-500 md:text-lg lg:text-xl">
               Excellence in Action
             </p>

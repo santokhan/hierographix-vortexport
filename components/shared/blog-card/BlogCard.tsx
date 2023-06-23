@@ -23,8 +23,6 @@ export default function BlogCard(props: { data: BCard }): JSX.Element {
           <Image
             src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
             alt={data.title}
-            width={0}
-            height={0}
             className="w-full object-contain shadow rounded-lg"
           />
         )}
@@ -37,7 +35,7 @@ export default function BlogCard(props: { data: BCard }): JSX.Element {
         {/* Card Title */}
         <Link
           href={data.url}
-          className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 dark:text-gray-100 capitalize"
+          className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 dark:text-gray-100 capitalize hover:text-vpurple-500 hover:dark:text-vpurple-500"
         >
           {data.title}
         </Link>
