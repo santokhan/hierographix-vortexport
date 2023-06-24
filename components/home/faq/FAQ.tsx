@@ -6,7 +6,7 @@ import Accordion from "./accordion/Accordion";
 export default function FAQ() {
   return (
     <section>
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-start max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center lg:items-start max-w-screen-xl px-4 py-12 mx-auto lg:py-20">
         <Image
           src={require("../../../app/assets/images/faqs.png")}
           alt="mockup"
