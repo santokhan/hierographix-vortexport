@@ -26,7 +26,7 @@ export default function TestiMonial() {
       </Headline>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
-        <div className="overflow-auto flex flex-col gap-12">
+        <div className="overflow-auto flex flex-col items-center gap-12">
           <svg
             width="77"
             height="59"
@@ -96,12 +96,12 @@ export function Slider() {
       navigation={true}
       modules={[Pagination, Navigation]}
       className={
-        "testimonial-slider max-w-[380px] max-h-[280px] overflow-hidden relative"
+        "testimonial-slider max-w-[380px] max-h-[320px] overflow-hidden relative"
       }
     >
       {reviews.map((e, i) => (
         <SwiperSlide
-          className={`min-w-[380px] space-y-5 transition-all duration-[400ms] ease-in-out text-start`}
+          className={`min-w-[380px] space-y-5 transition-all duration-[400ms] ease-in-out text-start mb-10`}
           key={i}
         >
           <div className="flex gap-4 items-center">
