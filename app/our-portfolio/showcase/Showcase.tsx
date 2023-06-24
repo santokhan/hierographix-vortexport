@@ -62,7 +62,7 @@ export const cardsData = [
 export default function Showcase() {
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 space-y-10">
-      <Headline>
+      <Headline className="mx-auto max-w-lg">
         Another <span className="text-teal-400">Creative</span> Showcase
       </Headline>
       <div
@@ -81,7 +81,10 @@ export default function Showcase() {
                   className="w-full h-full object-contain"
                 />
                 <div
-                  className={`absolute top-0 left-0 w-full h-full z-[10] p-6 flex flex-col justify-center items-center space-y-2 ${Styles.showcaseEffect}`}
+                  className={[
+                    "absolute top-0 left-0 w-full h-full z-[10] p-6 flex flex-col justify-center items-center space-y-2",
+                    Styles.showcaseEffect,
+                  ].join(" ")}
                 >
                   <a
                     href={e?.url}
@@ -158,13 +161,18 @@ export default function Showcase() {
 export function SeeMore(props: any) {
   return (
     <div className="flex gap-6 items-center">
-      <div className="border border-vpurple-500/20 w-full h-[2px]"></div>
+      <div className="border border-white/20 w-full h-[2px]"></div>
       <a
         href={props.url}
-        className="inline-flex items-center gap-2 font-medium text-center text-vpurple-500 hover:text-vpurple-500/60 whitespace-nowrap"
+        className="inline-flex items-center gap-2 text-center text-white whitespace-nowrap group transition-all ease-in-out"
       >
-        See more
-        <i className="fa fa-angle-right"></i>
+        <span>See more</span>
+        <i
+          className={[
+            "fa fa-angle-right -translate-x-3 opacity-0 transition-all ease-in-out",
+            "group-hover:translate-x-0 group-hover:opacity-100",
+          ].join(" ")}
+        ></i>
       </a>
     </div>
   );

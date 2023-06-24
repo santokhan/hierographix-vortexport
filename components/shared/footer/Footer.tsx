@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Logo from "../logo/Logo";
 import Empower from "../../home/empower/Empower";
 import { usePathname } from "next/navigation";
@@ -70,6 +69,7 @@ export const linkList = [
     ],
   },
 ];
+
 export default function Footer() {
   const pathName = usePathname();
   return (
@@ -100,11 +100,10 @@ export default function Footer() {
                     <li className="mb-4" key={ind}>
                       <a
                         href={ele.url}
-                        className={`hover:text-vpurple-500 flex items-center gap-2 group transition-all ease-out duration-200 relative ${
+                        className={`flex items-center gap-2 group transition-all ease-out duration-200 relative hover:text-vpurple-500 ${
                           ele.url === pathName && "text-vpurple-500"
                         }`}
                       >
-                        <div className="h-[2px] group-hover:w-2 bg-vpurple-500 transition-all ease-out duration-200 absolute right-[102%]"></div>{" "}
                         {ele.name}
                       </a>
                     </li>
@@ -128,23 +127,26 @@ export default function Footer() {
 
 export const SocialMedia = () => (
   <div className="flex items-center gap-4">
-    <a
-      href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"
-    >
+    <SocialIcon href="">
       <i className="fab fa-facebook-f"></i>
-    </a>
-    <a
-      href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"
-    >
+    </SocialIcon>
+    <SocialIcon href="">
       <i className="fab fa-instagram"></i>
-    </a>
-    <a
-      href=""
-      className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"
-    >
+    </SocialIcon>
+    <SocialIcon href="">
       <i className="fab fa-twitter"></i>
-    </a>
+    </SocialIcon>
   </div>
+);
+
+export const SocialIcon = (props: any) => (
+  <a
+    href={props.href}
+    className={[
+      "w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center transition-all ease-in-out",
+      "hover:bg-transparent hover:text-teal-400 hover:border hover:border-teal-400",
+    ].join(" ")}
+  >
+    {props.children}
+  </a>
 );

@@ -20,14 +20,7 @@ export default function Featured() {
           <span className="text-gray-800">Featured Project</span>
         </Headline>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-xl px-4 mx-auto">
-          <div className="w-full">
-            {/* <Image
-              src={feature}
-              alt="mockup"
-              className="w-full max-h-[600px] object-contain px-4"
-            /> */}
-            <SimpleSlider />
-          </div>
+          <SimpleSlider />
           <div className="w-full max-w-lg space-y-4">
             <p className="text-gray-800 md:text-lg lg:text-xl font-medium">
               Website Development for Unique Inc
@@ -55,11 +48,13 @@ export default function Featured() {
               website provides an engaging user experience, encourages company
               engagement and enhances Unique Inc&apos;s online presence.
             </p>
+
             <Link
-              href="/"
-              className="text-vpurple-500 flex gap-4 items-center my-3 hover:brightness-75"
+              className="relative inline-flex items-center my-1 py-1 text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500 group focus:ring-4 focus:outline-none focus:ring-blue-300"
+              href=""
             >
-              See More <i className="fa fa-angle-right"></i>
+              <span>See more</span>
+              <div className="absolute bottom-0 left-0 bg-vpurple-500 h-[2px] w-0 group-hover:w-full transition-all ease-in-out"></div>
             </Link>
           </div>
         </div>
@@ -76,14 +71,14 @@ const Hill = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M268 254H21.1862L17.914 247.355C-28.3358 153.437 19.393 53.6267 110.356 13.201L140.06 0L268 254Z"
       fill="url(#paint0_linear_1629_7)"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M595 254H348.186L344.914 247.355C298.664 153.437 346.393 53.6267 437.356 13.201L467.06 0L595 254Z"
       fill="url(#paint1_linear_1629_7)"
     />
@@ -96,8 +91,8 @@ const Hill = () => (
         y2="304.133"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" />
+        <stop stopColor="#886DF5" />
+        <stop offset="1" stopColor="#9C85FB" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_1629_7"
@@ -107,8 +102,8 @@ const Hill = () => (
         y2="304.133"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#886DF5" />
-        <stop offset="1" stop-color="#9C85FB" />
+        <stop stopColor="#886DF5" />
+        <stop offset="1" stopColor="#9C85FB" />
       </linearGradient>
     </defs>
   </svg>

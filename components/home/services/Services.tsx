@@ -40,13 +40,14 @@ export const cardsData = [
     desc: "Vortexpert's AI & Data Research services include leveraging machine learning algorithms and predictive analytics to gain insights into data and improve decision-making using technologies such as Python, TensorFlow, and PyTorch. The agency also offers natural language processing services to analyze and process unstructured data such as text and speech using natural language processing techniques. Additionally, Vortexpert provides computer vision services to analyze and process visual data such as images and videos using computer vision algorithms.",
   },
 ];
+
 export default function Services() {
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 space-y-10">
       <Headline>
         Our <span className="text-teal-400">Services</span>
       </Headline>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {cardsData.map((e, i) => (
           // card loop
           <div className="max-w-md mx-auto rounded-lg shadow" key={i}>
@@ -61,26 +62,32 @@ export default function Services() {
             </a>
             <div className="p-5">
               <a href={e.url}>
-                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-100 capitalize">
+                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-100 capitalize">
                   {e.title}
                 </h5>
               </a>
               <p
-                className={
-                  "mb-3 font-normal text-gray-500 h-24 overflow-hidden text-ellipsis " +
-                  Styles.cardDesc
-                }
+                className={[
+                  Styles.cardDesc,
+                  "mb-3 font-normal text-gray-400 h-24 overflow-hidden text-ellipsis",
+                ].join(" ")}
               >
                 {e.desc}
               </p>
               <a
                 href={e.url}
-                className="inline-flex items-center py-2 text-sm font-medium text-center text-vpurple-500/50 hover:text-vpurple-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                className={[
+                  "relative inline-flex items-center my-1 py-1 text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500 group",
+                  "focus:ring-4 focus:outline-none focus:ring-blue-300",
+                ].join(" ")}
               >
-                Read more
+                <span>Read more</span>
                 <svg
                   aria-hidden="true"
-                  className="w-4 h-4 ml-2 -mr-1"
+                  className={[
+                    "w-4 ml-2 -translate-x-4 opacity-0 transition-transform ease-in-out",
+                    "group-hover:translate-x-0 group-hover:opacity-100 hidden",
+                  ].join(" ")}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,6 +98,7 @@ export default function Services() {
                     clipRule="evenodd"
                   ></path>
                 </svg>
+                <div className="absolute bottom-0 left-0 bg-vpurple-500 h-[2px] w-0 group-hover:w-full transition-all ease-in-out"></div>
               </a>
             </div>
           </div>

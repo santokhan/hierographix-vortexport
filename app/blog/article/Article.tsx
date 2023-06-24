@@ -203,7 +203,7 @@ export default function Article() {
     <div className="">
       <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 space-y-10">
         <Headline>Articles</Headline>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {cardsDataArticle.slice(0, 9).map((e: BCard, i: number) => (
             <BlogCard data={e} key={i} />
           ))}
@@ -211,7 +211,7 @@ export default function Article() {
       </div>
       <MostPopular />
       <div className="max-w-screen-xl mx-auto px-4 py-16 lg:py-20 space-y-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {cardsDataArticle
             .slice(9, cardsDataArticle.length)
             .map((e: BCard, i: number) => (

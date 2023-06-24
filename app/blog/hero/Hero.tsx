@@ -1,6 +1,7 @@
 import Headline from "@/components/shared/Headline";
 import SubscribeForm from "@/components/home/hero/SubscribeForm";
 import BlogCard, { BCard } from "@/components/shared/blog-card/BlogCard";
+import Styles from "./Hero.module.css";
 
 export const cardsData: BCard[] = [
   {
@@ -52,12 +53,18 @@ export default function Hero() {
       </div>
 
       <div className="max-w-screen-xl mx-auto space-y-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-12">
-          <div className="lg:col-span-2 lg:row-span-2">
+        <div
+          className={[
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12",
+          ].join(" ")}
+        >
+          <div className="lg:col-span-9">
             <BlogCard data={cardsData[0]} />
           </div>
-          <BlogCard data={cardsData[1]} />
-          <BlogCard data={cardsData[2]} />
+          <div className="lg:col-span-3 overflow-hidden space-y-6">
+            <BlogCard data={cardsData[1]} />
+            <BlogCard data={cardsData[2]} />
+          </div>
         </div>
       </div>
     </div>

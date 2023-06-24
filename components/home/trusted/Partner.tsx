@@ -1,32 +1,84 @@
-import Image from "next/image";
-import partner1 from "../../../app/assets/images/partners/1.png";
-import partner2 from "../../../app/assets/images/partners/2.png";
-import partner3 from "../../../app/assets/images/partners/3.png";
-import partner4 from "../../../app/assets/images/partners/4.png";
-import partner5 from "../../../app/assets/images/partners/5.png";
-import partner6 from "../../../app/assets/images/partners/6.png";
 import Headline from "@/components/shared/Headline";
+import Styles from "./Partner.module.css";
+import LogoIpsum1 from "./brands/LogoIpsum1";
+import LogoIpsum2 from "./brands/LogoIpsum2";
+import LogoIpsum3 from "./brands/LogoIpsum3";
+import LogoIpsum4 from "./brands/LogoIpsum4";
+import LogoIpsum21 from "./brands/LogoIpsum21";
+import LogoIpsum22 from "./brands/LogoIpsum22";
 
-const Partner = () => (
-  <div className="max-w-screen-lg mx-auto px-4 py-8 space-y-8">
-    <Headline>
-      Trusted <span className="text-teal-500">Parternships</span>
-    </Headline>
-    <div className="flex justify-center items-center flex-wrap gap-x-8 gap-y-5 relative">
-      <div className="h-full w-1/4 absolute top-0 left-0 bg-gradient-to-l from-transparent to-vpurple-950"></div>
-      <div className="h-full w-1/4 absolute top-0 right-0 bg-gradient-to-r from-transparent to-vpurple-950"></div>
-      <Image src={partner1} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner2} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner3} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner4} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner5} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner6} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner5} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner3} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner3} alt="partner" className="h-8 w-30 object-contain" />
-      <Image src={partner4} alt="partner" className="h-8 w-30 object-contain" />
+function Partner() {
+  const brandStyles = "h-8 min-w-[160px] text-white";
+
+  return (
+    <div className="max-w-screen-lg mx-auto px-4 py-16 space-y-6 lg:space-y-12">
+      <Headline>
+        Trusted <span className="text-teal-500">Parternships</span>
+      </Headline>
+      <div
+        className={`${Styles.brands} relative space-y-6 lg:space-y-12 overflow-hidden`}
+      >
+        <div
+          className={`${Styles.partnerMoveLeft} flex justify-center items-center gap-x-8`}
+        >
+          {/* partner */}
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum4 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum4 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum4 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum4 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+        </div>
+        <div
+          className={`flex justify-center items-center gap-x-8 ${Styles.partnerMoveRight}`}
+        >
+          {/* partner */}
+          <LogoIpsum21 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum22 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum21 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum22 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum21 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+          <LogoIpsum22 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum21 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum3 className={brandStyles} />
+          <LogoIpsum22 className={brandStyles} />
+          <LogoIpsum1 className={brandStyles} />
+          <LogoIpsum2 className={brandStyles} />
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default Partner;

@@ -11,12 +11,12 @@ const Logo = (props: Props) => (
     <Image
       src={logoSrcWhite}
       alt="logo"
-      className="h-6 w-full object-contain hidden dark:block"
+      className="h-6 lg:h-8 w-full object-contain hidden dark:block"
     />
     <Image
       src={logoSrc}
       alt="logo"
-      className="h-6 w-full object-contain dark:hidden"
+      className="h-6 lg:h-8 w-full object-contain dark:hidden"
     />
   </div>
 );

@@ -1,9 +1,12 @@
 import Header from "@/components/shared/header/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import Footer from "@/components/shared/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 // Santo
 export const metadata = {
@@ -20,7 +23,7 @@ export default function RootLayout({ children }: RooteLayout) {
     // enable dark mode by default, Santo
     <html lang="en" className="dark">
       <head>
-        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
           rel="stylesheet"
@@ -30,7 +33,7 @@ export default function RootLayout({ children }: RooteLayout) {
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
         />
       </head>
-      <body className={inter.className}>
+      <body className={manrope.className}>
         <Header />
         {children}
         <Footer />
