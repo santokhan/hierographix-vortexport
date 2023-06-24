@@ -16,7 +16,7 @@ export default function BlogCard(props: { data: BCard }): JSX.Element {
   const { data } = props;
 
   return (
-    <div className="w-full space-y-3">
+    <div className="w-full space-y-3 overflow-hidden">
       {/* Card Image */}
       <Link href={data.url}>
         {data.src && (
@@ -70,7 +70,7 @@ export function BlogCardWhite({ data }: { data: BCard }): JSX.Element {
         {/* Card Title */}
         <Link
           href={data.url}
-          className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 capitalize"
+          className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 capitalize hover:text-vpurple-500"
         >
           {data.title}
         </Link>

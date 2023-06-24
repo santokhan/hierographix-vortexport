@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="relative overflow-hidden py-12">
       <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-8 items-center px-4">
         <div className="w-full lg:w-1/2 space-y-6">
-          <div className="space-y-4">
+          <div className="lg:space-y-4">
             <Headline className="text-start lg:text-5xl">
               Discover <span className="text-teal-500">Portfolio</span>
             </Headline>

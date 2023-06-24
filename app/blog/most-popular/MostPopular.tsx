@@ -13,18 +13,23 @@ export default function MostPopular(): JSX.Element {
         <Headline>
           <div className="text-white">Most Popular</div>
         </Headline>
-        <div className="grid grid-cols-1 lg:grid-cols-12 justify-between items-center">
-          <div className="lg:col-span-6 space-y-5 py-16 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 justify-between items-center">
+          <div className="lg:col-span-6 space-y-5 lg:py-24">
             <div className="space-y-2">
               <h5 className="font-meduim text-gray-200 text-lg uppercase">
                 Vortexpert's AI & Data Research
               </h5>
-              <Headline>
+              <h2
+                className={[
+                  "text-2xl lg:text-5xl font-black text-center !leading-[1.25] text-gray-800",
+                  "dark:text-white",
+                ].join(" ")}
+              >
                 <div className="text-start text-white">
                   Strategic Marketing in the Digital Age: Harnessing Data and
                   Innovation for Business Growth
                 </div>
-              </Headline>
+              </h2>
             </div>
             <div className="flex gap-4 items-center whitespace-nowrap">
               <div className="flex items-center gap-2 text-xs text-gray-100">
@@ -40,7 +45,7 @@ export default function MostPopular(): JSX.Element {
           <Image
             src={riseOfAI}
             alt="hero-image"
-            className="lg:col-span-5 w-full object-contain"
+            className="lg:col-span-6 w-full object-contain"
           />
         </div>
       </div>

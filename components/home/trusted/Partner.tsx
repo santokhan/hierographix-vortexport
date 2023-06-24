@@ -11,11 +11,13 @@ function Partner() {
   const brandStyles = "h-8 min-w-[160px] text-white";
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 py-16 space-y-12">
+    <div className="max-w-screen-lg mx-auto px-4 py-16 space-y-6 lg:space-y-12">
       <Headline>
         Trusted <span className="text-teal-500">Parternships</span>
       </Headline>
-      <div className={`${Styles.brands} relative space-y-12 overflow-hidden`}>
+      <div
+        className={`${Styles.brands} relative space-y-6 lg:space-y-12 overflow-hidden`}
+      >
         <div
           className={`${Styles.partnerMoveLeft} flex justify-center items-center gap-x-8`}
         >

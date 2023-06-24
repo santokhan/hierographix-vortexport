@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RooteLayout) {
     // enable dark mode by default, Santo
     <html lang="en" className="dark">
       <head>
-        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
           rel="stylesheet"

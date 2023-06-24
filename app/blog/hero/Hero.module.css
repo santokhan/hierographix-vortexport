@@ -1,0 +1,7 @@
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-areas:
+      "a a b"
+      "a a c";
+  }
+}
