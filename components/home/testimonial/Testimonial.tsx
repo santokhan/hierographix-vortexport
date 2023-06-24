@@ -96,12 +96,12 @@ export function Slider() {
       navigation={true}
       modules={[Pagination, Navigation]}
       className={
-        "testimonial-slider max-w-[380px] max-h-[320px] overflow-hidden relative"
+        "testimonial-slider max-w-[380px] max-h-[280px] overflow-hidden relative"
       }
     >
       {reviews.map((e, i) => (
         <SwiperSlide
-          className={`min-w-[380px] space-y-5 transition-all duration-[400ms] ease-in-out text-start mb-10`}
+          className={`min-w-[380px] space-y-5 transition-all duration-[400ms] ease-in-out text-start mb-10 lg:mt-0`}
           key={i}
         >
           <div className="flex gap-4 items-center">
