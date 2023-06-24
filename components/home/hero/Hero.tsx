@@ -4,15 +4,17 @@ import styles from "./Hero.module.css";
 import SubscribeForm from "./SubscribeForm";
 import { Poppins } from "next/font/google";
 import Text from "@/components/shared/text/Text";
+import RiveComponent from "./RiveHero";
+import Rive from "./RiveHero";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 
-function Hero() {
+export default function Hero() {
   return (
     <div className="relative overflow-hidden">
       <Effect />
-      <div className="max-w-screen-xl mx-auto px-4 pb-20 relative">
-        <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 py-16 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4 relative">
+        <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 pt-16 lg:pt-20">
           <h2
             className={`${poppins.className} text-4xl lg:text-[3.5rem] font-bold text-start lg:text-center leading-[1.2]`}
           >
@@ -25,12 +27,7 @@ function Hero() {
           </Text>
           <SubscribeForm />
         </div>
-
-        <Image
-          src={HeroImg}
-          alt="hero-image"
-          className="w-full object-contain"
-        />
+        <Rive />
       </div>
     </div>
   );
@@ -63,4 +60,3 @@ export const Effect = () => (
   </svg>
 );
 
-export default Hero;
