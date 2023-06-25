@@ -11,9 +11,8 @@ export default function BlogPage() {
         <ScrollAnimation animateIn="fadeIn">
           <ReadBlog />
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
-          <BottomBar />
-        </ScrollAnimation>
+
+        <BottomBar />
       </div>
     </div>
   );
