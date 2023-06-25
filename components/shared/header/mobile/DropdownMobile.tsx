@@ -7,6 +7,7 @@ import { NavsDD, navs } from "../NavList";
 import { SocialMedia } from "../../footer/Footer";
 import Icons from "../dropdown/icons/Icons";
 import Contact from "../ContactUs";
+import Styles from './DropdownMobile.module.css'
 
 export default function TogglerAndDDMobile() {
   // mobile dropdown toggler, by default it will be false
@@ -36,7 +37,8 @@ export function DropdownMobile(props: {
 }) {
   return (
     props.dropdown && (
-      <div className="w-screen h-screen font-medium fixed right-0 top-16 bg-white/95 dark:bg-vpurple-950/95 backdrop-blur-sm z-[2]">
+      <div className={["w-screen h-screen font-medium fixed right-0 top-16 bg-white dark:bg-vpurple-950/95 backdrop-blur-sm z-[2]",
+        "transition-transform ease-in-out origin-top-right", Styles.animateMobileDropdown].join(" ")}>
         <div className="relative flex flex-col items-center justify-start gap-6 py-8">
           {navs.map((e: any, i: number) =>
             e.dropdown ? (

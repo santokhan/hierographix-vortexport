@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="h-16 relative">
       {/* Both will `"h-16"` */}
-      <div className="h-16 fixed top-0 left-0 w-full z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
+      <div className="h-16 fixed top-0 left-0 w-full z-[11] bg-white backdrop-blur-sm shadow dark:bg-vpurple-950/95">
         <Navbar />
       </div>
     </header>
