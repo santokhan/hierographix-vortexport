@@ -1,4 +1,6 @@
-Prefered website : [https://www.superside.com/](https://www.superside.com/)
+[prefered-website](https://www.superside.com/)
+
+[requirements](file://SANTOKHAN-COMPU/Users/Santo%20Khan/OneDrive/move-to-android/Meet%20–%20gjz-tgnk-qii%20-%20Google%20Chrome%202023-06-16%2022-46-24.mp4)
 
 ## Getting Started
 
@@ -25,7 +27,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!na
 
 ## Deploy on Vercel
 

@@ -12,6 +12,7 @@ export default function Rive() {
 
     return (
         <div className="flex justify-center">
-            <RiveComponent className='w-full h-[50vw] lg:h-[700px]' onLoad={() => rive && rive.play()} /></div>
+            <RiveComponent className='w-full h-[50vw] lg:h-[700px]' onLoad={() => rive && rive.play()} />
+        </div>
     );
 }

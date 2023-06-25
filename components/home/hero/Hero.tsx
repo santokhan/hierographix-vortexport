@@ -4,8 +4,7 @@ import styles from "./Hero.module.css";
 import SubscribeForm from "./SubscribeForm";
 import { Poppins } from "next/font/google";
 import Text from "@/components/shared/text/Text";
-import RiveComponent from "./RiveHero";
-import Rive from "./RiveHero";
+import RiveComponent from "./rive/RiveHero";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 
@@ -27,7 +26,7 @@ export default function Hero() {
           </Text>
           <SubscribeForm />
         </div>
-        <Rive />
+        <RiveComponent />
       </div>
     </div>
   );
