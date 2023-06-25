@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Package Installation commands
+
+- npm i next@latest react@16.14.0 react-dom@16.14.0
+- npm i tailwindcss postcss autoprefixer
+- npx tailwindcss init -p
+- npm i react-animate-on-scroll daisyui
+- npm i @headlessui/react
+- npm i @rive-app/react-canvas
+- npm i swiper
+- npm i typescript

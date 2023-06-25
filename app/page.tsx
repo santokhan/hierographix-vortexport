@@ -1,5 +1,4 @@
 "use client"
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import Partner from "../components/home/trusted/Partner";
 import Hero from "../components/home/hero/Hero";
@@ -9,41 +8,19 @@ import Services from "../components/home/services/Services";
 import TestiMonial from "../components/home/testimonial/Testimonial";
 import ConnectWithSpacing from "../components/home/connect/Connect";
 import FAQ from "../components/home/faq/FAQ";
+// npm install next@latest react@16.14.0 react-dom@16.14.0
 
 export default function FrontendDevelopment() {
   return (
     <div className="bg-vpurple-950">
-      <ScrollAnimation animateIn="fadeIn">
-        <Hero />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <Partner />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <Pricing />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <Performance />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <Services />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <TestiMonial />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <ConnectWithSpacing />
-      </ScrollAnimation>
-
-      <ScrollAnimation animateIn="fadeIn">
-        <FAQ />
-      </ScrollAnimation>
+      <Hero />
+      <Partner />
+      <Pricing />
+      <Performance />
+      <Services />
+      <TestiMonial />
+      <ConnectWithSpacing />
+      <FAQ />
     </div>
   );
 }
