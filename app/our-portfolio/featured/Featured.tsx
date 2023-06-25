@@ -113,8 +113,7 @@ function Icon({ name }: { name: string }) {
   if (name === "light") {
     return (
       <svg
-        width="20"
-        height="20"
+        className="w-5"
         viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +127,7 @@ function Icon({ name }: { name: string }) {
   } else if (name === "client") {
     return (
       <svg
-        width="20"
-        height="20"
+        className="w-5"
         viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -143,8 +141,7 @@ function Icon({ name }: { name: string }) {
   } else if (name === "database") {
     return (
       <svg
-        width="15"
-        height="16"
+        className="h-4"
         viewBox="0 0 15 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -158,8 +155,7 @@ function Icon({ name }: { name: string }) {
   } else if (name === "support") {
     return (
       <svg
-        width="19"
-        height="19"
+        className="w-5"
         viewBox="0 0 19 19"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

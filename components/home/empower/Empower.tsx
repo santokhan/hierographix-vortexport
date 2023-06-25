@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
-import emppower from "../../../app/assets/images/empower.png";
 import Headline from "@/components/shared/Headline";
 import SubscribeForm from "../hero/SubscribeForm";
+import EmpowerImage from "./EmpowerImage";
 
 export default function Empower() {
   return (
@@ -41,11 +40,7 @@ export default function Empower() {
           </Headline>
           <SubscribeForm />
         </div>
-        <Image
-          src={emppower}
-          alt="hero-image"
-          className="w-full object-contain"
-        />
+        <EmpowerImage />
       </div>
     </div>
   );

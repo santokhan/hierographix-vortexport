@@ -16,6 +16,7 @@ import "./testimonial-slider.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import TestimonialImage from "./TestimonialImage";
 
 export default function TestiMonial() {
   return (
@@ -43,10 +44,11 @@ export default function TestiMonial() {
           <Slider />
         </div>
         <div className="">
-          <Image
+          {/* <Image
             src={require("../../../app/assets/images/testimonials.png")}
             alt="testimonial"
-          />
+          /> */}
+          <TestimonialImage />
         </div>
       </div>
     </div>
