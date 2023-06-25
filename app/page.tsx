@@ -1,4 +1,5 @@
-"use client";
+"use client"
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import Partner from "../components/home/trusted/Partner";
 import Hero from "../components/home/hero/Hero";
@@ -12,14 +13,37 @@ import FAQ from "../components/home/faq/FAQ";
 export default function FrontendDevelopment() {
   return (
     <div className="bg-vpurple-950">
-      <Hero />
-      <Partner />
-      <Pricing />
-      <Performance />
-      <Services />
-      <TestiMonial />
-      <ConnectWithSpacing />
-      <FAQ />
+      <ScrollAnimation animateIn="fadeIn">
+        <Hero />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <Partner />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <Pricing />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <Performance />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <Services />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <TestiMonial />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <ConnectWithSpacing />
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <FAQ />
+      </ScrollAnimation>
     </div>
   );
 }
