@@ -47,32 +47,14 @@ export default function Performance() {
             <p className="font-light text-gray-500 md:text-lg lg:text-xl">
               Excellence in Action
             </p>
-            <div className="rating">
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
+            {/* Ratings */}
+            <div className="flex gap-1">
+              {[1, 2, 3, 4, 5].map((e, i: number) => (
+                <svg className="w-5" key={i} viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 0.5L13.703 5.40319L19.5106 7.40983L15.9917 12.4468L15.8779 18.5902L10 16.8L4.12215 18.5902L4.00834 12.4468L0.489435 7.40983L6.29695 5.40319L10 0.5Z" fill="#FFC656" />
+                </svg>
+              )
+              )}
             </div>
           </div>
           <ul className="list-none space-y-6 py-3">
