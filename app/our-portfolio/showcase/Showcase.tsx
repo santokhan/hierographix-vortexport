@@ -164,15 +164,15 @@ export function SeeMore(props: any) {
       <div className="border border-white/20 w-full h-[2px]"></div>
       <a
         href={props.url}
-        className="inline-flex items-center gap-2 text-center text-white whitespace-nowrap group transition-all ease-in-out"
+        className="inline-flex items-center gap-2 text-center text-white whitespace-nowrap group transition-transform ease-in-out hover:text-vpurple-500"
       >
         <span>See more</span>
-        <i
+        {/* <i
           className={[
-            "fa fa-angle-right -translate-x-3 opacity-0 transition-all ease-in-out",
+            "fa fa-angle-right -translate-x-3 opacity-0 transition-all ease-in-out hidden",
             "group-hover:translate-x-0 group-hover:opacity-100",
           ].join(" ")}
-        ></i>
+        ></i> */}
       </a>
     </div>
   );

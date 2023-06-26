@@ -20,7 +20,7 @@ export default function Hero() {
             Taking Your Business to the Summit of{" "}
             <span className="text-teal-500">Digital Success</span>
           </h2>
-          <Text className="max-w-screen-sm text-gray-400 text-start lg:text-center">
+          <Text className="text-gray-400 text-start lg:text-center">
             We specialize in unleashing the full potential of your business by
             combining the power of creativity, and technical expertise.
           </Text>

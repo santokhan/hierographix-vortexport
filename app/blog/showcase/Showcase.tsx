@@ -67,10 +67,10 @@ export default function Showcase() {
         Another <span className="text-teal-400">Creative</span> Showcase
       </Headline>
       <div
-        className={
-          "grid grid-cols-1 md:grid-cols-2 lg:grid-cols3 gap-8 " +
-          Styles.showcaseGrid
-        }
+        className={[
+          "grid grid-cols-1 md:grid-cols-2 lg:grid-cols3 gap-8",
+          Styles.showcaseGrid,
+        ].join(" ")}
       >
         {cardsData.map((e, i) => {
           if (i === 3) {
@@ -90,17 +90,7 @@ export default function Showcase() {
                       {e.title}
                     </h5>
                   </a>
-                  {e.url && (
-                    <div className="flex justify-end">
-                      <a
-                        href={e.url}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500/60"
-                      >
-                        See more
-                        <i className="fa fa-angle-right"></i>
-                      </a>
-                    </div>
-                  )}
+                  {e.url && <SeeMore url={e.url} />}
                 </div>
               </div>
             );
@@ -121,15 +111,7 @@ export default function Showcase() {
                       {/* {e.title} */}
                     </h5>
                   </a>
-                  <div className="flex justify-end">
-                    <a
-                      href={e.url}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500/60"
-                    >
-                      See more
-                      <i className="fa fa-angle-right"></i>
-                    </a>
-                  </div>
+                  <SeeMore url={e.url} />
                 </div>
               </div>
             );
@@ -147,15 +129,7 @@ export default function Showcase() {
                       {e.title}
                     </h5>
                   </a>
-                  <div className="flex justify-end">
-                    <a
-                      href={e.url}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500/60"
-                    >
-                      See more
-                      <i className="fa fa-angle-right"></i>
-                    </a>
-                  </div>
+                  <SeeMore url={e.url} />
                 </div>
               </div>
             );
@@ -165,3 +139,14 @@ export default function Showcase() {
     </div>
   );
 }
+
+export const SeeMore = (props: { url: string }) => (
+  <div className="flex justify-end">
+    <a href={props.url} className={[
+      "inline-flex items-center gap-2",
+      "text-sm font-medium text-center text-vpurple-500 hover:text-vpurple-500/60"
+    ].join(" ")}>
+      See more <i className="fa fa-angle-right"></i>
+    </a>
+  </div>
+)
