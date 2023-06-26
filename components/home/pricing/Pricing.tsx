@@ -5,13 +5,12 @@ import Headline from "@/components/shared/Headline";
 import GetStarted, { GetStartedWhite } from "./GetStarted";
 import Check, { CheckWhite } from "./IconCheck";
 import priceList, { PriceList, starting, pro, enterprise } from "./PriceList";
-import PricingSlider from "./PricingSlider";
 
 export default function Pricing() {
   const [active, setactive] = useState(1);
 
   return (
-    <section className="max-w-screen-xl mx-auto">
+    <section className="max-w-screen-xl mx-auto hidden lg:block">
       <div className="px-4 mx-auto max-w-screen-xl py-16 lg:px-6 space-y-10">
         <Headline>
           Our <span className="text-teal-400">Packages</span>
@@ -86,7 +85,6 @@ export default function Pricing() {
               )}
             </div>
           ))}
-          <PricingSlider />
         </div>
       </div>
       <div className="py-5"></div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react'
-import Headline from "@/components/shared/Headline";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -147,4 +146,5 @@ export default function PricingSlider() {
         </Swiper>
     );
 }
+
 

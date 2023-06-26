@@ -3,6 +3,7 @@
 import Partner from "../components/home/trusted/Partner";
 import Hero from "../components/home/hero/Hero";
 import Pricing from "../components/home/pricing/Pricing";
+import PricingWithSlider from "../components/home/pricing/PricingWithSlider";
 import Performance from "../components/home/performance/Performance";
 import Services from "../components/home/services/Services";
 import TestiMonial from "../components/home/testimonial/Testimonial";
@@ -16,6 +17,7 @@ export default function FrontendDevelopment() {
       <Hero />
       <Partner />
       <Pricing />
+      <PricingWithSlider />
       <Performance />
       <Services />
       <TestiMonial />
