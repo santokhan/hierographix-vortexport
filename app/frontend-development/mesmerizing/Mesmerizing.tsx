@@ -16,7 +16,7 @@ export default function Mesmerizing() {
 
   return (
     <div className="max-w-screen-xl mx-auto space-y-8 py-16 lg:py-20">
-      <Headline>
+      <Headline className="max-w-2xl mx-auto">
         Mesmerizing portfolio of{" "}
         <span className="text-teal-400">extraordinary creations</span>
       </Headline>
@@ -57,6 +57,6 @@ export default function Mesmerizing() {
           </Link>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

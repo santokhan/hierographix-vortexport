@@ -11,6 +11,30 @@ export default function ConnectWithSpacing(): JSX.Element {
   );
 }
 
+interface Link {
+  icon: string;
+  text: string;
+  url: string;
+}
+
+const linkList: Link[] = [
+  {
+    icon: "phone",
+    text: "+12-3456-7890-00",
+    url: "tel:+123456789000"
+  },
+  {
+    icon: "email",
+    text: "email@vortexpert.io",
+    url: "mailto:email@vortexpert.io"
+  },
+  {
+    icon: "location",
+    text: "2012A Rue RaudotMontréal QC H4E 2N9 Canada",
+    url: "https://goo.gl/maps/AhRdLUxYdyhbSUja6"
+  },
+]
+
 export function ConnectSimplify(): JSX.Element {
   return (
     <div
@@ -27,37 +51,47 @@ export function ConnectSimplify(): JSX.Element {
             Contact VortExpert Today & Unleash Your Business's True Potential
             with our Expertise and Innovation
           </p>
-          <div className="space-y-4 lg:space-y-6 text-white">
-            <a
-              href="tel:+123456789000"
-              className="flex items-center gap-3 font-medium group"
-            >
-              <i className="fa fa-phone"></i>
-              <span className="group-hover:underline hover:decoration-2 hover:underline-offset-2">
-                +12-3456-7890-00
-              </span>
-            </a>
-            <a
-              href="mailto:email@vortexpert.io"
-              className="flex items-center gap-3 font-medium group"
-            >
-              <i className="fa fa-envelope"></i>
-              <span className="group-hover:underline hover:decoration-2 hover:underline-offset-2">
-                email@vortexpert.io
-              </span>
-            </a>
-            <a
-              href="https://goo.gl/maps/AhRdLUxYdyhbSUja6"
-              className="flex items-center gap-3 font-medium group"
-            >
-              <i className="fa fa-location-arrow"></i>
-              <address className="group-hover:underline hover:decoration-2 hover:underline-offset-2">
-                2012A Rue RaudotMontréal QC H4E 2N9 Canada
-              </address>
-            </a>
+          <div className="flex flex-col items-start gao-4 lg:gap-6 text-white">
+            {linkList.map((e: Link, i: number) =>
+              <ConnectLink key={i} url={e.url} icon={e.icon}>{e.text}</ConnectLink>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+const ConnectLink = (props: { url: string, icon: string, children: any }) => {
+  return <a
+    href={props.url}
+    className="flex items-center gap-3 font-medium group"
+  >
+    <Icon name={props.icon} />
+    <div className={[
+      "group-hover--underline hover:decoration-2 hover:underline-offset-2 relative",
+    ].join(" ")}>
+      <div className={[
+        "w-0 h-0 bg-white absolute bottom-0 opacity-0 transition-all ease-in-out origin-left",
+        "group-hover:w-full group-hover:opacity-100 group-hover:h-[2px]",
+      ].join(" ")}></div>
+      {props.children}
+    </div>
+  </a>
+}
+
+export const Icon = (props: { name: string }) => {
+  switch (props.name) {
+    case "email":
+      return <i className="fa fa-envelope"></i>
+
+    case "phone":
+      return <i className="fa fa-phone"></i>
+
+    case "location":
+      return <i className="fa fa-location-arrow"></i>
+
+    default:
+      return <></>
+  }
 }
