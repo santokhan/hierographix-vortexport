@@ -5,6 +5,7 @@ import Headline from "@/components/shared/Headline";
 import GetStarted, { GetStartedWhite } from "./GetStarted";
 import Check, { CheckWhite } from "./IconCheck";
 import priceList, { PriceList, starting, pro, enterprise } from "./PriceList";
+import PricingSlider from "./PricingSlider";
 
 export default function Pricing() {
   const [active, setactive] = useState(1);
@@ -85,12 +86,15 @@ export default function Pricing() {
               )}
             </div>
           ))}
+          <PricingSlider />
         </div>
       </div>
       <div className="py-5"></div>
     </section>
   );
 }
+
+
 
 export const Price = ({ children }: any): JSX.Element => (
   <div className="flex justify-center items-baseline mt-4 mb-6">

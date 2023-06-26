@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./testimonial-slider.css";
+import "./testimonialSlider.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
@@ -43,7 +43,7 @@ export default function TestiMonial() {
 
           <Slider />
         </div>
-        <div className="">
+        <div className="flex justify-center">
           {/* <Image
             src={require("../../../app/assets/images/testimonials.png")}
             alt="testimonial"
