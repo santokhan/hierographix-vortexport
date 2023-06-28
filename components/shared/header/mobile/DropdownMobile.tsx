@@ -6,7 +6,7 @@ import { useState } from "react";
 import { NavsDD, navs } from "../NavList";
 import { SocialMedia } from "../../footer/Footer";
 import Icons from "../dropdown/icons/Icons";
-import Contact from "../ContactUs";
+import { ContactOutlineVisible } from "../ContactUs";
 import Styles from './DropdownMobile.module.css'
 
 export default function TogglerAndDDMobile() {
@@ -56,7 +56,7 @@ export function DropdownMobile(props: {
               />
             )
           )}
-          <Contact />
+          <ContactOutlineVisible />
           <SocialMedia />
         </div>
       </div>

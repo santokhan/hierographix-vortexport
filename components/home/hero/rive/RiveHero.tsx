@@ -22,8 +22,8 @@ export default function Rive() {
     }
 
     return (
-        <div className="flex justify-center">
-            <RiveComponent className='w-full h-[50vw] lg:h-[700px]' onLoad={handleAnimate} />
+        <div className="w-full flex justify-center items-center h-[50vw] lg:h-[600px] overflow-y-hidden">
+            <RiveComponent className="w-full h-60 sm:h-80 md:w-92 lg:w-[992px] lg:h-[700px]" onLoad={handleAnimate} />
         </div>
     );
 }

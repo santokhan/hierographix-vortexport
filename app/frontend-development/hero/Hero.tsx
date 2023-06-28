@@ -9,7 +9,7 @@ export default function Hero() {
     <div className="relative overflow-hidden px-4">
       <Effect />
       <div className="max-w-screen-xl mx-auto">
-        <div className="max-w-3xl mx-auto flex flex-col items-center space-y-8 py-16 lg:py-20">
+        <div className="max-w-3xl mx-auto flex flex-col items-center space-y-8 py-12 lg:py-20">
           <div className="text-start lg:text-center space-y-2">
             <Headline className="">
               Taking Your Business to the Summit of{" "}

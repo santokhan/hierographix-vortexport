@@ -11,6 +11,18 @@ export interface BCard {
   read: string;
 }
 
+export function BlogImage(props: { src: string }) {
+  return (
+    <div className="w-full overflow-hidden rounded-lg">
+      <Image
+        src={require(`../../../app/assets/images/blog/article/${props.src}.png`)} alt="showcase"
+        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
+        width={0} height={0}
+      />
+    </div>
+  );
+}
+
 // Blog Card will fill it's container
 export default function BlogCard(props: { data: BCard }): JSX.Element {
   const { data } = props;
@@ -18,14 +30,8 @@ export default function BlogCard(props: { data: BCard }): JSX.Element {
   return (
     <div className="w-full space-y-3 overflow-hidden">
       {/* Card Image */}
-      <Link href={data.url}>
-        {data.src && (
-          <Image
-            src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
-            alt={data.title}
-            className="w-full object-contain shadow rounded-lg"
-          />
-        )}
+      <Link href={data.url} className="group">
+        {data.src && <BlogImage src={data.src} />}
       </Link>
       <div className="space-y-4 px-2">
         {/* Card Caption */}
@@ -51,16 +57,8 @@ export function BlogCardWhite({ data }: { data: BCard }): JSX.Element {
   return (
     <div className="w-full space-y-3">
       {/* Card Image */}
-      <Link href={data.url}>
-        {data.src && (
-          <Image
-            src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
-            alt={data.title}
-            width={0}
-            height={0}
-            className="w-full object-contain shadow rounded overflow-hidden"
-          />
-        )}
+      <Link href={data.url} className="group">
+        {data.src && <BlogImage src={data.src} />}
       </Link>
       <div className="space-y-4 px-2">
         {/* Card Caption */}

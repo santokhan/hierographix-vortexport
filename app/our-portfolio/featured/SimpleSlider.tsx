@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 interface Slider {
   src: string;
@@ -28,14 +28,18 @@ export default function SimpleSlider() {
   return (
     <div className="block space-y-4">
       <Swiper
-        slidesPerView={1} 
+        slidesPerView={1}
         spaceBetween={30}
         loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Autoplay]}
         className="testimonial-slider relative"
       >
         {slider.map((e: Slider, i) => (

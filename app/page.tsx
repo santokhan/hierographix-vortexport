@@ -9,7 +9,6 @@ import Services from "../components/home/services/Services";
 import TestiMonial from "../components/home/testimonial/Testimonial";
 import ConnectWithSpacing from "../components/home/connect/Connect";
 import FAQ from "../components/home/faq/FAQ";
-// npm install next@latest react@16.14.0 react-dom@16.14.0
 
 export default function FrontendDevelopment() {
   return (

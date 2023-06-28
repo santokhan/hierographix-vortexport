@@ -30,13 +30,10 @@ export default function Mesmerizing() {
           }
 
           return (
-            <div className={`p-4 ${w}`} key={i}>
+            <div className={`p-4 group ${w}`} key={i}>
               <div className="w-full rounded-lg space-y-2 relative">
-                <Image
-                  src={require(`../../assets/images/portfolio/${e.src}.png`)}
-                  alt={"showcase" + i}
-                  className="w-full h-full object-contain"
-                />
+                <ShowCaseImage src={e.src} />
+
                 <div
                   className={`absolute left-0 top-0 z-[3] h-full w-full p-6 flex flex-col justify-end space-y-2 ${Styles.showcaseEffect}`}
                 >
@@ -58,5 +55,17 @@ export default function Mesmerizing() {
         </div>
       </div>
     </div >
+  );
+}
+
+
+export function ShowCaseImage(props: { src: string }) {
+  return (
+    <div className="w-full h-full overflow-hidden rounded-lg">
+      <Image
+        src={require(`../../assets/images/portfolio/${props.src}.png`)} alt="showcase"
+        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
+      />
+    </div>
   );
 }

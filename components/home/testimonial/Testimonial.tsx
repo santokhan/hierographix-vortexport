@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 import "./testimonialSlider.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 import TestimonialImage from "./TestimonialImage";
 
 export default function TestiMonial() {
@@ -95,8 +95,12 @@ export function Slider() {
       pagination={{
         clickable: true,
       }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      modules={[Pagination, Navigation, Autoplay]}
       className={
         "testimonial-slider max-w-[380px] max-h-[280px] overflow-hidden relative"
       }

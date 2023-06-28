@@ -38,7 +38,7 @@ const linkList: Link[] = [
 export function ConnectSimplify(): JSX.Element {
   return (
     <div
-      className={`${Styles.bgPurpleSkew} bg-vpurple-500 lg:bg-transparent py-16 lg:py-40`}
+      className={`${Styles.bgPurpleSkew} bg-vpurple-500 lg:bg-transparent py-16 lg:py-28`}
     >
       <div className="max-w-lg mx-auto px-4 space-y-4">
         <Headline>

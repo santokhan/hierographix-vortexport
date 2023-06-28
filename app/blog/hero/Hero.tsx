@@ -55,13 +55,13 @@ export default function Hero() {
       <div className="max-w-screen-xl mx-auto space-y-10">
         <div
           className={[
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12",
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10",
           ].join(" ")}
         >
-          <div className="lg:col-span-9">
+          <div className="lg:col-span-2">
             <BlogCard data={cardsData[0]} />
           </div>
-          <div className="lg:col-span-3 overflow-hidden space-y-6">
+          <div className="overflow-auto space-y-6 max-h-[640px] px-2">
             <BlogCard data={cardsData[1]} />
             <BlogCard data={cardsData[2]} />
           </div>

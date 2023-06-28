@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Headline from "@/components/shared/Headline";
 import Styles from "./Showcase.module.css";
+import Link from "next/link";
 
 export const cardsData = [
   {
@@ -71,85 +72,69 @@ export default function Showcase() {
         {cardsData.map((e, i) => {
           if (i === 3) {
             return (
-              <div
-                className="lg:col-span-2 w-full rounded-lg space-y-2 relative overflowhidden"
+              <Link href={e.url}
+                className="lg:col-span-2 w-full rounded-lg space-y-2 relative group"
                 key={i}
               >
-                <Image
-                  src={require(`../../assets/images/portfolio/${e.src}.png`)}
-                  alt={"showcase" + i}
-                  className="w-full h-full object-contain"
-                />
+                <ShowCaseImage src={e.src} />
                 <div
                   className={[
-                    "absolute top-0 left-0 w-full h-full z-[10] p-6 flex flex-col justify-center items-center space-y-2",
+                    "absolute left-0 top-0 h-full w-full p-6 flex flex-col justify-center items-center space-y-2 z-[10]",
                     Styles.showcaseEffect,
                   ].join(" ")}
                 >
-                  <a
-                    href={e?.url}
-                    className="max-w-sm mx-auto text-center text-xl font-bold tracking-tight text-gray-100 capitalize"
-                  >
+                  <div className="max-w-sm mx-auto text-center text-xl font-bold tracking-tight text-gray-100 capitalize">
                     {e.title}
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           } else if (i === 4) {
             return (
-              <div className="w-full rounded-lg space-y-2 relative" key={i}>
-                <Image
-                  src={require(`../../assets/images/portfolio/${e.src}.png`)}
-                  alt={"showcase" + i}
-                  className="w-full h-full object-contain"
-                />
+              <Link href={e.url} className="w-full rounded-lg space-y-2 relative group" key={i}>
+                <ShowCaseImage src={e.src} />
                 <div
-                  className={
-                    "absolute left-0 top-0 z-[3] h-full w-full p-6 flex flex-col justify-center space-y-2 " +
-                    Styles.showcaseEffect
-                  }
+                  className={[
+                    "absolute left-0 top-0 h-full w-full p-6 flex flex-col justify-end space-y-2 z-[3]",
+                    Styles.showcaseEffect].join(" ")}
                 >
                   <div className="max-h-44 h-full flex flex-col justify-end">
                     <Title url={e.url}>{e.title}</Title>
                     <SeeMore url={e.url} />
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           } else if (i === 9) {
             return (
-              <div
-                className="lg:col-span-2 lg:row-span-2 w-full rounded-lg space-y-2 relative"
+              <Link href={e.url}
+                className="lg:col-span-2 lg:row-span-2 w-full rounded-lg space-y-2 relative group"
                 key={i}
               >
-                <Image
-                  src={require(`../../assets/images/portfolio/${e.src}.png`)}
-                  alt={"showcase" + i}
-                  className="w-full h-full object-contain"
-                />
+                <ShowCaseImage src={e.src} />
                 <div
-                  className={`absolute left-0 top-0 z-[3] h-full w-full p-6 flex flex-col justify-end space-y-2 ${Styles.showcaseEffect}`}
+                  className={[
+                    "absolute left-0 top-0 h-full w-full p-6 flex flex-col justify-end space-y-2 z-[3]",
+                    Styles.showcaseEffect].join(" ")}
                 >
                   <Title url={e.url}>{e.title}</Title>
                   <SeeMore url={e.url} />
                 </div>
-              </div>
+              </Link>
             );
           } else {
             return (
-              <div className="w-full rounded-lg space-y-2 relative" key={i}>
-                <Image
-                  src={require(`../../assets/images/portfolio/${e.src}.png`)}
-                  alt={"showcase" + i}
-                  className="w-full h-full object-contain"
-                />
+              <Link href={e.url} className="w-full rounded-lg space-y-2 relative group" key={i}>
+                <ShowCaseImage src={e.src} />
                 <div
-                  className={`absolute left-0 top-0 z-[3] h-full w-full p-6 flex flex-col justify-end space-y-2 ${Styles.showcaseEffect}`}
+                  className={[
+                    "absolute left-0 top-0 h-full w-full p-6 flex flex-col justify-end space-y-2 z-[3]",
+                    Styles.showcaseEffect].join(" ")}
                 >
                   <Title url={e.url}>{e.title}</Title>
                   <SeeMore url={e.url} />
                 </div>
-              </div>
+              </Link>
             );
           }
         })}
@@ -158,22 +143,26 @@ export default function Showcase() {
   );
 }
 
+export function ShowCaseImage(props: { src: string }) {
+  return (
+    <div className="w-full h-full overflow-hidden rounded-lg">
+      <Image
+        src={require(`../../assets/images/portfolio/${props.src}.png`)} alt="showcase"
+        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
+      />
+    </div>
+  );
+}
+
 export function SeeMore(props: any) {
   return (
     <div className="flex gap-6 items-center">
       <div className="border border-white/20 w-full h-[2px]"></div>
-      <a
-        href={props.url}
-        className="inline-flex items-center gap-2 text-center text-white whitespace-nowrap group transition-transform ease-in-out hover:text-vpurple-500"
+      <div
+        className="inline-flex items-center gap-2 text-center text-white whitespace-nowrap transition-transform ease-in-out group-hover:text-vpurple-500"
       >
-        <span>See more</span>
-        {/* <i
-          className={[
-            "fa fa-angle-right -translate-x-3 opacity-0 transition-all ease-in-out hidden",
-            "group-hover:translate-x-0 group-hover:opacity-100",
-          ].join(" ")}
-        ></i> */}
-      </a>
+        See more
+      </div>
     </div>
   );
 }

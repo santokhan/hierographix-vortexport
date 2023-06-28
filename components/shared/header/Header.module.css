@@ -1,0 +1,18 @@
+.dropdownToggler > .dropDownBox {
+  transform: scale(0);
+}
+
+.dropdownToggler:hover > .dropDownBox {
+  animation: drop 300ms ease-in-out forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

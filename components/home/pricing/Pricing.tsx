@@ -20,9 +20,9 @@ export default function Pricing() {
             <div
               className="self-center max-w-lg text-start text-white rounded-lg shadow overflow-hidden"
               key={i}
-              onClick={() => {
-                setactive(i);
-              }}
+            // onClick={() => {
+            //   setactive(i);
+            // }}
             >
               {e.recommended && (
                 <div className="w-full bg-vpurple-900 flex justify-center py-2 text-vpurple-500 gap-1">

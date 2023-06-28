@@ -13,14 +13,14 @@ export default function Hero() {
     <div className="relative overflow-hidden">
       <Effect />
       <div className="max-w-screen-xl mx-auto px-4 relative">
-        <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 pt-16 lg:pt-20">
+        <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 pt-12 lg:pt-20 text-start sm:text-center">
           <h2
-            className={`${poppins.className} text-4xl lg:text-[3.5rem] font-bold text-start lg:text-center leading-[1.2]`}
+            className={`${poppins.className} text-4xl lg:text-[3.5rem] font-bold leading-[1.2]`}
           >
             Taking Your Business to the Summit of{" "}
             <span className="text-teal-500">Digital Success</span>
           </h2>
-          <Text className="text-gray-400 text-start lg:text-center">
+          <Text className="text-gray-400">
             We specialize in unleashing the full potential of your business by
             combining the power of creativity, and technical expertise.
           </Text>
