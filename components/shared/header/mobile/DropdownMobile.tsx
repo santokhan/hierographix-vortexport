@@ -130,21 +130,21 @@ export const Bars = () => (
     <path
       d="M19.667 1H5.66702"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M19.667 9.16699H1.00032"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M19.667 17.3335H10.3336"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
@@ -160,14 +160,14 @@ export const Cross = () => (
     <path
       d="M13.5 1L0.999999 13.5"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2.5"
       strokeLinecap="round"
       opacity="0.5"
     />
     <path
       d="M1 1L13.5 13.5"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="2.5"
       strokeLinecap="round"
     />
   </svg>
