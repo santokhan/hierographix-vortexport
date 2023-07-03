@@ -16,7 +16,7 @@ export default function Mesmerizing() {
 
   return (
     <div className="max-w-screen-xl mx-auto space-y-8 py-16 lg:py-20">
-      <Headline className="max-w-2xl mx-auto">
+      <Headline className="max-w-3xl mx-auto">
         Mesmerizing portfolio of{" "}
         <span className="text-teal-400">extraordinary creations</span>
       </Headline>
@@ -64,7 +64,7 @@ export function ShowCaseImage(props: { src: string }) {
     <div className="w-full h-full overflow-hidden rounded-lg">
       <Image
         src={require(`../../assets/images/portfolio/${props.src}.png`)} alt="showcase"
-        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
+        className="w-full h-full object-contain transition-transform ease-in duration-150 group-hover:scale-[1.125]"
       />
     </div>
   );

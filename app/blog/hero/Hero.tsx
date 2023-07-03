@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="lg:col-span-2">
             <BlogCard data={cardsData[0]} />
           </div>
-          <div className={["overflow-auto space-y-6 max-h-[640px] px-2",Styles.styledScrollbar].join(' ')}>
+          <div className={["overflow-auto space-y-6 max-h-[640px] px-2", Styles.styledScrollbar].join(' ')}>
             <BlogCard data={cardsData[1]} />
             <BlogCard data={cardsData[2]} />
           </div>
