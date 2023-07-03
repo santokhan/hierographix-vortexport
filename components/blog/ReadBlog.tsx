@@ -82,9 +82,8 @@ export function BlogImage(props: { src: string }) {
   return (
     <div className="w-full overflow-hidden rounded-2xl">
       <Image
-        src={props.src} alt="showcase"
-        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
-        width={0} height={0}
+        src={props.src} alt="showcase" width={0} height={0}
+        className="w-full h-full object-contain transition-transform ease-in duration-150 group-hover:scale-[1.095]"
       />
     </div>
   );

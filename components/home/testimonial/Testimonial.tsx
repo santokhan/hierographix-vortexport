@@ -21,7 +21,7 @@ import TestimonialImage from "./TestimonialImage";
 export default function TestiMonial() {
   return (
     <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16">
-      <Headline className="max-w-xl mx-auto">
+      <Headline className="max-w-2xl mx-auto">
         <span className="text-teal-400">Testimonial</span> VortExpert's
         Excellence
       </Headline>

@@ -5,3 +5,16 @@
       "a a c";
   }
 }
+
+.styledScrollbar::-webkit-scrollbar {
+  border-radius: 1rem;
+  width: 10px;
+}
+
+.styledScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #ccc;
+}
+.styledScrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}

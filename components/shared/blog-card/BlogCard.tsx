@@ -13,10 +13,10 @@ export interface BCard {
 
 export function BlogImage(props: { src: string }) {
   return (
-    <div className="w-full overflow-hidden rounded-lg">
+    <div className="w-full overflow-hidden rounded-xl">
       <Image
         src={require(`../../../app/assets/images/blog/article/${props.src}.png`)} alt="showcase"
-        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
+        className="w-full h-full object-contain transition-transform ease-in duration-150 group-hover:scale-[1.125]"
         width={0} height={0}
       />
     </div>

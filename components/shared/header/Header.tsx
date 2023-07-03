@@ -66,10 +66,10 @@ export function NavDropdown({ nav }: { nav: NavsDD }) {
   // }, [dd]);
 
   return (
-    <div className={["relative h-full flex items-center", Styles.dropdownToggler].join(" ")}>
+    <div className={["relative h-full flex items-center group", Styles.dropdownToggler].join(" ")}>
       <button
         type="button"
-        className="flex gap-3 items-center text-gray-800 rounded hover:text-vpurple-500 dark:text-gray-300"
+        className="flex gap-3 items-center text-gray-800 rounded group-hover:text-vpurple-500 dark:text-gray-300"
       >
         {nav.name}
         <i className="fa fa-angle-down group-hover:-rotate-180 transition-transform ease-out"></i>

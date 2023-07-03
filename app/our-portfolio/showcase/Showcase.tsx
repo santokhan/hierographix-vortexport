@@ -73,7 +73,7 @@ export default function Showcase() {
           if (i === 3) {
             return (
               <Link href={e.url}
-                className="lg:col-span-2 w-full rounded-lg space-y-2 relative group"
+                className="lg:col-span-2 w-full rounded-lg space-y-2 relative"
                 key={i}
               >
                 <ShowCaseImage src={e.src} />
@@ -148,7 +148,7 @@ export function ShowCaseImage(props: { src: string }) {
     <div className="w-full h-full overflow-hidden rounded-lg">
       <Image
         src={require(`../../assets/images/portfolio/${props.src}.png`)} alt="showcase"
-        className="w-full h-full object-contain transition-transform ease-in-out duration-150 group-hover:scale-125"
+        className="w-full h-full object-contain transition-transform ease-in duration-150 group-hover:scale-[1.125]"
       />
     </div>
   );
@@ -169,11 +169,10 @@ export function SeeMore(props: any) {
 
 export function Title(props: any) {
   return (
-    <a
-      href={props.url}
+    <div
       className="text-xl font-bold tracking-tight text-gray-100 capitalize"
     >
       {props.children}
-    </a>
+    </div>
   );
 }
