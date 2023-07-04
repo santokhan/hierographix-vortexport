@@ -6,6 +6,7 @@ import { Poppins } from "next/font/google";
 import Text from "@/components/shared/text/Text";
 import RiveComponent from "./rive/RiveHero";
 import Headline from "@/components/shared/Headline";
+import HeroImage from "./HeroImage";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 
@@ -14,7 +15,7 @@ export default function Hero() {
     <div className="relative overflow-hidden">
       <Effect />
       <div className="max-w-screen-xl mx-auto px-4 relative">
-        <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 pt-12 lg:pt-20 text-start sm:text-center">
+        <div className="max-w-[800px] mx-auto flex flex-col sm:items-center space-y-6 pt-12 lg:pt-20 text-start sm:text-center">
           <Headline className="text-start sm:text-center">Taking Your Business to the Summit of{" "} <span className="text-teal-500">Digital Success</span></Headline>
           <Text className="text-gray-400">
             We specialize in unleashing the full potential of your business by
@@ -22,7 +23,8 @@ export default function Hero() {
           </Text>
           <SubscribeForm />
         </div>
-        <RiveComponent />
+        {/* <RiveComponent /> */}
+        <HeroImage />
       </div>
     </div>
   );
