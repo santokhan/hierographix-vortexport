@@ -83,7 +83,7 @@ export default function Showcase() {
                     Styles.showcaseEffect,
                   ].join(" ")}
                 >
-                  <div className="max-w-sm mx-auto text-center text-xl font-bold tracking-tight text-gray-100 capitalize">
+                  <div className="max-w-sm mx-auto text-center text-xl font-bold  text-gray-100 capitalize">
                     {e.title}
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export function SeeMore(props: any) {
 export function Title(props: any) {
   return (
     <div
-      className="text-xl font-bold tracking-tight text-gray-100 capitalize"
+      className="text-xl font-bold  text-gray-100 capitalize"
     >
       {props.children}
     </div>

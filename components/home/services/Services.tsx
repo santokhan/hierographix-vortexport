@@ -79,7 +79,7 @@ export default function Services() {
             </a>
             <div className="p-5">
               <a href={e.url}>
-                <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-100 capitalize">
+                <h5 className="mb-2 text-lg font-bold text-gray-100 capitalize">
                   {e.title}
                 </h5>
               </a>

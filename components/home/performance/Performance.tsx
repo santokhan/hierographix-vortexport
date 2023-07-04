@@ -38,7 +38,7 @@ export default function Performance() {
           /> */}
           <PerformanceImage />
         </div>
-        <div className="w-full max-w-lg space-y-4">
+        <div className="w-full max-w-xl space-y-4">
           <Headline className="text-start">
             <span className="text-gray-900">Performance</span>{" "}
             <span className="text-teal-400">Rating</span>

@@ -86,7 +86,7 @@ export default function Showcase() {
                 />
                 <div className="absolute z-[3] h-full w-full px-6 py-5 hidden lex flex-col justify-end">
                   <a href={e?.url}>
-                    <h5 className="text-xl font-bold tracking-tight text-gray-100 capitalize">
+                    <h5 className="text-xl font-bold text-gray-100 capitalize">
                       {e.title}
                     </h5>
                   </a>
@@ -107,7 +107,7 @@ export default function Showcase() {
                 />
                 <div className="absolute  z-[3] h-full px-6 py-5 hidden lex flex-col justify-end">
                   <a href={e.url}>
-                    <h5 className="text-xl font-bold tracking-tight text-gray-100 capitalize">
+                    <h5 className="text-xl font-bold  text-gray-100 capitalize">
                       {/* {e.title} */}
                     </h5>
                   </a>
@@ -125,7 +125,7 @@ export default function Showcase() {
                 />
                 <div className="absolute  z-[3] h-full w-full px-6 py-5 hidden lex flex-col justify-end">
                   <a href={e.url}>
-                    <h5 className="text-xl font-bold tracking-tight text-gray-100 capitalize">
+                    <h5 className="text-xl font-bold  text-gray-100 capitalize">
                       {e.title}
                     </h5>
                   </a>
