@@ -51,16 +51,16 @@ const Logo = (props: Props) => (
       <path fillRule="evenodd" clipRule="evenodd" d="M19.474 10.316L29.8366 10.2162L29.9589 8.97457C30.3334 5.17245 28.0917 1.8501 24.3502 1.8501H15.0615L19.474 10.316Z" fill="url(#paint2_linear_1629_7)" />
       <defs>
         <linearGradient id="paint0_linear_1629_7" x1="13.3561" y1="29.8096" x2="23.5321" y2="12.7468" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#886DF5" />
-          <stop offset="1" stop-color="#9C85FB" />
+          <stop stopColor="#886DF5" />
+          <stop offset="1" stopColor="#9C85FB" />
         </linearGradient>
         <linearGradient id="paint1_linear_1629_7" x1="1.75913" y1="3.01192" x2="11.2661" y2="20.4722" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#886DF5" />
-          <stop offset="1" stop-color="#9C85FB" />
+          <stop stopColor="#886DF5" />
+          <stop offset="1" stopColor="#9C85FB" />
         </linearGradient>
         <linearGradient id="paint2_linear_1629_7" x1="15.0615" y1="6.08308" x2="29.9995" y2="6.08308" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#9C85FB" />
-          <stop offset="1" stop-color="#886DF5" />
+          <stop stopColor="#9C85FB" />
+          <stop offset="1" stopColor="#886DF5" />
         </linearGradient>
       </defs>
     </svg>
