@@ -9,6 +9,7 @@
 .styledScrollbar::-webkit-scrollbar {
   border-radius: 1rem;
   width: 10px;
+  display: none;
 }
 
 .styledScrollbar::-webkit-scrollbar-thumb {
