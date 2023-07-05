@@ -10,7 +10,7 @@ export default function Pricing() {
   const [active, setactive] = useState(1);
 
   return (
-    <section className="max-w-screen-xl mx-auto">
+    <section className="max-w-screen-xl mx-auto hidden lg:block">
       <div className="px-4 mx-auto max-w-screen-xl py-16 lg:px-6 space-y-10">
         <Headline>
           Our <span className="text-teal-400">Packages</span>
@@ -20,9 +20,9 @@ export default function Pricing() {
             <div
               className="self-center max-w-lg text-start text-white rounded-lg shadow overflow-hidden"
               key={i}
-              onClick={() => {
-                setactive(i);
-              }}
+            // onClick={() => {
+            //   setactive(i);
+            // }}
             >
               {e.recommended && (
                 <div className="w-full bg-vpurple-900 flex justify-center py-2 text-vpurple-500 gap-1">
@@ -91,6 +91,8 @@ export default function Pricing() {
     </section>
   );
 }
+
+
 
 export const Price = ({ children }: any): JSX.Element => (
   <div className="flex justify-center items-baseline mt-4 mb-6">

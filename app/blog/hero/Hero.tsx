@@ -1,6 +1,6 @@
 import Headline from "@/components/shared/Headline";
 import SubscribeForm from "@/components/home/hero/SubscribeForm";
-import BlogCard, { BCard } from "@/components/shared/blog-card/BlogCard";
+import BlogCard, { BCard,BlogCardLarge } from "@/components/shared/blog-card/BlogCard";
 import Styles from "./Hero.module.css";
 
 export const cardsData: BCard[] = [
@@ -55,13 +55,14 @@ export default function Hero() {
       <div className="max-w-screen-xl mx-auto space-y-10">
         <div
           className={[
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12",
+            // "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10",
+            "flex flex-col lg:flex-row gap-10",
           ].join(" ")}
         >
-          <div className="lg:col-span-9">
-            <BlogCard data={cardsData[0]} />
+          <div className="w-full lg:w-[70%]">
+            <BlogCardLarge data={cardsData[0]} />
           </div>
-          <div className="lg:col-span-3 overflow-hidden space-y-6">
+          <div className={["w-full lg:w-[30%] space-y-6 max-h[640px]", "Styles.styledScrollbar"].join(' ')}>
             <BlogCard data={cardsData[1]} />
             <BlogCard data={cardsData[2]} />
           </div>

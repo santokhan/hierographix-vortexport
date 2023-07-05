@@ -7,15 +7,16 @@ import Contact from "./ContactUs";
 import Icons from "./dropdown/icons/Icons";
 import activeNav from "../ActiveNav";
 import TogglerAndDDMobile from "./mobile/DropdownMobile";
+import Styles from './Header.module.css'
 
 export default function Header() {
   return (
     <header className="h-16 relative">
-      {/* Both will `"h-16"` */}
-      <div className="h-16 fixed top-0 left-0 w-full z-[11] bg-white/95 backdrop-blur-sm shadow dark:bg-vpurple-950/95">
+      {/* Relative and absolute both will `"h-16"` */}
+      <div className="h-16 fixed top-0 left-0 w-full z-[11] bg-white backdrop-blur-sm shadow dark:bg-vpurple-950/95">
         <Navbar />
       </div>
-    </header>
+    </header >
   );
 }
 
@@ -65,20 +66,22 @@ export function NavDropdown({ nav }: { nav: NavsDD }) {
   // }, [dd]);
 
   return (
-    <div className="relative h-full flex items-center group">
+    <div className={["relative h-full flex items-center group", Styles.dropdownToggler].join(" ")}>
       <button
         type="button"
-        className="flex gap-3 items-center text-gray-800 rounded hover:text-vpurple-500 dark:text-gray-300"
+        className="flex gap-3 items-center text-gray-800 rounded group-hover:text-vpurple-500 dark:text-gray-300"
       >
         {nav.name}
         <i className="fa fa-angle-down group-hover:-rotate-180 transition-transform ease-out"></i>
       </button>
+
       {/* dropdown desktop */}
       <div
         className={[
-          "transition-all ease-in-out",
-          "hidden absolute top-14 left-0 w-80 mt-1 bg-white z-[2] rounded-lg py-3 px-5 shadow-xl",
-          "group-hover:flex group-hover:flex-col group-hover:items-start",
+          "transition-all ease-in-out origin-top-left",
+          "absolute top-14 left-0 w-80 mt-1 bg-white z-[2] rounded-lg py-3 px-5 shadow-xl",
+          "flex flex-col items-start",
+          Styles.dropDownBox
         ].join(" ")}
       >
         {nav.dropdown.map((ele: any, ind: number) => (

@@ -1,3 +1,5 @@
+"use client"
+
 import Hero from "@/components/portfolio/hero/Hero";
 import Featured from "./featured/Featured";
 import Showcase from "./showcase/Showcase";

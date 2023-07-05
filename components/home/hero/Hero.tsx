@@ -4,33 +4,27 @@ import styles from "./Hero.module.css";
 import SubscribeForm from "./SubscribeForm";
 import { Poppins } from "next/font/google";
 import Text from "@/components/shared/text/Text";
+import RiveComponent from "./rive/RiveHero";
+import Headline from "@/components/shared/Headline";
+import HeroImage from "./HeroImage";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 
-function Hero() {
+export default function Hero() {
   return (
     <div className="relative overflow-hidden">
       <Effect />
-      <div className="max-w-screen-xl mx-auto px-4 pb-20 relative">
-        <div className="max-w-[800px] mx-auto flex flex-col items-center space-y-6 py-16 lg:py-20">
-          <h2
-            className={`${poppins.className} text-4xl lg:text-[3.5rem] font-bold text-start lg:text-center leading-[1.2]`}
-          >
-            Taking Your Business to the Summit of{" "}
-            <span className="text-teal-500">Digital Success</span>
-          </h2>
-          <Text className="max-w-screen-sm text-gray-400 text-start lg:text-center">
+      <div className="max-w-screen-xl mx-auto px-4 relative">
+        <div className="max-w-[800px] mx-auto flex flex-col sm:items-center space-y-6 pt-12 lg:pt-20 text-start sm:text-center">
+          <Headline className="text-start sm:text-center">Taking Your Business to the Summit of{" "} <span className="text-teal-500">Digital Success</span></Headline>
+          <Text className="text-gray-400">
             We specialize in unleashing the full potential of your business by
             combining the power of creativity, and technical expertise.
           </Text>
           <SubscribeForm />
         </div>
-
-        <Image
-          src={HeroImg}
-          alt="hero-image"
-          className="w-full object-contain"
-        />
+        {/* <RiveComponent /> */}
+        <HeroImage />
       </div>
     </div>
   );
@@ -63,4 +57,3 @@ export const Effect = () => (
   </svg>
 );
 
-export default Hero;

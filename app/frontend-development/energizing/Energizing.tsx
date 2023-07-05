@@ -3,16 +3,18 @@
 import Headline from "@/components/shared/Headline";
 import Image from "next/image";
 import energizingImg from "../../assets/images/frontend/energizing.png";
+import ElectrofyingImg from "./EnergizingImg";
 
 export default function Electrofying() {
   return (
     <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 justify-between">
-        <Image
+        {/* <Image
           src={energizingImg}
           alt="hero-image"
           className="lg:col-span-5 w-full object-contain p-6"
-        />
+        /> */}
+        <ElectrofyingImg className="lg:col-span-5 w-full object-contain p-6"/>
         <div className=""></div>
         <div className="lg:col-span-6 space-y-5 py-10 lg:py-24">
           <div className="space-y-2">

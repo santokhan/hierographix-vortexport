@@ -3,11 +3,23 @@
 
 @layer components {
   .image-top-effect {
-    background: linear-gradient(
-      180deg,
-      rgba(7, 8, 30, 0) 0%,
-      rgba(7, 8, 30, 0.87) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(7, 8, 30, 0) 0%,
+        rgba(7, 8, 30, 0.87) 100%);
+  }
+
+  ::-webkit-scrollbar {
+    border-radius: 1rem;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #ccc;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 }
 
@@ -29,10 +41,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }

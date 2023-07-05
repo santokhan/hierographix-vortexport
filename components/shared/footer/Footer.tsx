@@ -76,7 +76,7 @@ export default function Footer() {
     <footer className="bg-white dark:bg-vpurple-950">
       <Empower />
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="lg:flex lg:justify-between gap-12">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-12">
           <div className="lg:w-5/12 mb-6 md:mb-0 space-y-5">
             <a href="/" className="flex items-center">
               <Logo dark={true} />
@@ -89,7 +89,7 @@ export default function Footer() {
             <SocialMedia />
           </div>
           {/* Navs */}
-          <div className="lg:w-7/12 flex gap-8 flex-wrap flex-col lg:flex-row justify-between">
+          <div className="lg:w-7/12 flex gap-8 flex-wrap justify-between">
             {linkList.map((e, i) => (
               <div key={i}>
                 <h2 className="mb-4 font-semibold text-gray-400 dark:text-gray-500 uppercase">

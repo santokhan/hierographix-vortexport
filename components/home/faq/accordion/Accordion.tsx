@@ -73,34 +73,25 @@ export function AccordItem(props: any) {
   }
 
   return (
-    <li className="border-b border-gray-200 dark:border-gray-800 py-5">
-      <div className="">
-        <button
-          type="button"
-          className="w-full flex gap-8 items-center justify-between"
-          onClick={handleExpand}
-        >
-          <h5 className="w-full text-base font-semibold text-gray-200 text-start">
-            {data.ques}
-          </h5>
-          <i
-            className={`w-2 fa fa-angle-down text-teal-400 transition-transform ease-out ${
-              expand && "-rotate-180"
+    <li className="border-b border-gray-200 dark:border-gray-800">
+      {/* Accordion toggler */}
+      <button
+        type="button"
+        className="w-full flex gap-8 items-center justify-between py-5"
+        onClick={handleExpand}
+      >
+        <h5 className="w-full text-base font-semibold text-gray-200 text-start">
+          {data.ques}
+        </h5>
+        <i
+          className={`w-2 fa fa-angle-down text-teal-400 transition-transform ease-out ${expand && "-rotate-180"
             }`}
-          ></i>
-        </button>
+        ></i>
+      </button>
 
-        {expand === true && (
-          <p className={`${Styles.expand} text-gray-400 font-normal`}>
-            {data.ans}
-          </p>
-        )}
-        {expand === false && (
-          <p className={`${Styles.collapse} text-gray-400 font-normal`}>
-            {data.ans}
-          </p>
-        )}
-      </div>
+      {expand === true && <p className={["text-gray-400 font-normal origin-top overflow-hidden pb-5", Styles.expand].join(" ")}>
+        {data.ans}
+      </p>}
     </li>
   );
 }

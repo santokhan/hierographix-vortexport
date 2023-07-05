@@ -1,4 +1,6 @@
-Prefered website : [https://www.superside.com/](https://www.superside.com/)
+[prefered-website](https://www.superside.com/)
+
+[requirements](file://SANTOKHAN-COMPU/Users/Santo%20Khan/OneDrive/move-to-android/Meet%20–%20gjz-tgnk-qii%20-%20Google%20Chrome%202023-06-16%2022-46-24.mp4)
 
 ## Getting Started
 
@@ -25,10 +27,21 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!na
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Package Installation commands
+
+- npm i next@latest react@16.14.0 react-dom@16.14.0
+- npm i tailwindcss postcss autoprefixer
+- npx tailwindcss init -p
+- npm i react-animate-on-scroll daisyui
+- npm i @headlessui/react
+- npm i @rive-app/react-canvas
+- npm i swiper
+- npm i typescript

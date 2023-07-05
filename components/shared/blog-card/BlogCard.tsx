@@ -11,6 +11,18 @@ export interface BCard {
   read: string;
 }
 
+export function BlogImage(props: { src: string }) {
+  return (
+    <div className="w-full overflow-hidden rounded-xl">
+      <Image
+        src={require(`../../../app/assets/images/blog/article/${props.src}.png`)} alt="showcase"
+        className="w-full h-full object-contain transition-transform ease-in duration-150 group-hover:scale-[1.125]"
+        width={0} height={0}
+      />
+    </div>
+  );
+}
+
 // Blog Card will fill it's container
 export default function BlogCard(props: { data: BCard }): JSX.Element {
   const { data } = props;
@@ -18,29 +30,51 @@ export default function BlogCard(props: { data: BCard }): JSX.Element {
   return (
     <div className="w-full space-y-3 overflow-hidden">
       {/* Card Image */}
-      <Link href={data.url}>
-        {data.src && (
-          <Image
-            src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
-            alt={data.title}
-            className="w-full object-contain shadow rounded-lg"
-          />
-        )}
+      <Link href={data.url} className="group">
+        {data.src && <BlogImage src={data.src} />}
       </Link>
-      <div className="space-y-4 px-2">
+      <div className="space-y-3 px-2">
         {/* Card Caption */}
-        <h5 className="font-medium text-sm lg:text-base tracking-tight text-gray-400 uppercase">
+        <h5 className="font-medium text-sm lg:text-base text-gray-400 uppercase">
           {data.caption}
         </h5>
         {/* Card Title */}
         <Link
           href={data.url}
-          className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 dark:text-gray-100 capitalize hover:text-vpurple-500 hover:dark:text-vpurple-500"
+          className="block text-lg lg:text-lg font-bold text-gray-800 dark:text-gray-100 capitalize hover:text-vpurple-500 hover:dark:text-vpurple-500"
         >
           {data.title}
         </Link>
         {/* Card Footer */}
         <BlogCardFooter data={data} />
+      </div>
+    </div>
+  );
+}
+// Blog Card will fill it's container
+export function BlogCardLarge(props: { data: BCard }): JSX.Element {
+  const { data } = props;
+
+  return (
+    <div className="w-full space-y-4 overflow-hidden">
+      {/* Card Image */}
+      <Link href={data.url} className="group">
+        {data.src && <BlogImage src={data.src} />}
+      </Link>
+      <div className="space-y-4 px-2">
+        {/* Card Caption */}
+        <h5 className="font-medium text-sm lg:text-xl text-gray-400 uppercase">
+          {data.caption}
+        </h5>
+        {/* Card Title */}
+        <Link
+          href={data.url}
+          className="block text-lg lg:text-3xl font-bold !leading-[1.5]  text-gray-800 dark:text-gray-100 capitalize hover:text-vpurple-500 hover:dark:text-vpurple-500"
+        >
+          {data.title}
+        </Link>
+        {/* Card Footer */}
+        <BlogCardFooterLarge data={data} />
       </div>
     </div>
   );
@@ -51,32 +85,24 @@ export function BlogCardWhite({ data }: { data: BCard }): JSX.Element {
   return (
     <div className="w-full space-y-3">
       {/* Card Image */}
-      <Link href={data.url}>
-        {data.src && (
-          <Image
-            src={require(`../../../app/assets/images/blog/article/${data.src}.png`)}
-            alt={data.title}
-            width={0}
-            height={0}
-            className="w-full object-contain shadow rounded overflow-hidden"
-          />
-        )}
+      <Link href={data.url} className="group">
+        {data.src && <BlogImage src={data.src} />}
       </Link>
       <div className="space-y-4 px-2">
         {/* Card Caption */}
-        <h5 className="font-medium text-sm lg:text-base tracking-tight text-gray-500 uppercase">
+        <h5 className="font-medium text-sm lg:text-base text-gray-500 uppercase">
           {data.caption}
         </h5>
         {/* Card Title */}
         <Link
           href={data.url}
-          className="block text-lg lg:text-xl font-bold tracking-tight text-gray-800 capitalize hover:text-vpurple-500"
+          className="block text-lg lg:text-xl font-bold text-gray-800 capitalize hover:text-vpurple-500"
         >
           {data.title}
         </Link>
         {/* Card Footer for Light mode */}
         <div className="flex gap-4 items-center whitespace-nowrap">
-          <div className="flex items-center gap-2 text-xs lg:text-sm text-gray-800">
+          <div className="flex items-center gap-3 text-xs lg:text-sm text-gray-800">
             <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
             {data.creator}
           </div>
@@ -97,7 +123,7 @@ export function BlogCardFooter(props: { data: BCard }): JSX.Element {
 
   return (
     <div className="flex gap-4 items-center whitespace-nowrap">
-      <div className="flex items-center gap-2 text-xs text-gray-400">
+      <div className="flex items-center gap-3 text-xs text-gray-400">
         <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
         {data.creator}
       </div>
@@ -105,6 +131,23 @@ export function BlogCardFooter(props: { data: BCard }): JSX.Element {
       <div className="text-xs text-gray-400">{data.timestamp}</div>
       <div className="w-[2px] h-3 bg-gray-400"></div>
       <div className="text-xs text-gray-400">{data.read}</div>
+    </div>
+  );
+}
+
+export function BlogCardFooterLarge(props: { data: BCard }): JSX.Element {
+  const { data } = props;
+
+  return (
+    <div className="flex gap-4 items-center whitespace-nowrap">
+      <div className="flex items-center gap-3 text-sm text-gray-400">
+        <div className="w-9 h-9 rounded-full bg-teal-400 flex justify-center items-center hover:bg-teal-500 focus:ring-4 ring-teal-400/50"></div>
+        {data.creator}
+      </div>
+      <div className="w-[2px] h-3 bg-gray-400"></div>
+      <div className="text-sm text-gray-400">{data.timestamp}</div>
+      <div className="w-[2px] h-3 bg-gray-400"></div>
+      <div className="text-sm text-gray-400">{data.read}</div>
     </div>
   );
 }

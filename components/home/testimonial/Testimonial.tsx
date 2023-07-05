@@ -12,21 +12,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./testimonial-slider.css";
+import "./testimonialSlider.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
+import TestimonialImage from "./TestimonialImage";
 
 export default function TestiMonial() {
   return (
     <div className="max-w-screen-xl mx-auto px-4 space-y-10 lg:space-y-16">
-      <Headline className="max-w-xl mx-auto">
+      <Headline className="max-w-2xl mx-auto">
         <span className="text-teal-400">Testimonial</span> VortExpert's
         Excellence
       </Headline>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0">
-        <div className="overflow-auto flex flex-col gap-12">
+        <div className="overflow-auto flex flex-col items-center gap-12">
           <svg
             width="77"
             height="59"
@@ -42,11 +43,12 @@ export default function TestiMonial() {
 
           <Slider />
         </div>
-        <div className="">
-          <Image
+        <div className="flex justify-center">
+          {/* <Image
             src={require("../../../app/assets/images/testimonials.png")}
             alt="testimonial"
-          />
+          /> */}
+          <TestimonialImage />
         </div>
       </div>
     </div>
@@ -93,15 +95,19 @@ export function Slider() {
       pagination={{
         clickable: true,
       }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      modules={[Pagination, Navigation, Autoplay]}
       className={
         "testimonial-slider max-w-[380px] max-h-[280px] overflow-hidden relative"
       }
     >
       {reviews.map((e, i) => (
         <SwiperSlide
-          className={`min-w-[380px] space-y-5 transition-all duration-[400ms] ease-in-out text-start`}
+          className={`min-w-[380px] space-y-5 transition-all duration-[400ms] ease-in-out text-start mb-10 lg:mt-0`}
           key={i}
         >
           <div className="flex gap-4 items-center">

@@ -41,7 +41,7 @@ const blogDetailsData = {
     },
     {
       img: {
-        src: "assets/images/blog/article/revolution.png",
+        src: "../../app/assets/images/blog/article/revolution.png",
       },
     },
     {
@@ -50,7 +50,7 @@ const blogDetailsData = {
     },
     {
       img: {
-        src: "assets/images/blog/article/ai-in-web.png",
+        src: "../../app/assets/images/blog/article/ai-in-web.png",
       },
     },
     {
@@ -77,6 +77,18 @@ const blogDetailsData = {
   ],
 };
 
+// add utility `classsName="group"` to active zoom effect
+export function BlogImage(props: { src: string }) {
+  return (
+    <div className="w-full overflow-hidden rounded-2xl">
+      <Image
+        src={props.src} alt="showcase" width={0} height={0}
+        className="w-full h-full object-contain transition-transform ease-in duration-150 group-hover:scale-[1.095]"
+      />
+    </div>
+  );
+}
+
 export default function ReadBlog() {
   return (
     <div className="w-full">
@@ -91,12 +103,9 @@ export default function ReadBlog() {
       </div>
 
       {/* Hero */}
-      <div className="relative">
-        <Image
-          src={require("../../app/assets/images/blog/article/rise-of-ai.png")}
-          alt="rise of ait"
-          className="w-full h-auto rounded-2xl"
-        />
+      <div className="relative group">
+        <BlogImage src={require(`../../app/assets/images/blog/article/rise-of-ai.png`)} />
+
         {/* Text Content */}
         <div className="absolute left-0 top-0 p-4 lg:p-16 w-full h-full image-top-effect z-[3] flex flex-col justify-between">
           <div className="space-y-2">
@@ -127,12 +136,14 @@ export default function ReadBlog() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 py-16 lg:py-20">
         {/* Main content */}
-        <div className="order-2 lg:order-1 lg:col-span-9 space-y-8">
+        <div className="order-2 lg:order-1 lg:col-span-9 space-y-8 ">
           {blogDetailsData.details.map((e: any, i: number) => {
             const { img, title, desc, important } = e;
             return (
-              <div className="" key={i}>
-                {img?.src && <BlogImg src={img.src} />}
+              <div key={i}>
+                <div className="group">
+                  {img?.src && <BlogImage src={require(`../../app/assets/images/blog/article/ai-in-web.png`)} />}
+                </div>
                 {title && <Title>{title}</Title>}
                 {important && <Important>{important}</Important>}
                 {desc && <Desc desc={desc} />}
@@ -197,14 +208,5 @@ export function Important(props: any) {
     <p className="font-semibold text-gray-600 dark:text-white border-l-2 border-teal-400 pl-3 mb-8">
       {props.children}
     </p>
-  );
-}
-export function BlogImg(props: { src: string }) {
-  return (
-    <Image
-      src={require(`../../app/assets/images/blog/article/rise-of-ai.png`)}
-      alt={props.src}
-      className="w-full h-auto rounded"
-    />
   );
 }

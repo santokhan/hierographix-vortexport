@@ -1,3 +1,5 @@
+"use client"
+
 import Hero from "./hero/Hero";
 import EditorChoice from "./editor-choice/EditorChoice";
 import Article from "./article/Article";
